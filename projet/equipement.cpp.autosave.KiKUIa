@@ -1,0 +1,7 @@
+#include "equipement.h"
+
+equipement::equipement()
+{
+  nom="";
+  
+}

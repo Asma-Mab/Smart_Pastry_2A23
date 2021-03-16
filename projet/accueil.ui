@@ -75,7 +75,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/img/img/Untitled design (6).png</pixmap>
+     <pixmap resource="../../projet/img.qrc">:/img/img/Untitled design (6).png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -91,7 +91,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/img/img/DREAM PASTRY.png</pixmap>
+     <pixmap resource="../../projet/img.qrc">:/img/img/DREAM PASTRY.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_6">
@@ -126,7 +126,7 @@ color: rgb(255, 255, 255);
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/img/img/154067405_1632533030284127_9027939143200895570_n.png</pixmap>
+     <pixmap resource="../../projet/img.qrc">:/img/img/154067405_1632533030284127_9027939143200895570_n.png</pixmap>
     </property>
    </widget>
    <widget class="QPushButton" name="button_profil">
@@ -167,7 +167,7 @@ border-radius:10px;
      <string> Profil                     </string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/154347018_1093458397748791_4413400449242006441_n.png</normaloff>:/img/img/154347018_1093458397748791_4413400449242006441_n.png</iconset>
     </property>
     <property name="iconSize">
@@ -218,7 +218,7 @@ border-radius:10px;
      <string>  employés                </string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/Untitled design (18).png</normaloff>:/img/img/Untitled design (18).png</iconset>
     </property>
     <property name="iconSize">
@@ -266,7 +266,7 @@ border-radius:10px;
      <string>  Produits                  </string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/Untitled design (22).png</normaloff>:/img/img/Untitled design (22).png</iconset>
     </property>
     <property name="iconSize">
@@ -314,7 +314,7 @@ border-radius:10px;
      <string> Equipements            </string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/Untitled design (23).png</normaloff>:/img/img/Untitled design (23).png</iconset>
     </property>
     <property name="iconSize">
@@ -362,7 +362,7 @@ border-radius:10px;
      <string> Evenements             </string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/Untitled design (25).png</normaloff>:/img/img/Untitled design (25).png</iconset>
     </property>
     <property name="iconSize">
@@ -410,7 +410,7 @@ border-radius:10px;
      <string>Fournisseurs/stock</string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/Untitled design (24).png</normaloff>:/img/img/Untitled design (24).png</iconset>
     </property>
     <property name="iconSize">
@@ -458,7 +458,7 @@ border-radius:10px;
      <string>  Clients/Commande </string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/Untitled design (21).png</normaloff>:/img/img/Untitled design (21).png</iconset>
     </property>
     <property name="iconSize">
@@ -506,7 +506,7 @@ border-radius:10px;
      <string> RECETTES                  </string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/Untitled design (26).png</normaloff>:/img/img/Untitled design (26).png</iconset>
     </property>
     <property name="iconSize">
@@ -554,7 +554,7 @@ border-radius:10px;
      <string> Quitter                    </string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/Untitled design (28).png</normaloff>:/img/img/Untitled design (28).png</iconset>
     </property>
     <property name="iconSize">
@@ -923,7 +923,7 @@ height:28px;
 }</string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab_4">
          <attribute name="title">
@@ -1434,7 +1434,7 @@ border-radius:10px;
      <string>Evaluation/Reclamation</string>
     </property>
     <property name="icon">
-     <iconset>
+     <iconset resource="../../projet/img.qrc">
       <normaloff>:/img/img/Untitled design (26).png</normaloff>:/img/img/Untitled design (26).png</iconset>
     </property>
     <property name="iconSize">
@@ -1451,7 +1451,7 @@ border-radius:10px;
      <x>0</x>
      <y>0</y>
      <width>1200</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

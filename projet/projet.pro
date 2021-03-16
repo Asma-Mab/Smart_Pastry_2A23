@@ -18,11 +18,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     connexion.cpp \
     main.cpp \
-    accueil.cpp
+    accueil.cpp \
+    reclamation.cpp
 
 HEADERS += \
     accueil.h \
-    connexion.h
+    connexion.h \
+    reclamation.h
 
 FORMS += \
     accueil.ui

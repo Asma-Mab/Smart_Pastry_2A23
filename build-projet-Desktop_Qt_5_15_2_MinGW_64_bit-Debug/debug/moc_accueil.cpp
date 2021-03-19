@@ -131,10 +131,10 @@ void accueil::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 7: _t->on_button_evenement_clicked(); break;
         case 8: _t->on_button_recette_clicked(); break;
         case 9: _t->on_button_quitter_clicked(); break;
-        case 10: _t->on_aj_clicked(); break;
+        //case 10: _t->on_aj_clicked(); break;
         case 11: _t->on_button_recette_2_clicked(); break;
         //case 12: _t->on_tableWidget_cellClicked((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
-        case 13: _t->on_button_evaluation_clicked(); break;
+        //case 13: _t->on_button_evaluation_clicked(); break;
         default: ;
         }
     }

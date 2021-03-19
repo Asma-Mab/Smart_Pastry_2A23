@@ -18,12 +18,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connexion.cpp \
+    evaluation.cpp \
     main.cpp \
     mainwindow.cpp \
     reclamation.cpp
 
 HEADERS += \
     connexion.h \
+    evaluation.h \
     mainwindow.h \
     reclamation.h
 

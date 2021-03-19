@@ -33,7 +33,7 @@ public:
     reclamation();
      reclamation(int);//cle primaire
      reclamation(QString,QString,QString,QString);
-
+ reclamation(QString,QString,QString);
     int getId_reclamation() ;
     QString getTitre();
 
@@ -52,7 +52,8 @@ public:
     void setEtat(QString);
 
     bool ajouter();
-    bool supprimer();
+    bool supprimer(QString);
+    bool modifier();
     QSqlQueryModel * afficher();
 
     int lastId();

@@ -1,7 +1,10 @@
 #include "reclamation.h"
 #include <QSqlQuery>
 #include <QVariant>
-
+#include <QMainWindow>
+#include "mainwindow.h"
+#include "mainwindow.cpp"
+#include "ui_mainwindow.h"
 reclamation::reclamation(){}
 
 
@@ -16,6 +19,16 @@ reclamation::reclamation(QString titre,QString description,QString date_reclamat
     this->date_reclamation = date_reclamation;
 
     this->etat = etat;
+}
+reclamation::reclamation(QString titre,QString description,QString date_reclamation)
+{
+    this->id_reclamation = lastId();
+    this->titre =titre;
+
+    this->description =description;
+    this->date_reclamation = date_reclamation;
+
+
 }
 
 
@@ -53,27 +66,44 @@ reclamation::reclamation(QString titre,QString description,QString date_reclamat
        int l = lastId();
         QString stringId = QString::number(this->id_reclamation);
 
-        query.prepare("INSERT INTO RECLAMATION VALUES (?,?, ?, ?,'non traité','1')");
+        query.prepare("INSERT INTO RECLAMATION VALUES (?,'non traité', ?, ?,?,'1')");
         query.addBindValue(l);
+        query.addBindValue(this->date_reclamation);
+         query.addBindValue(this->description);
         query.addBindValue(this->titre);
 
-        query.addBindValue(this->description);
-        query.addBindValue(this->date_reclamation);
+
+
 
 
 
         return query.exec();
 }
 
-    bool reclamation::supprimer(){
+    bool reclamation::supprimer(QString titre){
         QSqlQuery query;
-        QString stringId = QString::number(id_reclamation);
+        //QString stringId = QString::number(id_reclamation);
 
-        query.prepare("DELETE FROM reclamation WHERE ID_reclamation=?");
-        query.addBindValue(stringId);
+        query.prepare("DELETE FROM reclamation WHERE titre=:titre");
+      query.bindValue(0,titre);
 
         return query.exec();
     }
+    bool reclamation::modifier()
+
+        {
+            QSqlQuery query;
+
+          query.prepare("Update RECLAMATION set titre=:t, DATE_RECLAMATION=:date, DESCRIPTION=:d where TITRE=:t");
+          query.bindValue(":t",titre);
+          query.bindValue(":date",date_reclamation);
+
+          query.bindValue(":d",description);
+
+          return query.exec();
+        }
+
+
 
 QSqlQueryModel * reclamation::afficher(){
 
@@ -83,10 +113,11 @@ QSqlQueryModel * reclamation::afficher(){
     model->setQuery("select * from reclamation");
 
     model->setHeaderData(0, Qt::Horizontal,QObject::tr("Id_reclamation"));
-    model->setHeaderData(1, Qt::Horizontal,QObject::tr("titre"));
-    model->setHeaderData(2, Qt::Horizontal,QObject::tr("description"));
-    model->setHeaderData(3, Qt::Horizontal,QObject::tr("etat"));
-    model->setHeaderData(4, Qt::Horizontal,QObject::tr("date_reclamation"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("ETAT"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("date_reclamation"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("description"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("titre"));
+
     model->setHeaderData(5, Qt::Horizontal,QObject::tr("cin_employe"));
 
 

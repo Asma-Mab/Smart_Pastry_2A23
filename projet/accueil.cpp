@@ -100,7 +100,6 @@ void accueil::on_aj_clicked()
      QString caracteristique;
      QString date_achat_1 ;
      QString etat;
-
      id_equipement=ui->id_line->text().toInt();
      nom=ui->nom_line->text();
      date_achat_1 = ui->date_l->text();
@@ -128,7 +127,8 @@ void accueil::on_aj_clicked()
 
 void accueil::on_button_recette_2_clicked()
 {
-
+    ui->stackedWidget->setCurrentIndex(8);
+    ui->stackedWidget_2->setCurrentIndex(8);
 }
 
 void accueil::on_tableWidget_cellClicked(int row, int column)

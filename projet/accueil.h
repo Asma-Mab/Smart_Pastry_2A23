@@ -1,6 +1,6 @@
 #ifndef ACCUEIL_H
 #define ACCUEIL_H
-
+#include "equipement.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -43,7 +43,22 @@ private slots:
 
     void on_tableWidget_cellClicked(int row, int column);
 
+    void on_toolBox_3_currentChanged(int index);
+
+    void on_toolBox_4_currentChanged(int index);
+
+    void on_modifier_eq_clicked();
+
+    void on_supprimer_eq_clicked();
+
+    void on_modifier_valide_m_clicked();
+
+    void on_tabWidget_2_currentChanged(int index);
+
+    void on_ajouter_eq_clicked();
+
 private:
     Ui::accueil *ui;
+    int a;
 };
 #endif // ACCUEIL_H

@@ -18,10 +18,10 @@
 #include "connexion.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-class equipement
+class event
 {
 private :
-int id_equipement;
+int id_event;
 QString nom;
 int prix;
 QString marque;
@@ -30,11 +30,11 @@ QString date_achat ;
 QString etat;
 
 public:
-    equipement();
-    equipement(int);//cle primaire
-    equipement(QString,int,QString,QString,QString,QString);
+    event();
+    event(int);//cle primaire
+    event(QString,int,QString,QString,QString,QString);
 
-    int getId_equipement();
+    int getId_event();
     QString getNom();
     int getPrix();
     QString getCaracteristique();
@@ -43,7 +43,7 @@ public:
     QString getEtat ();
 
 
-    void setId_equipement(int);
+    void setId_event(int);
     void setNom(QString);
     void setPrix(int);
     void setCaracteristique(QString);

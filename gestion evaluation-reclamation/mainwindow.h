@@ -22,13 +22,29 @@ private slots :
 
     //void on_excelfiabilite_clicked();
 
-    void on_pushButtoneval_clicked();
+
 
     void on_tableView_activated(const QModelIndex &index);
 
     void on_pushButton_3_clicked();
 
     void on_pushButton_4_clicked();
+
+
+
+    void on_pushButton_6_clicked();
+
+
+
+
+
+    void on_tableView_2_activated(const QModelIndex &index);
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_8_clicked();
 
 private:
     Ui::MainWindow *ui;

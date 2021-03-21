@@ -110,7 +110,7 @@ QSqlQueryModel * reclamation::afficher(){
 
     QSqlQueryModel* model   = new QSqlQueryModel();
 
-    model->setQuery("select * from reclamation");
+    model->setQuery("select * from reclamation ");
 
     model->setHeaderData(0, Qt::Horizontal,QObject::tr("Id_reclamation"));
     model->setHeaderData(1, Qt::Horizontal,QObject::tr("ETAT"));

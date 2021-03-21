@@ -24,10 +24,9 @@ private :
 int id_event;
 QString nom;
 int prix;
-QString marque;
+QString Catégorie;
 QString caracteristique;
-QString date_achat ;
-QString etat;
+QString NB_Participant;
 
 public:
     event();
@@ -38,18 +37,14 @@ public:
     QString getNom();
     int getPrix();
     QString getCaracteristique();
-    QString getDate_achat ();
-    QString getMarque();
-    QString getEtat ();
+    QString getNB_Participant ();
 
 
     void setId_event(int);
     void setNom(QString);
     void setPrix(int);
     void setCaracteristique(QString);
-    void setDate_achat(QString);
-    void setMarque(QString);
-    void setEtat(QString);
+    void setNB_Participant(QString);
 
     bool ajouter();
     bool supprimer();

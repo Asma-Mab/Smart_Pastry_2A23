@@ -76,7 +76,7 @@ bool Employee::supprimer(){
     return query.exec();
 }
 
-QSqlQueryModel * Employee::afficher(){
+/*QSqlQueryModel * Employee::afficher(){
 
 
 QSqlQueryModel* model   = new QSqlQueryModel();
@@ -95,7 +95,7 @@ model->setHeaderData(8, Qt::Horizontal,QObject::tr("EVALUATION"));
 model->setHeaderData(9, Qt::Horizontal,QObject::tr("AGE"));
 model->setHeaderData(10, Qt::Horizontal,QObject::tr("DATEENTR"));
 model->setHeaderData(11, Qt::Horizontal,QObject::tr("SPECIALITE"));
-/*ui->tableView->resizeColumnToContents(0);
+ui->tableView->resizeColumnToContents(0);
 ui->tableView->resizeColumnToContents(1);
  ui->tableView->resizeColumnToContents(2);
  ui->tableView->resizeColumnToContents(3);
@@ -109,6 +109,7 @@ ui->tableView->resizeColumnToContents(1);
  ui->tableView->resizeColumnToContents(11);
 
 return model;
-}*/
+}
 
 }
+*/

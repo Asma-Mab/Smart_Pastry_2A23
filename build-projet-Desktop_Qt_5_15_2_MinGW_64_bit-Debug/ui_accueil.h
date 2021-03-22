@@ -69,6 +69,7 @@ public:
     QLabel *label_19;
     QLineEdit *lineEdit_5;
     QPushButton *pushButton_10;
+    QLineEdit *lineEdit_6;
     QWidget *employes;
     QWidget *clients;
     QWidget *produits;
@@ -527,6 +528,9 @@ public:
 "background:#b20837;\n"
 "border-radius:10px;\n"
 "}"));
+        lineEdit_6 = new QLineEdit(groupBox);
+        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
+        lineEdit_6->setGeometry(QRect(100, 160, 361, 41));
         stackedWidget->addWidget(profil);
         employes = new QWidget();
         employes->setObjectName(QString::fromUtf8("employes"));
@@ -819,12 +823,12 @@ public:
 
         retranslateUi(accueil);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(0);
         tabWidget->setCurrentIndex(0);
-        tabWidget_2->setCurrentIndex(0);
-        tabWidget_3->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(1);
+        tabWidget_3->setCurrentIndex(1);
         tabWidget_4->setCurrentIndex(0);
-        stackedWidget_2->setCurrentIndex(0);
+        stackedWidget_2->setCurrentIndex(6);
 
 
         QMetaObject::connectSlotsByName(accueil);

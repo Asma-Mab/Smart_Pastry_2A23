@@ -27,6 +27,8 @@ Employee:: Employee(int c,QString n,QString p,int ev,QString d,QString s)
 
 {
 cin=c;nom=n;prenom=p;dateentr=d;specialite=s;evaluation=ev;}
+Employee::Employee(int c,QString n,QString p,int a,int t,QString pas)
+{cin=c;nom=n;prenom=p;password=pas;age=a;telephone=t;}
 int Employee::getcin(){return cin;};
 QString Employee::getnom(){return nom;};
 QString Employee::getprenom(){return prenom;};
@@ -99,6 +101,21 @@ bool Employee::modifier()
   query.bindValue(":s",specialite);
   return query.exec();
 }
+bool Employee::modifier12()
+{
+    QSqlQuery query;
+    QString scin=QString::number(cin);
+    QString a=QString::number(age);
+      QString t=QString::number(telephone);
+  query.prepare("Update EMPLOYE set CIN=:c, NOM=:n, PRENOM=:p,PASSWORD=:pas,TELEPHONE=:tel,AGE=:ag where CIN=:c");
+  query.bindValue(":c",scin);
+  query.bindValue(":n",nom);
+  query.bindValue(":p",prenom);
+  query.bindValue(":pas",password);
+  query.bindValue(":tel",t);
+  query.bindValue(":ag",a);
+  return query.exec();
+}
 QSqlQueryModel * Employee::afficher(){
 
 
@@ -122,4 +139,26 @@ model->setHeaderData(11, Qt::Horizontal,QObject::tr("SPECIALITE"));
 
 return model;
 }
+QSqlQueryModel * Employee::afficher11(){
 
+
+QSqlQueryModel* model   = new QSqlQueryModel();
+
+model->setQuery("select * from EMPLOYE");
+
+model->setHeaderData(0, Qt::Horizontal,QObject::tr("CIN"));
+model->setHeaderData(1, Qt::Horizontal,QObject::tr("NOM"));
+model->setHeaderData(2, Qt::Horizontal,QObject::tr("PRENOM"));
+model->setHeaderData(3, Qt::Horizontal,QObject::tr("DATENAIS"));
+model->setHeaderData(4, Qt::Horizontal,QObject::tr("EMAIL"));
+model->setHeaderData(5, Qt::Horizontal,QObject::tr("PASSWORD"));
+model->setHeaderData(6, Qt::Horizontal,QObject::tr("TELEPHONE"));
+model->setHeaderData(7, Qt::Horizontal,QObject::tr("ROLE"));
+model->setHeaderData(8, Qt::Horizontal,QObject::tr("EVALUATION"));
+model->setHeaderData(9, Qt::Horizontal,QObject::tr("AGE"));
+model->setHeaderData(10,Qt::Horizontal,QObject::tr("DATEENTR"));
+model->setHeaderData(11, Qt::Horizontal,QObject::tr("SPECIALITE"));
+
+
+return model;
+}

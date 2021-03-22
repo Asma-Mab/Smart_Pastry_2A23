@@ -22,8 +22,6 @@ private slots:
 
     void on_button_equipement_clicked();
 
-    void on_pushButton_clicked();
-
     void on_button_client_clicked();
 
     void on_button_produit_clicked();
@@ -41,7 +39,6 @@ private slots:
 
     void on_button_recette_2_clicked();
 
-    void on_tableWidget_cellClicked(int row, int column);
 
 private:
     Ui::accueil *ui;

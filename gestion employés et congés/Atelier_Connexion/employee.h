@@ -20,6 +20,7 @@ public:
     Employee();
     Employee(int,QString,QString,QString,QString,QString,int,QString,int,int,QString,QString);
     Employee(int,QString,QString,int,QString,QString);
+    Employee(int,QString,QString,int,int,QString);
 
     int getcin();
     QString getnom();
@@ -49,8 +50,11 @@ public:
 
     bool ajouter();
      bool modifier();
+     bool modifier12();
     bool supprimer(int);
     QSqlQueryModel * afficher();
+    QSqlQueryModel * afficher11();
+
 
 
 private:

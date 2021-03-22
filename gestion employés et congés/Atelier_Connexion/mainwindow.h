@@ -1,6 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
+#include "smtp.h"
+#include <QTextTableFormat>
+#include <QStandardItemModel>
+#include <QDialog>
+#include <QFileDialog>
 #include <QMainWindow>
 #include "connection.h"
 #include<QObject>
@@ -38,9 +42,20 @@ private slots:
 
     void on_suppconge_clicked();
 
+    void on_tableView_5_activated(const QModelIndex &index);
+
+    void on_modifier_2_clicked();
+    void sendMail();
+    void mailSent(QString);
+    void browse();
+    void on_ajouterconge_2_clicked();
+
+    void on_loading_clicked();
+
 private:
     Ui::MainWindow *ui;
     Employee E;
     conge c;
+     QStringList files;
 };
 #endif // MAINWINDOW_H

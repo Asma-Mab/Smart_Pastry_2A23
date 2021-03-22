@@ -68,17 +68,6 @@ void accueil::on_button_evenement_clicked()
 }
 
 
-
-void accueil::on_pushButton_clicked()
-{
-}
-
-
-
-
-
-
-
 void accueil::on_button_recette_clicked()
 {
     ui->stackedWidget->setCurrentIndex(7);
@@ -129,9 +118,4 @@ void accueil::on_button_recette_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
     ui->stackedWidget_2->setCurrentIndex(8);
-}
-
-void accueil::on_tableWidget_cellClicked(int row, int column)
-{
-
 }

@@ -35,9 +35,9 @@
         void conge::setnature(QString nt){nature=nt;};
 
     int conge::lastIdconge(){
-        int lastIdc = 0;
+        int lastIdc=0;
         QSqlQuery qry3 ;
-        qry3.prepare("select cin_employe from conge ");
+        qry3.prepare("select idconge from conge ");
         if (qry3.exec()){
         while(qry3.next()){
             lastIdc = qry3.value(0).toInt();}
@@ -57,6 +57,24 @@
         query.bindValue(":dr",date_retour);
         query.bindValue(":n",nature);
         query.bindValue(":cf",confirmation);
+        query.bindValue(":c",sa);
+
+        return query.exec();
+    }
+    bool conge::ajouter11()
+    {
+        int l = lastIdconge();
+        QSqlQuery query;
+        QString scin=QString::number(cin_employe);
+        QString sa=QString::number(l);
+
+
+        query.prepare("INSERT INTO CONGE(cin_employe,date_depart,date_retour,nature,confirmation,idconge) VALUES (:ci,:dp,:dr,:n,'En attente',:c)");
+        query.bindValue(":ci",scin);
+        query.bindValue(":dp",date_depart);
+        query.bindValue(":dr",date_retour);
+        query.bindValue(":n",nature);
+        query.bindValue("En attente",confirmation);
         query.bindValue(":c",sa);
 
         return query.exec();
@@ -131,4 +149,19 @@
 
     return model;
     }
+    QSqlQueryModel * conge::afficher11(int cin){
 
+
+    QSqlQueryModel* model   = new QSqlQueryModel();
+   QString cinn=QString::number(cin);
+    model->setQuery("select * from CONGE where cin_employe='"+cinn+"'");
+    model->setHeaderData(0, Qt::Horizontal,QObject::tr("CIN_EMPLOYE"));
+    model->setHeaderData(1, Qt::Horizontal,QObject::tr("DATE_DEPART"));
+    model->setHeaderData(2, Qt::Horizontal,QObject::tr("DATE_RETOUR"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("NATURE"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("CONFIRMATION"));
+    model->setHeaderData(5, Qt::Horizontal,QObject::tr("IDCONGE"));
+
+
+    return model;
+    }

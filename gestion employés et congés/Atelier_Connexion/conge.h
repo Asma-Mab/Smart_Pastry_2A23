@@ -35,7 +35,8 @@ public:
         QSqlQueryModel * afficher();
         QSqlQueryModel * afficher1();
         QSqlQueryModel * afficher2();
-
+        QSqlQueryModel * afficher11(int);
+        bool ajouter11();
         bool supprimer(int);
         bool modifier();
             int lastIdconge();

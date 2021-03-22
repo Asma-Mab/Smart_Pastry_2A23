@@ -31,6 +31,7 @@ SOURCES += \
     employee.cpp \
         main.cpp \
         mainwindow.cpp \
+    smtp.cpp
 
 
 HEADERS += \
@@ -38,7 +39,8 @@ HEADERS += \
     connection.h \
     employee.h \
         mainwindow.h \
-    connection.h
+    connection.h \
+    smtp.h
 
 FORMS += \
         mainwindow.ui

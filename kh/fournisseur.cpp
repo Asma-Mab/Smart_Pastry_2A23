@@ -133,3 +133,4 @@ QSqlQueryModel * fournisseur::afficher(){
     a.setEMAIL("");
    return a;
 }*/
+

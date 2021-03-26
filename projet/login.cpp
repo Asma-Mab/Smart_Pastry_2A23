@@ -32,17 +32,25 @@ void login::on_login_2_clicked()
 
     }
     QSqlQuery qry;
-    if(qry.exec("Select * from employe where NOM='"+username+"' and password='"+password+"' "))
+  int a=0;  if(qry.exec("Select * from employe where NOM='"+username+"' and password='"+password+"' "))
     { while(qry.next())
         {QString role= qry.value(7).toString();
         qDebug()<<role;
+
      if(role=="Admin")
      {
+        a=1;
      this->hide();
-     accueil acc;
-     acc.show();
+
      }
 }
+
+    }
+  qDebug()<<a;
+    if(a==1)
+    {
+        accueil acc;
+        acc.show();
     }
 
 }

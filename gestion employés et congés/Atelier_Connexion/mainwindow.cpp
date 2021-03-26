@@ -2,9 +2,16 @@
 #include "ui_mainwindow.h"
 #include <QDebug>
 #include <string>
+#include<QPrinter>
+#include <QPdfWriter>
+#include <QPainter>
+#include <QTextDocument>
+#include<QPrintDialog>
+#include<QFileDialog>
 #include <QSqlQuery>
 #include<QSqlQueryModel>
 #include<QMediaPlayer>
+#include"stati.h"
 
 using namespace std;
 MainWindow::MainWindow(QWidget *parent)
@@ -56,7 +63,36 @@ qDebug()<< music->errorString();
          E.setpassword(ui->mdp->text());
           E.setrole(ui->role->currentText());
          E.setspecialite(ui->specialite->text());
-        E.ajouter();
+         if(E.verif_tel_et_cin(ui->cin->text())==false){
+
+                QMessageBox::critical(nullptr,QObject::tr("Ajouter un employe"),
+                                                 QObject::tr("veuillez saisir correctement votre CIN.\n"
+                                                             "Click Cancel to exit ."),QMessageBox::Cancel);
+                     }
+         else if(E.verif_tel_et_cin(ui->tel->text())==false){
+
+                QMessageBox::critical(nullptr,QObject::tr("Ajouter un employe"),
+                                                 QObject::tr("veuillez saisir correctement votre Numero.\n"
+                                                             "Click Cancel to exit ."),QMessageBox::Cancel);
+                     }
+         else if(ui->specialite->text()==""){QMessageBox::critical(nullptr,QObject::tr("Ajouter un employe"),
+                                                                   QObject::tr("veuillez saisir votre specialite.\n"
+                                                                           "Click Cancel to exit ."),QMessageBox::Cancel);}
+       else if(E.verif_nom(ui->nom->text())==false||ui->nom->text()=="")
+         {
+
+                         QMessageBox::critical(nullptr,QObject::tr("Ajouter un employe"),
+                                                          QObject::tr("veuillez saisir correctement votre nom.\n"
+                                                                      "Click Cancel to exit ."),QMessageBox::Cancel);
+        }
+         else if(E.verif_nom(ui->prenom->text())==false||ui->prenom->text()=="")
+         {
+
+                         QMessageBox::critical(nullptr,QObject::tr("Ajouter un employe"),
+                                                          QObject::tr("veuillez saisir correctement votre prenom.\n"
+                                                                      "Click Cancel to exit ."),QMessageBox::Cancel);
+        }
+        else E.ajouter();
         ui->tableView->setModel(E.afficher());
 }
 
@@ -292,9 +328,9 @@ void   MainWindow::sendMail()
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )
-        smtp->sendMail("farah.braiki@esprit.tn", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText(), files );
+        smtp->sendMail("farah.braiki@esprit.tn", ui->rcpt->currentText() , ui->subject->text(),ui->msg->toPlainText(), files );
     else
-        smtp->sendMail("farah.braiki@esprit.tn", ui->rcpt->text() , ui->subject->text(),ui->msg->toPlainText());
+        smtp->sendMail("farah.braiki@esprit.tn", ui->rcpt->currentText() , ui->subject->text(),ui->msg->toPlainText());
 }
 void   MainWindow::mailSent(QString status)
 {
@@ -340,4 +376,74 @@ void MainWindow::on_loading_clicked()
        qDebug()<<ui->lineEditc->text().toInt();
 
            ui->tableView_6->setModel(c1.afficher11(c1.getcin_employe()));
+}
+
+void MainWindow::on_load_2_clicked()
+{
+    QMediaPlayer * music=new QMediaPlayer();
+        music->setMedia(QUrl("qrc:/sounds/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        music->play();
+    QSqlQueryModel * modal=new QSqlQueryModel();
+    QSqlQuery *query=new QSqlQuery();
+    query->prepare("Select email from EMPLOYE");
+    query->exec();
+    modal->setQuery(*query);
+    ui->rcpt->setModel(modal);
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    QString str;
+
+           str.append("<html><head></head><body><center><h1>"+QString("Attestation de travail")+"</h1></center>");
+           str.append("<p><font size='+3'>") ;
+
+
+
+           QString val=ui->cin1->text();
+
+           QSqlQuery* query=new QSqlQuery();
+           query->exec("select * from EMPLOYE where CIN='"+val+"'");
+
+           while(query->next())
+           {
+           str.append("  <b>"+QString("Je soussignée Mme:Braiki Farah")+"</b>"+ QString(",atteste par la présente que Mr/Mme ")+" ");
+           str.append(query->value(1).toString()) ;
+           str.append(""+QString("né le ")+" ") ;
+           str.append(query->value(3).toString());
+           str.append(""+QString("Titulaire de la CIN N° ")+"<br> ") ;
+           str.append(query->value(0).toString());
+           str.append(""+QString("délivrée le ")+" ") ;
+           str.append(query->value(10).toString());
+           str.append(""+QString("est salarié au sein de notre Micro entreprise de Patisserie Dream Pastry comme Patissier(ère) spécialisée en ")+" ") ;
+           str.append(query->value(11).toString());
+           str.append("</p></font>") ;
+           str.append("<hr>") ;
+           str.append("<br>") ;
+           str.append("<img src='Desktop/fff.png' width='100' height='133'>");
+
+
+
+           }
+        str.append("</body></html>") ;
+
+        QPrinter printer ;
+        printer.setOrientation(QPrinter::Portrait);
+        printer.setOutputFormat(QPrinter::PdfFormat);
+        printer.setPaperSize(QPrinter::A4) ;
+
+        QString path=QFileDialog::getSaveFileName(NULL,"Convertir en PDF","..","PDF(*.pdf)");
+
+        if (path.isEmpty()) return ;
+        printer.setOutputFileName(path) ;
+
+        QTextDocument doc;
+        doc.setHtml(str) ;
+        doc.print(&printer);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+   stati s;
+   s.exec();
 }

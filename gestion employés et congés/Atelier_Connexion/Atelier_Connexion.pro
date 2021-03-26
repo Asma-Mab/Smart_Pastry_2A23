@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql \
+QT       += core gui sql printsupport\
             multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -31,7 +31,8 @@ SOURCES += \
     employee.cpp \
         main.cpp \
         mainwindow.cpp \
-    smtp.cpp
+    smtp.cpp \
+    stati.cpp
 
 
 HEADERS += \
@@ -40,10 +41,12 @@ HEADERS += \
     employee.h \
         mainwindow.h \
     connection.h \
-    smtp.h
+    smtp.h \
+    stati.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+        stati.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

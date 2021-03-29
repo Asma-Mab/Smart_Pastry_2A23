@@ -54,6 +54,8 @@ public:
     bool ajouter();
     bool supprimer(QString);
     bool modifier();
+   bool modifieretat();
+  bool verif(QString );
     QSqlQueryModel * afficher();
 
     int lastId();

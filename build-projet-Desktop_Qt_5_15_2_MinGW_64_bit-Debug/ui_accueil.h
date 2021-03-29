@@ -15,12 +15,15 @@
 #include <QtWidgets/QDateEdit>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QRadioButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
@@ -73,28 +76,92 @@ public:
     QWidget *clients;
     QWidget *produits;
     QWidget *equipements;
-    QTabWidget *tabWidget;
-    QWidget *evaluation;
-    QWidget *reclamation;
-    QTabWidget *tabWidget_3;
-    QWidget *ajouter_reclam_2;
-    QDateEdit *lineEdit_6;
-    QLineEdit *lineEdit_7;
-    QLineEdit *lineEdit_8;
+    QTabWidget *tabWidget_2;
+    QWidget *tab_7;
+    QTabWidget *tabWidget_4;
+    QWidget *tab;
+    QTableView *affichageemployee;
     QPushButton *pushButton;
+    QWidget *ajouter_reclam_2;
+    QLabel *label_33;
+    QLabel *label_34;
+    QLabel *label_35;
+    QLabel *label_36;
+    QLabel *label_37;
+    QLabel *label_38;
+    QLabel *label_39;
+    QLabel *label_40;
     QLabel *label_41;
     QLabel *label_42;
     QLabel *label_43;
-    QWidget *consulter_reclam_2;
-    QTableView *tableView;
-    QLineEdit *lineEdit_9;
-    QLineEdit *lineEdit_10;
-    QDateEdit *lineEdit_11;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
     QLabel *label_44;
     QLabel *label_45;
     QLabel *label_46;
+    QDateEdit *dateEval;
+    QLineEdit *lineEdit_desc;
+    QPushButton *sendBtn;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout_17;
+    QRadioButton *moyenneperf2_3;
+    QRadioButton *excelperf2;
+    QRadioButton *faibleperf2_3;
+    QWidget *horizontalLayoutWidget_2;
+    QHBoxLayout *horizontalLayout_18;
+    QRadioButton *faibleperf1_3;
+    QRadioButton *moyenneperf1_3;
+    QRadioButton *excelperf1_3;
+    QWidget *horizontalLayoutWidget_3;
+    QHBoxLayout *horizontalLayout_19;
+    QRadioButton *faiblefiab1_3;
+    QRadioButton *moyennefiab2;
+    QRadioButton *excelfiab1_3;
+    QWidget *horizontalLayoutWidget_4;
+    QHBoxLayout *horizontalLayout_20;
+    QRadioButton *faiblefiab2;
+    QRadioButton *moyennefiab2_2;
+    QRadioButton *excelfiab2_3;
+    QWidget *horizontalLayoutWidget_5;
+    QHBoxLayout *horizontalLayout_21;
+    QRadioButton *faiblefiab3;
+    QRadioButton *moyennefiab3;
+    QRadioButton *excelfiab3;
+    QWidget *horizontalLayoutWidget_6;
+    QHBoxLayout *horizontalLayout_22;
+    QRadioButton *faibleauto1_3;
+    QRadioButton *moyenneauto1;
+    QRadioButton *excelauto1_3;
+    QWidget *horizontalLayoutWidget_7;
+    QHBoxLayout *horizontalLayout_23;
+    QRadioButton *faibleauto2_3;
+    QRadioButton *moyenneauto2;
+    QRadioButton *excelauto2_3;
+    QWidget *horizontalLayoutWidget_8;
+    QHBoxLayout *horizontalLayout_24;
+    QRadioButton *faibleauto3_3;
+    QRadioButton *moyenneauto3;
+    QRadioButton *excelauto3_3;
+    QLineEdit *email;
+    QLineEdit *cin;
+    QLineEdit *objet;
+    QPlainTextEdit *msg;
+    QStackedWidget *stackedWidget_3;
+    QWidget *page_9;
+    QLineEdit *file;
+    QLineEdit *mail_pass;
+    QWidget *page_10;
+    QWidget *page_11;
+    QWidget *consulter_reclam_2;
+    QTableView *tableView_2;
+    QPushButton *pushButton_affichereval;
+    QPushButton *supprimereval;
+    QLineEdit *ideval;
+    QLineEdit *commentaire;
+    QPushButton *modifiereval;
+    QDateEdit *dateeval;
+    QLabel *label_27;
+    QLabel *label_28;
+    QLabel *label_29;
+    QWidget *tab_8;
     QWidget *fournisseurs;
     QWidget *evenements;
     QWidget *recettes;
@@ -442,7 +509,7 @@ public:
         label_9->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label_10 = new QLabel(centralwidget);
         label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setGeometry(QRect(389, 27, 811, 151));
+        label_10->setGeometry(QRect(390, 20, 811, 151));
         label_10->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         label_8 = new QLabel(centralwidget);
         label_8->setObjectName(QString::fromUtf8("label_8"));
@@ -450,7 +517,7 @@ public:
         label_8->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(270, 100, 931, 581));
+        stackedWidget->setGeometry(QRect(270, 170, 931, 481));
         stackedWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         profil = new QWidget();
         profil->setObjectName(QString::fromUtf8("profil"));
@@ -537,77 +604,345 @@ public:
         stackedWidget->addWidget(produits);
         equipements = new QWidget();
         equipements->setObjectName(QString::fromUtf8("equipements"));
-        tabWidget = new QTabWidget(equipements);
-        tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 90, 541, 381));
-        evaluation = new QWidget();
-        evaluation->setObjectName(QString::fromUtf8("evaluation"));
-        tabWidget->addTab(evaluation, QString());
-        reclamation = new QWidget();
-        reclamation->setObjectName(QString::fromUtf8("reclamation"));
-        tabWidget_3 = new QTabWidget(reclamation);
-        tabWidget_3->setObjectName(QString::fromUtf8("tabWidget_3"));
-        tabWidget_3->setGeometry(QRect(0, 0, 491, 361));
+        tabWidget_2 = new QTabWidget(equipements);
+        tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
+        tabWidget_2->setGeometry(QRect(90, 0, 641, 431));
+        tab_7 = new QWidget();
+        tab_7->setObjectName(QString::fromUtf8("tab_7"));
+        tabWidget_4 = new QTabWidget(tab_7);
+        tabWidget_4->setObjectName(QString::fromUtf8("tabWidget_4"));
+        tabWidget_4->setGeometry(QRect(0, 0, 641, 411));
+        tab = new QWidget();
+        tab->setObjectName(QString::fromUtf8("tab"));
+        affichageemployee = new QTableView(tab);
+        affichageemployee->setObjectName(QString::fromUtf8("affichageemployee"));
+        affichageemployee->setGeometry(QRect(50, 20, 481, 201));
+        pushButton = new QPushButton(tab);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(424, 250, 101, 23));
+        tabWidget_4->addTab(tab, QString());
         ajouter_reclam_2 = new QWidget();
         ajouter_reclam_2->setObjectName(QString::fromUtf8("ajouter_reclam_2"));
-        lineEdit_6 = new QDateEdit(ajouter_reclam_2);
-        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
-        lineEdit_6->setGeometry(QRect(130, 90, 111, 22));
-        lineEdit_7 = new QLineEdit(ajouter_reclam_2);
-        lineEdit_7->setObjectName(QString::fromUtf8("lineEdit_7"));
-        lineEdit_7->setGeometry(QRect(130, 20, 113, 22));
-        lineEdit_8 = new QLineEdit(ajouter_reclam_2);
-        lineEdit_8->setObjectName(QString::fromUtf8("lineEdit_8"));
-        lineEdit_8->setGeometry(QRect(130, 60, 113, 22));
-        pushButton = new QPushButton(ajouter_reclam_2);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(140, 130, 93, 28));
+        label_33 = new QLabel(ajouter_reclam_2);
+        label_33->setObjectName(QString::fromUtf8("label_33"));
+        label_33->setGeometry(QRect(150, 20, 121, 20));
+        label_34 = new QLabel(ajouter_reclam_2);
+        label_34->setObjectName(QString::fromUtf8("label_34"));
+        label_34->setGeometry(QRect(300, 20, 121, 16));
+        label_35 = new QLabel(ajouter_reclam_2);
+        label_35->setObjectName(QString::fromUtf8("label_35"));
+        label_35->setGeometry(QRect(450, 20, 131, 20));
+        label_36 = new QLabel(ajouter_reclam_2);
+        label_36->setObjectName(QString::fromUtf8("label_36"));
+        label_36->setGeometry(QRect(0, 40, 91, 16));
+        label_37 = new QLabel(ajouter_reclam_2);
+        label_37->setObjectName(QString::fromUtf8("label_37"));
+        label_37->setGeometry(QRect(0, 60, 47, 13));
+        label_38 = new QLabel(ajouter_reclam_2);
+        label_38->setObjectName(QString::fromUtf8("label_38"));
+        label_38->setGeometry(QRect(0, 80, 47, 13));
+        label_39 = new QLabel(ajouter_reclam_2);
+        label_39->setObjectName(QString::fromUtf8("label_39"));
+        label_39->setGeometry(QRect(0, 180, 47, 13));
+        label_40 = new QLabel(ajouter_reclam_2);
+        label_40->setObjectName(QString::fromUtf8("label_40"));
+        label_40->setGeometry(QRect(0, 110, 61, 16));
         label_41 = new QLabel(ajouter_reclam_2);
         label_41->setObjectName(QString::fromUtf8("label_41"));
-        label_41->setGeometry(QRect(50, 20, 51, 20));
+        label_41->setGeometry(QRect(0, 140, 47, 13));
         label_42 = new QLabel(ajouter_reclam_2);
         label_42->setObjectName(QString::fromUtf8("label_42"));
-        label_42->setGeometry(QRect(40, 60, 71, 20));
+        label_42->setGeometry(QRect(0, 160, 47, 13));
         label_43 = new QLabel(ajouter_reclam_2);
         label_43->setObjectName(QString::fromUtf8("label_43"));
-        label_43->setGeometry(QRect(10, 90, 111, 20));
-        tabWidget_3->addTab(ajouter_reclam_2, QString());
+        label_43->setGeometry(QRect(0, 200, 61, 16));
+        label_44 = new QLabel(ajouter_reclam_2);
+        label_44->setObjectName(QString::fromUtf8("label_44"));
+        label_44->setGeometry(QRect(0, 230, 47, 13));
+        label_45 = new QLabel(ajouter_reclam_2);
+        label_45->setObjectName(QString::fromUtf8("label_45"));
+        label_45->setGeometry(QRect(0, 250, 47, 13));
+        label_46 = new QLabel(ajouter_reclam_2);
+        label_46->setObjectName(QString::fromUtf8("label_46"));
+        label_46->setGeometry(QRect(0, 270, 47, 13));
+        dateEval = new QDateEdit(ajouter_reclam_2);
+        dateEval->setObjectName(QString::fromUtf8("dateEval"));
+        dateEval->setGeometry(QRect(20, 330, 110, 22));
+        lineEdit_desc = new QLineEdit(ajouter_reclam_2);
+        lineEdit_desc->setObjectName(QString::fromUtf8("lineEdit_desc"));
+        lineEdit_desc->setGeometry(QRect(190, 290, 371, 20));
+        sendBtn = new QPushButton(ajouter_reclam_2);
+        sendBtn->setObjectName(QString::fromUtf8("sendBtn"));
+        sendBtn->setGeometry(QRect(540, 330, 75, 23));
+        horizontalLayoutWidget = new QWidget(ajouter_reclam_2);
+        horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(190, 80, 371, 21));
+        horizontalLayout_17 = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout_17->setObjectName(QString::fromUtf8("horizontalLayout_17"));
+        horizontalLayout_17->setContentsMargins(0, 0, 0, 0);
+        moyenneperf2_3 = new QRadioButton(horizontalLayoutWidget);
+        moyenneperf2_3->setObjectName(QString::fromUtf8("moyenneperf2_3"));
+
+        horizontalLayout_17->addWidget(moyenneperf2_3);
+
+        excelperf2 = new QRadioButton(horizontalLayoutWidget);
+        excelperf2->setObjectName(QString::fromUtf8("excelperf2"));
+
+        horizontalLayout_17->addWidget(excelperf2);
+
+        faibleperf2_3 = new QRadioButton(horizontalLayoutWidget);
+        faibleperf2_3->setObjectName(QString::fromUtf8("faibleperf2_3"));
+
+        horizontalLayout_17->addWidget(faibleperf2_3);
+
+        horizontalLayoutWidget_2 = new QWidget(ajouter_reclam_2);
+        horizontalLayoutWidget_2->setObjectName(QString::fromUtf8("horizontalLayoutWidget_2"));
+        horizontalLayoutWidget_2->setGeometry(QRect(190, 60, 371, 20));
+        horizontalLayout_18 = new QHBoxLayout(horizontalLayoutWidget_2);
+        horizontalLayout_18->setObjectName(QString::fromUtf8("horizontalLayout_18"));
+        horizontalLayout_18->setContentsMargins(0, 0, 0, 0);
+        faibleperf1_3 = new QRadioButton(horizontalLayoutWidget_2);
+        faibleperf1_3->setObjectName(QString::fromUtf8("faibleperf1_3"));
+
+        horizontalLayout_18->addWidget(faibleperf1_3);
+
+        moyenneperf1_3 = new QRadioButton(horizontalLayoutWidget_2);
+        moyenneperf1_3->setObjectName(QString::fromUtf8("moyenneperf1_3"));
+
+        horizontalLayout_18->addWidget(moyenneperf1_3);
+
+        excelperf1_3 = new QRadioButton(horizontalLayoutWidget_2);
+        excelperf1_3->setObjectName(QString::fromUtf8("excelperf1_3"));
+
+        horizontalLayout_18->addWidget(excelperf1_3);
+
+        horizontalLayoutWidget_3 = new QWidget(ajouter_reclam_2);
+        horizontalLayoutWidget_3->setObjectName(QString::fromUtf8("horizontalLayoutWidget_3"));
+        horizontalLayoutWidget_3->setGeometry(QRect(190, 140, 371, 19));
+        horizontalLayout_19 = new QHBoxLayout(horizontalLayoutWidget_3);
+        horizontalLayout_19->setObjectName(QString::fromUtf8("horizontalLayout_19"));
+        horizontalLayout_19->setContentsMargins(0, 0, 0, 0);
+        faiblefiab1_3 = new QRadioButton(horizontalLayoutWidget_3);
+        faiblefiab1_3->setObjectName(QString::fromUtf8("faiblefiab1_3"));
+
+        horizontalLayout_19->addWidget(faiblefiab1_3);
+
+        moyennefiab2 = new QRadioButton(horizontalLayoutWidget_3);
+        moyennefiab2->setObjectName(QString::fromUtf8("moyennefiab2"));
+
+        horizontalLayout_19->addWidget(moyennefiab2);
+
+        excelfiab1_3 = new QRadioButton(horizontalLayoutWidget_3);
+        excelfiab1_3->setObjectName(QString::fromUtf8("excelfiab1_3"));
+
+        horizontalLayout_19->addWidget(excelfiab1_3);
+
+        horizontalLayoutWidget_4 = new QWidget(ajouter_reclam_2);
+        horizontalLayoutWidget_4->setObjectName(QString::fromUtf8("horizontalLayoutWidget_4"));
+        horizontalLayoutWidget_4->setGeometry(QRect(190, 160, 371, 17));
+        horizontalLayout_20 = new QHBoxLayout(horizontalLayoutWidget_4);
+        horizontalLayout_20->setObjectName(QString::fromUtf8("horizontalLayout_20"));
+        horizontalLayout_20->setContentsMargins(0, 0, 0, 0);
+        faiblefiab2 = new QRadioButton(horizontalLayoutWidget_4);
+        faiblefiab2->setObjectName(QString::fromUtf8("faiblefiab2"));
+
+        horizontalLayout_20->addWidget(faiblefiab2);
+
+        moyennefiab2_2 = new QRadioButton(horizontalLayoutWidget_4);
+        moyennefiab2_2->setObjectName(QString::fromUtf8("moyennefiab2_2"));
+
+        horizontalLayout_20->addWidget(moyennefiab2_2);
+
+        excelfiab2_3 = new QRadioButton(horizontalLayoutWidget_4);
+        excelfiab2_3->setObjectName(QString::fromUtf8("excelfiab2_3"));
+
+        horizontalLayout_20->addWidget(excelfiab2_3);
+
+        horizontalLayoutWidget_5 = new QWidget(ajouter_reclam_2);
+        horizontalLayoutWidget_5->setObjectName(QString::fromUtf8("horizontalLayoutWidget_5"));
+        horizontalLayoutWidget_5->setGeometry(QRect(190, 180, 371, 21));
+        horizontalLayout_21 = new QHBoxLayout(horizontalLayoutWidget_5);
+        horizontalLayout_21->setObjectName(QString::fromUtf8("horizontalLayout_21"));
+        horizontalLayout_21->setContentsMargins(0, 0, 0, 0);
+        faiblefiab3 = new QRadioButton(horizontalLayoutWidget_5);
+        faiblefiab3->setObjectName(QString::fromUtf8("faiblefiab3"));
+
+        horizontalLayout_21->addWidget(faiblefiab3);
+
+        moyennefiab3 = new QRadioButton(horizontalLayoutWidget_5);
+        moyennefiab3->setObjectName(QString::fromUtf8("moyennefiab3"));
+
+        horizontalLayout_21->addWidget(moyennefiab3);
+
+        excelfiab3 = new QRadioButton(horizontalLayoutWidget_5);
+        excelfiab3->setObjectName(QString::fromUtf8("excelfiab3"));
+
+        horizontalLayout_21->addWidget(excelfiab3);
+
+        horizontalLayoutWidget_6 = new QWidget(ajouter_reclam_2);
+        horizontalLayoutWidget_6->setObjectName(QString::fromUtf8("horizontalLayoutWidget_6"));
+        horizontalLayoutWidget_6->setGeometry(QRect(190, 210, 371, 21));
+        horizontalLayout_22 = new QHBoxLayout(horizontalLayoutWidget_6);
+        horizontalLayout_22->setObjectName(QString::fromUtf8("horizontalLayout_22"));
+        horizontalLayout_22->setContentsMargins(0, 0, 0, 0);
+        faibleauto1_3 = new QRadioButton(horizontalLayoutWidget_6);
+        faibleauto1_3->setObjectName(QString::fromUtf8("faibleauto1_3"));
+
+        horizontalLayout_22->addWidget(faibleauto1_3);
+
+        moyenneauto1 = new QRadioButton(horizontalLayoutWidget_6);
+        moyenneauto1->setObjectName(QString::fromUtf8("moyenneauto1"));
+        moyenneauto1->setChecked(false);
+
+        horizontalLayout_22->addWidget(moyenneauto1);
+
+        excelauto1_3 = new QRadioButton(horizontalLayoutWidget_6);
+        excelauto1_3->setObjectName(QString::fromUtf8("excelauto1_3"));
+
+        horizontalLayout_22->addWidget(excelauto1_3);
+
+        horizontalLayoutWidget_7 = new QWidget(ajouter_reclam_2);
+        horizontalLayoutWidget_7->setObjectName(QString::fromUtf8("horizontalLayoutWidget_7"));
+        horizontalLayoutWidget_7->setGeometry(QRect(190, 230, 371, 21));
+        horizontalLayout_23 = new QHBoxLayout(horizontalLayoutWidget_7);
+        horizontalLayout_23->setObjectName(QString::fromUtf8("horizontalLayout_23"));
+        horizontalLayout_23->setContentsMargins(0, 0, 0, 0);
+        faibleauto2_3 = new QRadioButton(horizontalLayoutWidget_7);
+        faibleauto2_3->setObjectName(QString::fromUtf8("faibleauto2_3"));
+
+        horizontalLayout_23->addWidget(faibleauto2_3);
+
+        moyenneauto2 = new QRadioButton(horizontalLayoutWidget_7);
+        moyenneauto2->setObjectName(QString::fromUtf8("moyenneauto2"));
+
+        horizontalLayout_23->addWidget(moyenneauto2);
+
+        excelauto2_3 = new QRadioButton(horizontalLayoutWidget_7);
+        excelauto2_3->setObjectName(QString::fromUtf8("excelauto2_3"));
+        excelauto2_3->setCheckable(true);
+        excelauto2_3->setChecked(false);
+
+        horizontalLayout_23->addWidget(excelauto2_3);
+
+        horizontalLayoutWidget_8 = new QWidget(ajouter_reclam_2);
+        horizontalLayoutWidget_8->setObjectName(QString::fromUtf8("horizontalLayoutWidget_8"));
+        horizontalLayoutWidget_8->setGeometry(QRect(190, 250, 371, 21));
+        horizontalLayout_24 = new QHBoxLayout(horizontalLayoutWidget_8);
+        horizontalLayout_24->setObjectName(QString::fromUtf8("horizontalLayout_24"));
+        horizontalLayout_24->setContentsMargins(0, 0, 0, 0);
+        faibleauto3_3 = new QRadioButton(horizontalLayoutWidget_8);
+        faibleauto3_3->setObjectName(QString::fromUtf8("faibleauto3_3"));
+
+        horizontalLayout_24->addWidget(faibleauto3_3);
+
+        moyenneauto3 = new QRadioButton(horizontalLayoutWidget_8);
+        moyenneauto3->setObjectName(QString::fromUtf8("moyenneauto3"));
+
+        horizontalLayout_24->addWidget(moyenneauto3);
+
+        excelauto3_3 = new QRadioButton(horizontalLayoutWidget_8);
+        excelauto3_3->setObjectName(QString::fromUtf8("excelauto3_3"));
+
+        horizontalLayout_24->addWidget(excelauto3_3);
+
+        email = new QLineEdit(ajouter_reclam_2);
+        email->setObjectName(QString::fromUtf8("email"));
+        email->setGeometry(QRect(400, 330, 113, 20));
+        cin = new QLineEdit(ajouter_reclam_2);
+        cin->setObjectName(QString::fromUtf8("cin"));
+        cin->setGeometry(QRect(140, 330, 113, 20));
+        objet = new QLineEdit(ajouter_reclam_2);
+        objet->setObjectName(QString::fromUtf8("objet"));
+        objet->setGeometry(QRect(30, 300, 113, 20));
+        msg = new QPlainTextEdit(ajouter_reclam_2);
+        msg->setObjectName(QString::fromUtf8("msg"));
+        msg->setGeometry(QRect(300, 310, 61, 41));
+        stackedWidget_3 = new QStackedWidget(ajouter_reclam_2);
+        stackedWidget_3->setObjectName(QString::fromUtf8("stackedWidget_3"));
+        stackedWidget_3->setGeometry(QRect(0, 0, 631, 381));
+        page_9 = new QWidget();
+        page_9->setObjectName(QString::fromUtf8("page_9"));
+        file = new QLineEdit(page_9);
+        file->setObjectName(QString::fromUtf8("file"));
+        file->setGeometry(QRect(230, 360, 113, 20));
+        mail_pass = new QLineEdit(page_9);
+        mail_pass->setObjectName(QString::fromUtf8("mail_pass"));
+        mail_pass->setGeometry(QRect(90, 360, 113, 20));
+        stackedWidget_3->addWidget(page_9);
+        page_10 = new QWidget();
+        page_10->setObjectName(QString::fromUtf8("page_10"));
+        stackedWidget_3->addWidget(page_10);
+        page_11 = new QWidget();
+        page_11->setObjectName(QString::fromUtf8("page_11"));
+        stackedWidget_3->addWidget(page_11);
+        tabWidget_4->addTab(ajouter_reclam_2, QString());
+        stackedWidget_3->raise();
+        label_33->raise();
+        label_34->raise();
+        label_35->raise();
+        label_36->raise();
+        label_37->raise();
+        label_38->raise();
+        label_39->raise();
+        label_40->raise();
+        label_41->raise();
+        label_42->raise();
+        label_43->raise();
+        label_44->raise();
+        label_45->raise();
+        label_46->raise();
+        dateEval->raise();
+        lineEdit_desc->raise();
+        sendBtn->raise();
+        horizontalLayoutWidget->raise();
+        horizontalLayoutWidget_2->raise();
+        horizontalLayoutWidget_3->raise();
+        horizontalLayoutWidget_4->raise();
+        horizontalLayoutWidget_5->raise();
+        horizontalLayoutWidget_6->raise();
+        horizontalLayoutWidget_7->raise();
+        horizontalLayoutWidget_8->raise();
+        email->raise();
+        cin->raise();
+        objet->raise();
+        msg->raise();
         consulter_reclam_2 = new QWidget();
         consulter_reclam_2->setObjectName(QString::fromUtf8("consulter_reclam_2"));
-        tableView = new QTableView(consulter_reclam_2);
-        tableView->setObjectName(QString::fromUtf8("tableView"));
-        tableView->setGeometry(QRect(10, 10, 261, 81));
-        tableView->setGridStyle(Qt::DotLine);
-        tableView->setSortingEnabled(false);
-        tableView->horizontalHeader()->setCascadingSectionResizes(false);
-        tableView->horizontalHeader()->setMinimumSectionSize(50);
-        tableView->horizontalHeader()->setDefaultSectionSize(85);
-        lineEdit_9 = new QLineEdit(consulter_reclam_2);
-        lineEdit_9->setObjectName(QString::fromUtf8("lineEdit_9"));
-        lineEdit_9->setGeometry(QRect(70, 130, 111, 22));
-        lineEdit_10 = new QLineEdit(consulter_reclam_2);
-        lineEdit_10->setObjectName(QString::fromUtf8("lineEdit_10"));
-        lineEdit_10->setGeometry(QRect(70, 170, 111, 22));
-        lineEdit_11 = new QDateEdit(consulter_reclam_2);
-        lineEdit_11->setObjectName(QString::fromUtf8("lineEdit_11"));
-        lineEdit_11->setGeometry(QRect(70, 210, 111, 22));
-        pushButton_3 = new QPushButton(consulter_reclam_2);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(200, 150, 101, 23));
-        pushButton_4 = new QPushButton(consulter_reclam_2);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(200, 200, 101, 23));
-        label_44 = new QLabel(consulter_reclam_2);
-        label_44->setObjectName(QString::fromUtf8("label_44"));
-        label_44->setGeometry(QRect(10, 130, 47, 13));
-        label_45 = new QLabel(consulter_reclam_2);
-        label_45->setObjectName(QString::fromUtf8("label_45"));
-        label_45->setGeometry(QRect(10, 170, 47, 13));
-        label_46 = new QLabel(consulter_reclam_2);
-        label_46->setObjectName(QString::fromUtf8("label_46"));
-        label_46->setGeometry(QRect(10, 220, 47, 13));
-        tabWidget_3->addTab(consulter_reclam_2, QString());
-        tabWidget->addTab(reclamation, QString());
+        tableView_2 = new QTableView(consulter_reclam_2);
+        tableView_2->setObjectName(QString::fromUtf8("tableView_2"));
+        tableView_2->setGeometry(QRect(80, 20, 361, 121));
+        pushButton_affichereval = new QPushButton(consulter_reclam_2);
+        pushButton_affichereval->setObjectName(QString::fromUtf8("pushButton_affichereval"));
+        pushButton_affichereval->setGeometry(QRect(460, 60, 101, 23));
+        supprimereval = new QPushButton(consulter_reclam_2);
+        supprimereval->setObjectName(QString::fromUtf8("supprimereval"));
+        supprimereval->setGeometry(QRect(320, 180, 75, 23));
+        ideval = new QLineEdit(consulter_reclam_2);
+        ideval->setObjectName(QString::fromUtf8("ideval"));
+        ideval->setGeometry(QRect(130, 180, 113, 20));
+        commentaire = new QLineEdit(consulter_reclam_2);
+        commentaire->setObjectName(QString::fromUtf8("commentaire"));
+        commentaire->setGeometry(QRect(130, 210, 113, 20));
+        modifiereval = new QPushButton(consulter_reclam_2);
+        modifiereval->setObjectName(QString::fromUtf8("modifiereval"));
+        modifiereval->setGeometry(QRect(320, 220, 75, 23));
+        dateeval = new QDateEdit(consulter_reclam_2);
+        dateeval->setObjectName(QString::fromUtf8("dateeval"));
+        dateeval->setGeometry(QRect(140, 250, 110, 22));
+        label_27 = new QLabel(consulter_reclam_2);
+        label_27->setObjectName(QString::fromUtf8("label_27"));
+        label_27->setGeometry(QRect(50, 180, 81, 20));
+        label_28 = new QLabel(consulter_reclam_2);
+        label_28->setObjectName(QString::fromUtf8("label_28"));
+        label_28->setGeometry(QRect(50, 210, 81, 20));
+        label_29 = new QLabel(consulter_reclam_2);
+        label_29->setObjectName(QString::fromUtf8("label_29"));
+        label_29->setGeometry(QRect(40, 250, 81, 20));
+        tabWidget_4->addTab(consulter_reclam_2, QString());
+        tabWidget_2->addTab(tab_7, QString());
+        tab_8 = new QWidget();
+        tab_8->setObjectName(QString::fromUtf8("tab_8"));
+        tabWidget_2->addTab(tab_8, QString());
         stackedWidget->addWidget(equipements);
         fournisseurs = new QWidget();
         fournisseurs->setObjectName(QString::fromUtf8("fournisseurs"));
@@ -773,8 +1108,9 @@ public:
         retranslateUi(accueil);
 
         stackedWidget->setCurrentIndex(4);
-        tabWidget->setCurrentIndex(1);
-        tabWidget_3->setCurrentIndex(1);
+        tabWidget_2->setCurrentIndex(0);
+        tabWidget_4->setCurrentIndex(1);
+        stackedWidget_3->setCurrentIndex(2);
         stackedWidget_2->setCurrentIndex(0);
 
 
@@ -813,21 +1149,57 @@ public:
         label_18->setText(QCoreApplication::translate("accueil", "TELEPHONE", nullptr));
         label_19->setText(QCoreApplication::translate("accueil", "PASSWORD", nullptr));
         pushButton_10->setText(QCoreApplication::translate("accueil", "sauvegarder ", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(evaluation), QCoreApplication::translate("accueil", "evalution", nullptr));
-        lineEdit_7->setText(QString());
-        lineEdit_8->setText(QString());
-        pushButton->setText(QCoreApplication::translate("accueil", "reclamer", nullptr));
-        label_41->setText(QCoreApplication::translate("accueil", "TITRE", nullptr));
-        label_42->setText(QCoreApplication::translate("accueil", "DESCRIPTION", nullptr));
-        label_43->setText(QCoreApplication::translate("accueil", "DATE_RECLAMATION", nullptr));
-        tabWidget_3->setTabText(tabWidget_3->indexOf(ajouter_reclam_2), QCoreApplication::translate("accueil", "ajouter", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("accueil", "supprimer", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("accueil", "modifier", nullptr));
-        label_44->setText(QCoreApplication::translate("accueil", "TITRE", nullptr));
-        label_45->setText(QCoreApplication::translate("accueil", "DESCRIPTION", nullptr));
-        label_46->setText(QCoreApplication::translate("accueil", "DATE_RECLAMATION", nullptr));
-        tabWidget_3->setTabText(tabWidget_3->indexOf(consulter_reclam_2), QCoreApplication::translate("accueil", "consulter", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(reclamation), QCoreApplication::translate("accueil", "reclamation", nullptr));
+        pushButton->setText(QCoreApplication::translate("accueil", "load employee", nullptr));
+        tabWidget_4->setTabText(tabWidget_4->indexOf(tab), QCoreApplication::translate("accueil", "liste employ\303\251s", nullptr));
+        label_33->setText(QCoreApplication::translate("accueil", "AU DESSOUS DU NIVEAU ATTENDU", nullptr));
+        label_34->setText(QCoreApplication::translate("accueil", "ATTEINTE DU NIVEAU ATTENDU", nullptr));
+        label_35->setText(QCoreApplication::translate("accueil", "AU DESSUS DU NIVEAU ATTENDU", nullptr));
+        label_36->setText(QCoreApplication::translate("accueil", "PERFORMANCE", nullptr));
+        label_37->setText(QCoreApplication::translate("accueil", "TextLabel", nullptr));
+        label_38->setText(QCoreApplication::translate("accueil", "TextLabel", nullptr));
+        label_39->setText(QCoreApplication::translate("accueil", "TextLabel", nullptr));
+        label_40->setText(QCoreApplication::translate("accueil", "FIABILITE", nullptr));
+        label_41->setText(QCoreApplication::translate("accueil", "TextLabel", nullptr));
+        label_42->setText(QCoreApplication::translate("accueil", "TextLabel", nullptr));
+        label_43->setText(QCoreApplication::translate("accueil", "AUTONOMIE", nullptr));
+        label_44->setText(QCoreApplication::translate("accueil", "TextLabel", nullptr));
+        label_45->setText(QCoreApplication::translate("accueil", "TextLabel", nullptr));
+        label_46->setText(QCoreApplication::translate("accueil", "TextLabel", nullptr));
+        sendBtn->setText(QCoreApplication::translate("accueil", "evaluer", nullptr));
+        moyenneperf2_3->setText(QString());
+        excelperf2->setText(QString());
+        faibleperf2_3->setText(QString());
+        faibleperf1_3->setText(QString());
+        moyenneperf1_3->setText(QString());
+        excelperf1_3->setText(QString());
+        faiblefiab1_3->setText(QString());
+        moyennefiab2->setText(QString());
+        excelfiab1_3->setText(QString());
+        faiblefiab2->setText(QString());
+        moyennefiab2_2->setText(QString());
+        excelfiab2_3->setText(QString());
+        faiblefiab3->setText(QString());
+        moyennefiab3->setText(QString());
+        excelfiab3->setText(QString());
+        faibleauto1_3->setText(QString());
+        moyenneauto1->setText(QString());
+        excelauto1_3->setText(QString());
+        faibleauto2_3->setText(QString());
+        moyenneauto2->setText(QString());
+        excelauto2_3->setText(QString());
+        faibleauto3_3->setText(QString());
+        moyenneauto3->setText(QString());
+        excelauto3_3->setText(QString());
+        tabWidget_4->setTabText(tabWidget_4->indexOf(ajouter_reclam_2), QCoreApplication::translate("accueil", "ajouter", nullptr));
+        pushButton_affichereval->setText(QCoreApplication::translate("accueil", "load evaluation", nullptr));
+        supprimereval->setText(QCoreApplication::translate("accueil", "supprimer", nullptr));
+        modifiereval->setText(QCoreApplication::translate("accueil", "modifier", nullptr));
+        label_27->setText(QCoreApplication::translate("accueil", "id evaluation", nullptr));
+        label_28->setText(QCoreApplication::translate("accueil", "commentaire", nullptr));
+        label_29->setText(QCoreApplication::translate("accueil", "date evaluation", nullptr));
+        tabWidget_4->setTabText(tabWidget_4->indexOf(consulter_reclam_2), QCoreApplication::translate("accueil", "consulter", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_7), QCoreApplication::translate("accueil", "evaluation", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_8), QCoreApplication::translate("accueil", "reclamation", nullptr));
         label_11->setText(QCoreApplication::translate("accueil", "Profil", nullptr));
         label_20->setText(QCoreApplication::translate("accueil", "Gestion Employes", nullptr));
         label_21->setText(QCoreApplication::translate("accueil", "Gestion Clients", nullptr));

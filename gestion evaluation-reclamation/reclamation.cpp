@@ -103,8 +103,31 @@ reclamation::reclamation(QString titre,QString description,QString date_reclamat
           return query.exec();
         }
 
+    bool reclamation::modifieretat()
 
+        {
+            QSqlQuery query;
+QString id=QString::number(id_reclamation);
+          query.prepare("Update RECLAMATION set etat='traité' where id_reclamation=:id_reclamation");
+         query.bindValue(":id_reclamation",id);
 
+          return query.exec();
+        }
+
+    bool reclamation::verif(QString ch){
+        bool test=true;
+        int i;
+        if(true)
+        {
+            for(i=0;i<ch.length();i++){
+                if(!(((ch[i]>='A')&&(ch[i]<='Z'))||((ch[i]>= 'a')&&(ch[i]<='z')))){
+                    test=false;
+                    return  test;
+            }
+        }
+      }
+        return  test;
+    }
 QSqlQueryModel * reclamation::afficher(){
 
 

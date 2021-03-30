@@ -22,10 +22,10 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>0</y>
-      <width>691</width>
-      <height>551</height>
+      <x>0</x>
+      <y>90</y>
+      <width>221</width>
+      <height>431</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -53,7 +53,7 @@
        <rect>
         <x>0</x>
         <y>50</y>
-        <width>161</width>
+        <width>51</width>
         <height>51</height>
        </rect>
       </property>
@@ -92,24 +92,11 @@
        <string>Grille d' evaluation annuelle</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_26">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>140</y>
-        <width>47</width>
-        <height>13</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_27">
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>170</y>
+        <y>160</y>
         <width>47</width>
         <height>13</height>
        </rect>
@@ -128,7 +115,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>resultet de l' evaluation</string>
+       <string>resultat de l' evaluation</string>
       </property>
      </widget>
      <widget class="QLabel" name="autonomie">
@@ -173,7 +160,7 @@
        <rect>
         <x>470</x>
         <y>120</y>
-        <width>171</width>
+        <width>141</width>
         <height>16</height>
        </rect>
       </property>
@@ -218,8 +205,8 @@
      <widget class="QLabel" name="label_31">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>160</y>
+        <x>80</x>
+        <y>150</y>
         <width>191</width>
         <height>16</height>
        </rect>
@@ -331,13 +318,13 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
-        <width>741</width>
-        <height>331</height>
+        <y>10</y>
+        <width>661</width>
+        <height>321</height>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="ajouter_reclam">
        <attribute name="title">
@@ -573,10 +560,10 @@
    <widget class="QTabWidget" name="tabWidget_2">
     <property name="geometry">
      <rect>
-      <x>840</x>
-      <y>20</y>
-      <width>31</width>
-      <height>261</height>
+      <x>310</x>
+      <y>10</y>
+      <width>611</width>
+      <height>471</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -589,10 +576,10 @@
      <widget class="QTabWidget" name="tabWidget_4">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>10</y>
-        <width>571</width>
-        <height>381</height>
+        <x>0</x>
+        <y>0</y>
+        <width>611</width>
+        <height>431</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -1118,13 +1105,13 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="commentaire">
+       <widget class="QTextEdit" name="commentaire">
         <property name="geometry">
          <rect>
-          <x>130</x>
-          <y>290</y>
-          <width>113</width>
-          <height>20</height>
+          <x>200</x>
+          <y>350</y>
+          <width>81</width>
+          <height>41</height>
          </rect>
         </property>
        </widget>

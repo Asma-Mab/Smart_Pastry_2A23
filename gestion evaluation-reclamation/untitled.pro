@@ -22,17 +22,20 @@ SOURCES += \
     evaluation.cpp \
     main.cpp \
     mainwindow.cpp \
-    reclamation.cpp
+    reclamation.cpp \
+    stati.cpp
 
 HEADERS += \
     connexion.h \
     employee.h \
     evaluation.h \
     mainwindow.h \
-    reclamation.h
+    reclamation.h \
+    stati.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    stati.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

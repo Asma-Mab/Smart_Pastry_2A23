@@ -6,6 +6,7 @@
 #include "reclamation.h"
 #include "evaluation.h"
 #include "smtp.h"
+#include "stati.h"
 #include "employee.h"
 #include<QPrinter>
 
@@ -28,6 +29,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
                                           ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+   /* annimation=new QPropertyAnimation(ui->pushButton,"geometry");
+    annimation->setDuration(1000);
+    annimation->setStartValue(ui->pushButton->geometry());
+    annimation->setEndValue(QRect(300,300,100,50));
+    annimation->start();*/
 reclamation r;
    ui->tableView->setModel(r.afficher());
 }
@@ -46,7 +52,20 @@ void MainWindow::on_pushButton_clicked()//Ajouter
 
         r.setDate_reclamation(ui->lineEdit_4->text());
         r.setDescription(ui->desc->toPlainText());
+        if(r.verif(ui->desc->toPlainText())==false||ui->desc->toPlainText()=="")
+                 {
 
+                                 QMessageBox::critical(nullptr,QObject::tr("Ajouter une reclamation"),
+                                                                  QObject::tr("veuillez saisir correctement la  description.\n"
+                                                                              "Click Cancel to exit ."),QMessageBox::Cancel);
+                }
+        if(r.verif(ui->lineEdit_6->text())==false||ui->lineEdit_6->text()=="")
+                 {
+
+                                 QMessageBox::critical(nullptr,QObject::tr("Ajouter une reclamation"),
+                                                                  QObject::tr("veuillez saisir correctement le titre.\n"
+                                                                              "Click Cancel to exit ."),QMessageBox::Cancel);
+                }
         r.ajouter();
     ui->tableView->setModel(r.afficher());
 }
@@ -142,9 +161,17 @@ ui->affichagereclam->setModel(r.afficher());
 /********evaluation******/
 
 
-void MainWindow::on_pushButton_2_clicked()//afficher
+void MainWindow::on_pushButton_2_clicked()//ajouter
 {
     evaluation e;
+    if(e.verif(ui->commentaire->toPlainText())==false||ui->commentaire->toPlainText()=="")
+             {
+
+                             QMessageBox::critical(nullptr,QObject::tr("Ajouter une reclamation"),
+                                                              QObject::tr("veuillez saisir correctement la  description.\n"
+                                                                          "Click Cancel to exit ."),QMessageBox::Cancel);
+            }
+
         float perf =0;
                 float fiab = 0;
                float  autonomie=0;
@@ -204,7 +231,7 @@ void MainWindow::on_pushButton_2_clicked()//afficher
 
        e.setAutonomie(autonomie/3);
        e.setDate_evaluation(ui->dateEval->text());
-       e.setCommentaire(ui->commentaire->text());
+       e.setCommentaire(ui->commentaire->toPlainText());
   e.setCin_employe(ui->cin1->text());
       e.ajouter();
       ui->tableView_2->setModel(e.afficher());
@@ -331,7 +358,7 @@ str.append("   ");
 str.append(query->value(2).toString());
 str.append("_______Date___________");
 str.append("______________09/04/2021_____________""</p>");
-str.append("                                                                                                    Signature");
+str.append("                                                                                                  " " Signature");
 str.append("</filedset>");
 
 
@@ -438,5 +465,8 @@ if(a==1)
 
 
           }}
+      stati s;
+
+      s.exec();
 
 }

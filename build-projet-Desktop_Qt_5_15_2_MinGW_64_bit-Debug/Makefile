@@ -250,6 +250,7 @@ Makefile: ../../projet/projet.pro C:/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qmak
 		../../projet/projet.pro \
 		C:/Qt/5.15.2/mingw81_64/lib/Qt5Widgets.prl \
 		C:/Qt/5.15.2/mingw81_64/lib/Qt5Gui.prl \
+		C:/Qt/5.15.2/mingw81_64/lib/Qt5Network.prl \
 		C:/Qt/5.15.2/mingw81_64/lib/Qt5Sql.prl \
 		C:/Qt/5.15.2/mingw81_64/lib/Qt5Core.prl \
 		C:/Qt/5.15.2/mingw81_64/lib/qtmain.prl \
@@ -436,6 +437,7 @@ C:/Qt/5.15.2/mingw81_64/mkspecs/features/lex.prf:
 ../../projet/projet.pro:
 C:/Qt/5.15.2/mingw81_64/lib/Qt5Widgets.prl:
 C:/Qt/5.15.2/mingw81_64/lib/Qt5Gui.prl:
+C:/Qt/5.15.2/mingw81_64/lib/Qt5Network.prl:
 C:/Qt/5.15.2/mingw81_64/lib/Qt5Sql.prl:
 C:/Qt/5.15.2/mingw81_64/lib/Qt5Core.prl:
 C:/Qt/5.15.2/mingw81_64/lib/qtmain.prl:

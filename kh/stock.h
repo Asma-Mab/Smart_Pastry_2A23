@@ -15,6 +15,7 @@
 #include<QtCore>
 #include <QObject>
 #include<QtGui>
+#include<QSqlTableModel>
 #include "connexion.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -50,7 +51,11 @@ public:
 
 
         bool ajouter();
+        QSqlTableModel *tri(int id);
         bool supprimer(QString);
+        void trie(QTableView* table);
+        void trie1(QTableView* table);
+        void trie2(QTableView* table);
 /*
 
         stock rehcerche(int);

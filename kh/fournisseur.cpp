@@ -59,8 +59,8 @@ QString getSPECIALITE ();
         QSqlQuery query;
        int l = lastId();
         QString stringId = QString::number(this->ID_FOURNISSEUR);
-
-        query.prepare("INSERT INTO fournisseur VALUES (?, ?, ?, ?, ?)");
+        QString TEL = QString::number(this->TELEPHONE);
+        query.prepare("INSERT INTO fournisseur VALUES (?,?, ?, ?, ?, ?)");
         query.addBindValue(l);
         query.addBindValue(this->NOM);
         query.addBindValue(this->PRENOM);

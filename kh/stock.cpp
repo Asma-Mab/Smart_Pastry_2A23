@@ -111,6 +111,50 @@ QSqlQueryModel * stock::afficher(){
 
     return model;
     }
+QSqlTableModel *stock::tri(int QUANTITE )
+{
+
+   QSqlTableModel *mmodel = new QSqlTableModel();
+    mmodel->setTable("stock");
+
+   mmodel->setSort(QUANTITE,Qt::DescendingOrder);
+   mmodel->select();
+   return mmodel;
+
+
+
+}
+void stock::trie(QTableView* table){
+
+    QSqlQueryModel *model= new QSqlQueryModel();
+    QSqlQuery *query=new QSqlQuery;
+    query->prepare("select * from stock  ORDER BY QUANTITE");
+    query->exec();
+    model->setQuery(*query);
+    table->setModel(model);
+    table->show();
+}
+void stock::trie1(QTableView* table){
+
+    QSqlQueryModel *model= new QSqlQueryModel();
+    QSqlQuery *query=new QSqlQuery;
+    query->prepare("select * from stock  ORDER BY DATE_ACHAT");
+    query->exec();
+    model->setQuery(*query);
+    table->setModel(model);
+    table->show();
+}
+void stock::trie2(QTableView* table){
+
+    QSqlQueryModel *model= new QSqlQueryModel();
+    QSqlQuery *query=new QSqlQuery;
+    query->prepare("select * from stock  ORDER BY PRIX");
+    query->exec();
+    model->setQuery(*query);
+    table->setModel(model);
+    table->show();
+}
+
 /*
 stock stock::rehcerche(int id)
 {  stock a;

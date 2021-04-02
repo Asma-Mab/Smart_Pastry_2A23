@@ -1,4 +1,4 @@
-QT += sql
+QT += sql network
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -14,16 +14,21 @@ SOURCES += \
     fournisseur.cpp \
     main.cpp \
     mainwindow.cpp \
+    smtp.cpp \
+    statistique_f.cpp \
     stock.cpp
 
 HEADERS += \
     connexion.h \
     fournisseur.h \
     mainwindow.h \
+    smtp.h \
+    statistique_f.h \
     stock.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    statistique_f.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

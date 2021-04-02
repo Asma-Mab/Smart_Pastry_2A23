@@ -5,6 +5,7 @@
 #include "stock.h"
 #include "fournisseur.h"
 #include "smtp.h"
+#include "stati.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -46,6 +47,8 @@ private slots:
     void on_tri_d_clicked();
 
     void sendMail();
+
+    void on_pushButton_5_clicked();
 
 private:
     Ui::MainWindow *ui;

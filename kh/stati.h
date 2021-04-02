@@ -1,8 +1,10 @@
 #ifndef STATI_H
 #define STATI_H
+
 #include <QPainter>
 #include <QSqlQuery>
 #include <QDialog>
+#include "connexion.h"
 using namespace std;
 
 namespace Ui {
@@ -22,12 +24,10 @@ public:
      void paintEvent(QPaintEvent *) ;
     ~stati();
 private slots:
-
-     void on_pushButton_clicked();
+    void on_pushButton_clicked();
 
 private:
     Ui::stati *ui;
 };
 
 #endif // STATI_H
-

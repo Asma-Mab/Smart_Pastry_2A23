@@ -173,3 +173,17 @@ stock stock::rehcerche(int id)
     a.setDATE_ACHAT("");
    return a;
 }*/
+bool stock::verif_nom(QString ch_nom){
+    bool test=true;
+    int i;
+    if(true)
+    {
+        for(i=0;i<ch_nom.length();i++){
+            if(!(((ch_nom[i]>='A')&&(ch_nom[i]<='Z'))||((ch_nom[i]>='a')&&(ch_nom[i]<='z'))||(ch_nom[i]==' '))){
+                test=false;
+                return  test;
+        }
+    }
+  }
+    return  test;
+}

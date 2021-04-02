@@ -201,3 +201,9 @@ void MainWindow::on_tri_d_clicked()
 
     p.trie1(table);
 }
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    stati s;
+    s.exec();
+}

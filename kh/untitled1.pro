@@ -15,7 +15,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     smtp.cpp \
-    statistique_f.cpp \
+    stati.cpp \
     stock.cpp
 
 HEADERS += \
@@ -23,12 +23,12 @@ HEADERS += \
     fournisseur.h \
     mainwindow.h \
     smtp.h \
-    statistique_f.h \
+    stati.h \
     stock.h
 
 FORMS += \
     mainwindow.ui \
-    statistique_f.ui
+    stati.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

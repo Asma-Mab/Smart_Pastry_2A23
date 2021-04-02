@@ -56,6 +56,7 @@ public:
         void trie(QTableView* table);
         void trie1(QTableView* table);
         void trie2(QTableView* table);
+        bool verif_nom(QString ch_nom);
 /*
 
         stock rehcerche(int);

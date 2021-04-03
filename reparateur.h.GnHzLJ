@@ -1,0 +1,66 @@
+#ifndef TRANSACTION_H
+#define TRANSACTION_H
+#include <QString>
+#include <QSqlQueryModel>
+#include<QString>
+#include<QSqlDatabase>
+#include<QSqlError>
+#include<QSqlQuery>
+#include<QFileInfo>
+#include<QMessageBox>
+#include<QSqlQueryModel>
+#include<QDebug>
+#include<QFileDialog>
+#include<QDialog>
+#include<QtCore>
+#include <QObject>
+#include<QtGui>
+#include "connexion.h"
+#include "accueil.h"
+#include "ui_accueil.h"
+
+
+class reparateur
+{
+private :
+int id_reparateur;
+QString nom;
+QString prenom;
+int telephone;
+QString email;
+QString societe ;
+QString specialite;
+
+public:
+    reparateur();
+    reparateur(int);//cle primaire
+    reparateur(QString,QString,int,QString,QString,QString);
+
+    int getId_reparateur();
+    QString getNom();
+    QString getPrenom();
+    int getTelephone();
+    QString getEmail ();
+    QString getSociete();
+    QString getSpecialite ();
+
+
+    void setId_reparateur(int);
+    void setNom(QString);
+    void setPrenom(QString);
+    void setTelephone(int);
+    void setEmail(QString);
+    void setSociete(QString);
+    void setSpecialite(QString);
+
+    bool ajouter();
+    bool supprimer(int);
+    bool modifier(reparateur);
+    QSqlQueryModel * afficher();
+    reparateur rehcerche(int);
+
+    int lastId();
+
+};
+
+#endif // TRANSACTION_H

@@ -1,0 +1,11 @@
+#ifndef REPARATEUR_H
+#define REPARATEUR_H
+
+
+class reparateur
+{
+public:
+    reparateur();
+};
+
+#endif // REPARATEUR_H

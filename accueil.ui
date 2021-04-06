@@ -900,7 +900,7 @@ border-top-right-radius:10px;
 }</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -1992,7 +1992,7 @@ border-radius:10px;
               </rect>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="page_33">
               <widget class="QLabel" name="label_43">
@@ -2598,7 +2598,7 @@ height:28px;
 }</string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab_6">
          <attribute name="title">
@@ -2614,7 +2614,7 @@ height:28px;
            </rect>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="page_83">
            <widget class="QGroupBox" name="groupBox_6">
@@ -3294,8 +3294,8 @@ border-radius:10px;</string>
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>221</width>
+              <height>381</height>
              </rect>
             </property>
             <attribute name="label">
@@ -3618,8 +3618,8 @@ border-radius:10px;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>100</width>
-                <height>30</height>
+                <width>221</width>
+                <height>31</height>
                </rect>
               </property>
               <attribute name="label">
@@ -3656,8 +3656,8 @@ border-radius:10px;
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>221</width>
+              <height>331</height>
              </rect>
             </property>
             <attribute name="label">
@@ -3673,7 +3673,7 @@ border-radius:10px;
               </rect>
              </property>
              <property name="currentIndex">
-              <number>1</number>
+              <number>0</number>
              </property>
              <widget class="QWidget" name="page_46">
               <widget class="QLabel" name="label_47">
@@ -4202,8 +4202,8 @@ border-radius:10px;
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>100</width>
-                <height>30</height>
+                <width>221</width>
+                <height>31</height>
                </rect>
               </property>
               <attribute name="label">

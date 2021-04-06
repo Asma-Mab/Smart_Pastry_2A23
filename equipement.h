@@ -64,6 +64,7 @@ public:
     bool verif_nom(QString ch_nom);
     bool verif_id(QString ch_id);
 
+
 };
 
 #endif // TRANSACTION_H

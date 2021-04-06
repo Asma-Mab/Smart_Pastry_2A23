@@ -54,6 +54,36 @@ accueil::~accueil()
     delete ui;
 }
 
+//µµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµ
+bool accueil::verif_modif(QString nom,QString nom1,int id)
+{
+    bool test = false;
+    QString stringId = QString::number(id);
+
+    QSqlQuery query;
+    QString ms = "select * from "+nom+" where "+nom1+" = "+stringId;
+    query.prepare(ms);
+    query.addBindValue(nom);
+    query.addBindValue(nom1);
+    query.addBindValue(stringId);
+    query.exec();
+     if (query.first()==NULL)
+     {
+         QMessageBox::information(nullptr, QObject::tr("erreur"),
+                     QObject::tr("ID non trouvé.\n"
+                                 "Click Cancel to exit."), QMessageBox::Cancel);
+
+     }
+     else
+     {
+         test=true;
+     }
+     return test;
+
+}
+//µµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµ
+
+
 
 void accueil::on_button_profil_clicked()
 {
@@ -150,15 +180,20 @@ void accueil::on_toolBox_4_currentChanged(int index)
 
 void accueil::on_modifier_eq_clicked()
 {
-    ui->stackedWidget_7->setCurrentIndex(1);
+
   equipement r;
+  accueil a;
+   bool test = a.verif_modif("EQUIPEMENT","ID_EQUIPEMENT",ui->IDE_mo->text().toInt());
+   if (test==true)
+   {
     r = r.rehcerche(ui->IDE_mo->text().toInt());
+    ui->stackedWidget_7->setCurrentIndex(1);
     ui->nom_m_2->setText(r.getNom());
    // QString stringPrix = QString::number(r.getPrix());
     ui->prix_m_2->setText(r.getPrix());
     ui->marque_m_2->setText(r.getMarque());
     ui->caracteristique_m_2->setText(r.getCaracteristique());  
-    ui->etat_m_2->setCurrentText(r.getEtat());
+    ui->etat_m_2->setCurrentText(r.getEtat());}
 
 
 }
@@ -166,6 +201,10 @@ void accueil::on_modifier_eq_clicked()
 void accueil::on_supprimer_eq_clicked()
 {
     equipement s;
+    accueil b;
+     bool test = b.verif_modif("EQUIPEMENT","ID_EQUIPEMENT",ui->IDEs->text().toInt());
+     if (test==true)
+     {
     s.supprimer(ui->IDEs->text().toInt());
     ui->tableView->setModel(s.afficher());
     a=0;
@@ -176,7 +215,7 @@ void accueil::on_supprimer_eq_clicked()
     ui->stackedWidget_9->setCurrentIndex(0);
     ui->stackedWidget_10->setCurrentIndex(0);
     ui->stackedWidget_10->show();
-    a=1;
+    a=1;}
 }
 
 void accueil::on_modifier_valide_m_clicked()
@@ -258,6 +297,7 @@ void accueil::on_ajouter_eq_clicked()
 void accueil::on_ajouter_rep_clicked()
 {
    reparateur t;
+
     t.setNom(ui->nom_rep->text());
     t.setPrenom(ui->prenom_rep->text());
     t.setTelephone(ui->tel_rep->text());
@@ -355,8 +395,13 @@ void accueil::on_modifier_valide_m_2_clicked()
 
 void accueil::on_modifier_eq_2_clicked()
 {
-    ui->stackedWidget_7_2->setCurrentIndex(1);
+
   reparateur r;
+  accueil a;
+   bool test = a.verif_modif("REPARATEUR","ID_REPARATEUR",ui->IDE_mo_2->text().toInt());
+   if (test==true)
+   {
+  ui->stackedWidget_7_2->setCurrentIndex(1);
     r = r.rehcerche(ui->IDE_mo_2->text().toInt());
     ui->nom_m_rep->setText(r.getNom());
     ui->prenom_m_rep->setText(r.getPrenom());
@@ -365,12 +410,16 @@ void accueil::on_modifier_eq_2_clicked()
     ui->societe_m_rep->setText(r.getSociete());
     ui->specialite_m_rep->setText(r.getSpecialite());
     ui->email_m_rep->setText(r.getEmail());
-
+}
 }
 
 void accueil::on_supprimer_eq_2_clicked()
 {
     reparateur s;
+    accueil b;
+     bool test = b.verif_modif("REPARATEUR","ID_REPARATEUR",ui->IDEs_2->text().toInt());
+     if (test==true)
+     {
     s.supprimer(ui->IDEs_2->text().toInt());
     ui->tableView_2->setModel(s.afficher());
     a=0;
@@ -381,7 +430,7 @@ void accueil::on_supprimer_eq_2_clicked()
     ui->stackedWidget_9_2->setCurrentIndex(0);
     ui->stackedWidget_10_2->setCurrentIndex(0);
     ui->stackedWidget_10_2->show();
-    a=1;
+    a=1;}
 }
 
 void accueil::on_tabWidget_currentChanged(int index)
@@ -476,19 +525,28 @@ void accueil::on_toolBox_4_3_currentChanged(int index)
 
 void accueil::on_modifier_eq_3_clicked()
 {
-    ui->stackedWidget_7_3->setCurrentIndex(1);
+
   reparation r;
+  accueil a;
+  bool test = a.verif_modif("REPARATION","ID_REPARATION",ui->IDE_mo_3->text().toInt());
+  if (test==true)
+  {
+  ui->stackedWidget_7_3->setCurrentIndex(1);
     r = r.rehcerche(ui->IDE_mo_3->text().toInt());
     ui->nom_reparation_m->setText(r.getNom());
     ui->prix_reparation_m->setText(r.getPrix());
     ui->dateL_m->setText(r.getDateLivraison());
     ui->dateR_m->setText(r.getDateReception());
-
+}
 }
 
 void accueil::on_supprimer_eq_3_clicked()
 {
     reparation s;
+    accueil b;
+     bool test = b.verif_modif("REPARATION","ID_REPARATION",ui->IDEs_3->text().toInt());
+     if (test==true)
+     {
     s.supprimer(ui->IDEs_3->text().toInt());
     ui->tableView_3->setModel(s.afficher());
     a=0;
@@ -499,7 +557,7 @@ void accueil::on_supprimer_eq_3_clicked()
     ui->stackedWidget_9_3->setCurrentIndex(0);
     ui->stackedWidget_10_3->setCurrentIndex(0);
     ui->stackedWidget_10_3->show();
-    a=1;
+    a=1;}
 }
 
 void accueil::on_modifier_valide_m_3_clicked()

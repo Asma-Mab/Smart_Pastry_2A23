@@ -114,6 +114,7 @@ private:
     int a;
      QPropertyAnimation *animation;
      QPropertyAnimation *animation1;
+     bool verif_modif(QString,QString,int);
 
 
 };

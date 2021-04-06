@@ -270,24 +270,3 @@ QVector<double> equipement::prix_equipement()
 
  return a;
 }
-
-QVector<QString> equipement::nom_equipement()
-{   QVector<QString> a;
-    QSqlQuery query;
-    query.prepare("select NOM from EQUIPEMENT WHERE etat = 'en panne' order by ID_EQUIPEMENT ");
-    if (query.exec() ){
-    while(query.next() ){
-         a << query.value(0).toString();}
-    }
-    return a;
-}
-int equipement::count()
-{  QSqlQuery query;
-    int i=0;
-    query.prepare("select NOM from EQUIPEMENT WHERE etat = 'en panne' order by ID_EQUIPEMENT ");
-    if (query.exec() ){
-    while(query.next() ){
-         i++;}
-    }
-    return i;
-}

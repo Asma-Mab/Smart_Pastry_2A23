@@ -139,6 +139,16 @@ border-radius:20px;</string>
     <string/>
    </property>
   </widget>
+  <widget class="stati" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>80</y>
+     <width>301</width>
+     <height>171</height>
+    </rect>
+   </property>
+  </widget>
   <zorder>label_RedEq2_4</zorder>
   <zorder>label_3</zorder>
   <zorder>widget</zorder>
@@ -146,7 +156,16 @@ border-radius:20px;</string>
   <zorder>label_2</zorder>
   <zorder>label_redEq_5</zorder>
   <zorder>label_AjEq_5</zorder>
+  <zorder>widget_2</zorder>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>stati</class>
+   <extends>QWidget</extends>
+   <header>stati.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

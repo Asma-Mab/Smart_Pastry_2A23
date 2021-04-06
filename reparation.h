@@ -52,6 +52,7 @@ public:
     bool verif_date(QString);
     int mois(int,int);
     void pdf(QString,QString,QString,QString,reparation );
+    QVector<double> prix_reparation();
 };
 
 

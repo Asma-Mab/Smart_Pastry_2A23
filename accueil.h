@@ -7,6 +7,7 @@
 #include <QPrinter>
 #include "stati.h"
 #include "smtp.h"
+
 #include <QPropertyAnimation>
 QT_BEGIN_NAMESPACE
 namespace Ui { class accueil; }
@@ -21,6 +22,8 @@ public:
     ~accueil();
 
 private slots:
+
+void make();
     void on_button_profil_clicked();
 
     void on_button_employe_clicked();

@@ -23,7 +23,7 @@ SOURCES += \
     reparateur.cpp \
     reparation.cpp \
     smtp.cpp \
-    stati.cpp
+    qcustomplot.cpp
 
 HEADERS += \
     accueil.h \
@@ -32,11 +32,10 @@ HEADERS += \
     reparateur.h \
     reparation.h \
     smtp.h \
-    stati.h
+    qcustomplot.h
 
 FORMS += \
-    accueil.ui \
-    stati.ui
+    accueil.ui
 
 libcrypto.so
 libssl.so

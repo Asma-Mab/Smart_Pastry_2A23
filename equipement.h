@@ -18,6 +18,7 @@
 #include "connexion.h"
 #include "accueil.h"
 #include "ui_accueil.h"
+#include <QPrinter>
 class equipement
 {
 private :
@@ -63,8 +64,9 @@ public:
     bool verif_date(QString date_d);
     bool verif_nom(QString ch_nom);
     bool verif_id(QString ch_id);
-
-
+    QVector<double> prix_equipement();
+    QVector<QString> nom_equipement();
+    int count();
 };
 
 #endif // TRANSACTION_H

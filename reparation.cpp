@@ -103,10 +103,16 @@ QString getPrix ();
     bool reparation::supprimer(int id){
         QSqlQuery query;
         QString stringId = QString::number(id);
-
+        reparation r;
+        r=r.rehcerche(id);
+        QString stringIde = QString::number(r.getId_equipement());
         query.prepare("DELETE FROM reparation WHERE ID_REPARATION=?");
         query.addBindValue(stringId);
-
+        QSqlQuery edit;
+        edit.prepare("update EQUIPEMENT set  ETAT=:ETAT where ID_EQUIPEMENT = :ID");
+        edit.bindValue(":ETAT","en marche");
+        edit.bindValue(":ID",stringIde);
+        edit.exec();
         return query.exec();
     }
 
@@ -328,4 +334,18 @@ void reparation::pdf(QString str,QString ids,QString nom,QString prenom,reparati
     QTextDocument doc;
     doc.setHtml(str) ;
     doc.print(&printer);
+}
+
+QVector<double> reparation::prix_reparation()
+{
+    QVector<double> a;
+    QSqlQuery query;
+    query.prepare("select PRIX_REPARATION from REPARATION order by ID_EQUIPEMENT ");
+
+    if (query.exec()){
+    while(query.next()){
+        a << 0.0009975*query.value(0).toInt();}
+    }
+     return a;
+
 }

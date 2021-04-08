@@ -43,9 +43,9 @@ QT_MOC_LITERAL(7, 140, 30), // "on_button_fournisseurs_clicked"
 QT_MOC_LITERAL(8, 171, 27), // "on_button_evenement_clicked"
 QT_MOC_LITERAL(9, 199, 25), // "on_button_recette_clicked"
 QT_MOC_LITERAL(10, 225, 25), // "on_button_quitter_clicked"
-QT_MOC_LITERAL(11, 251, 28), // "on_button_evaluation_clicked"
-QT_MOC_LITERAL(12, 280, 34), // "on_pushButton_affichereval_cl..."
-QT_MOC_LITERAL(13, 315, 24), // "on_supprimereval_clicked"
+QT_MOC_LITERAL(11, 251, 24), // "on_supprimereval_clicked"
+QT_MOC_LITERAL(12, 276, 28), // "on_button_evaluation_clicked"
+QT_MOC_LITERAL(13, 305, 34), // "on_pushButton_affichereval_cl..."
 QT_MOC_LITERAL(14, 340, 23), // "on_modifiereval_clicked"
 QT_MOC_LITERAL(15, 364, 24), // "on_tableView_2_activated"
 QT_MOC_LITERAL(16, 389, 11), // "QModelIndex"
@@ -64,9 +64,9 @@ QT_MOC_LITERAL(20, 460, 18) // "on_sendBtn_clicked"
     "on_button_evenement_clicked\0"
     "on_button_recette_clicked\0"
     "on_button_quitter_clicked\0"
+    "on_supprimereval_clicked\0"
     "on_button_evaluation_clicked\0"
     "on_pushButton_affichereval_clicked\0"
-    "on_supprimereval_clicked\0"
     "on_modifiereval_clicked\0"
     "on_tableView_2_activated\0QModelIndex\0"
     "index\0on_pushButton_clicked\0"
@@ -144,9 +144,9 @@ void accueil::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 6: _t->on_button_evenement_clicked(); break;
         case 7: _t->on_button_recette_clicked(); break;
         case 8: _t->on_button_quitter_clicked(); break;
-        case 9: _t->on_button_evaluation_clicked(); break;
-        case 10: _t->on_pushButton_affichereval_clicked(); break;
-        case 11: _t->on_supprimereval_clicked(); break;
+        case 9: _t->on_supprimereval_clicked(); break;
+        case 10: _t->on_button_evaluation_clicked(); break;
+        case 11: _t->on_pushButton_affichereval_clicked(); break;
         case 12: _t->on_modifiereval_clicked(); break;
         case 13: _t->on_tableView_2_activated((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
         case 14: _t->on_pushButton_clicked(); break;

@@ -30,3 +30,9 @@ private:
 };
 
 #endif // STATI_H
+/*void stati::on_pushButton_clicked()
+{
+    hide();
+
+
+}*/

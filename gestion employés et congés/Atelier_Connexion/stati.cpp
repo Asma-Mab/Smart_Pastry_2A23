@@ -13,11 +13,9 @@ stati::~stati()
     delete ui;
 }
 int stati::Statistique_partie2()
-{
-    QSqlQuery query;
-    int count=0 ;
+{    int count=0 ;
 
-    QSqlQuery requete("SELECT * FROM employe INNER JOIN conge ON employe.cin=conge.cin_employe where conge.date_retour>TO_CHAR(SYSDATE,'DD-MM-YYYY')") ;
+    QSqlQuery requete("SELECT * FROM employe INNER JOIN conge ON employe.cin=conge.cin_employe where to_date(conge.date_retour,'DD-MM-YYYY')>to_date(SYSDATE,'DD-MM-YYYY')") ;
     while(requete.next())
     {
             count++ ;
@@ -30,10 +28,9 @@ return count ;
 }
 int stati::Statistique_partie3()
 {
-    QSqlQuery query;
-    int c=0 ;
     QSqlQuery requete("select * from employe") ;
-    while(requete.next())
+     int c=0 ;
+     while(requete.next())
     {
             c++ ;
     }
@@ -70,10 +67,10 @@ void stati::paintEvent(QPaintEvent *)
 
     painter.setBrush(Qt::red);
     painter.drawPie(size,0,16*y);
-    ui->label_2->setText("En congé") ;
+    ui->label_2->setText("En congé");
     painter.setBrush(Qt::blue);
     painter.drawPie(size,16*y,16*m);
-    ui->label_3->setText("En travail") ;
+    ui->label_3->setText("En travail");
 
 
 }
@@ -82,6 +79,4 @@ void stati::paintEvent(QPaintEvent *)
 void stati::on_pushButton_clicked()
 {
     hide();
-
-
 }

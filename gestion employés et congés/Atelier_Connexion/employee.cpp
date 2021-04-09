@@ -190,6 +190,24 @@ bool Employee::verif_nom(QString ch_nom){
                 return  test;
         }
     }
-  }
+    }
+    return  test;
+}
+bool Employee::verif_mail(QString ch_nom){
+    bool test=true;
+    int i;
+    int c=0;
+    if(true)
+    {
+        for(i=0;i<ch_nom.length();i++){
+            if(!(ch_nom[i]=='@')){
+                c=1;
+                if(c==1)
+                {
+                test=false;}
+                return  test;
+        }
+    }
+    }
     return  test;
 }

@@ -323,8 +323,8 @@ void  MainWindow::browse()
 
 }
 void   MainWindow::sendMail()
-{
-    Smtp* smtp = new Smtp("farah.braiki@esprit.tn",ui->mail_pass->text(), "smtp.gmail.com");
+{     ui->anim->setText("Sending...") ;
+    Smtp* smtp = new Smtp("farah.braiki@esprit.tn","191JFT4636", "smtp.gmail.com");
     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
     if( !files.isEmpty() )
@@ -336,7 +336,14 @@ void   MainWindow::mailSent(QString status)
 {
 
     if(status == "Message sent")
-        QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+      //  QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+    {animation = new QPropertyAnimation(ui->anim,"geometry");
+        ui->anim->setText("Email sent!") ;
+        animation->setDuration(1000);
+        animation->setStartValue(ui->anim->geometry());
+        animation->setEndValue(QRect(200,200,100,50));
+        animation->start();
+    }
     ui->rcpt->clear();
     ui->subject->clear();
     ui->file->clear();
@@ -420,7 +427,9 @@ void MainWindow::on_pushButton_4_clicked()
            str.append("</p></font>") ;
            str.append("<hr>") ;
            str.append("<br>") ;
-           str.append("<img src='Desktop/fff.png' width='100' height='133'>");
+           str.append("<img src=':/img/img/signature.jpg' width='200' height='200'>");
+           str.append("<center><img src=':/img/img/fff.png' width='500' height='400'></center>");
+
 
 
 
@@ -443,7 +452,14 @@ void MainWindow::on_pushButton_4_clicked()
 }
 
 void MainWindow::on_pushButton_2_clicked()
-{
+{  QMediaPlayer * music=new QMediaPlayer();
+    music->setMedia(QUrl("qrc:/sounds/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    music->play();
    stati s;
    s.exec();
+}
+
+void MainWindow::on_anim_clicked()
+{
+    ui->anim->setVisible(false);
 }

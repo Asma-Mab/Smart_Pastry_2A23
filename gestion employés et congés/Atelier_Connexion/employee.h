@@ -55,6 +55,7 @@ public:
     bool verif_tel_et_cin(QString);
     bool verif_date(QString);
     bool verif_nom(QString);
+    bool verif_mail(QString);
     QSqlQueryModel * afficher();
     QSqlQueryModel * afficher11();
 

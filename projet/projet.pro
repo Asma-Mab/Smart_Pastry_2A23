@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connexion.cpp \
+    dialog.cpp \
     employee.cpp \
     login.cpp \
     main.cpp \
@@ -25,11 +26,13 @@ SOURCES += \
 HEADERS += \
     accueil.h \
     connexion.h \
+    dialog.h \
     employee.h \
     login.h
 
 FORMS += \
     accueil.ui \
+    dialog.ui \
     login.ui
 
 # Default rules for deployment.

@@ -1,4 +1,6 @@
 #include "login.h"
+#include "dialog.h"
+
 
 #include<QDialog>
 #include "ui_login.h"
@@ -49,8 +51,8 @@ void login::on_login_2_clicked()
   qDebug()<<a;
     if(a==1)
     {
-        accueil acc;
-        acc.show();
+        Dialog d;
+        d.exec();
     }
 
 }

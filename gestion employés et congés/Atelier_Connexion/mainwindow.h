@@ -10,6 +10,7 @@
 #include<QObject>
 #include"employee.h"
 #include"conge.h"
+#include<QPropertyAnimation>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow;}
@@ -58,8 +59,11 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_anim_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QPropertyAnimation *animation;
     Employee E;
     conge c;
      QStringList files;

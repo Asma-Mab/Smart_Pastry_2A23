@@ -6,6 +6,7 @@
 #include "fournisseur.h"
 #include "smtp.h"
 #include "stati.h"
+#include <QPropertyAnimation>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -52,5 +53,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+      QPropertyAnimation *annimation;
 };
 #endif // MAINWINDOW_H

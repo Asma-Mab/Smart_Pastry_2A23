@@ -51,7 +51,8 @@ public:
     bool modifier(fournisseur);
     QSqlQueryModel * afficher();
     //fournisseur rehcerche(int);
-
+    bool verif_nom(QString ch_nom);
+    bool verif_mail(QString ch_nom);
     int lastId();
 };
 

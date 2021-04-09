@@ -1,4 +1,4 @@
-£#include "stati.h"
+#include "stati.h"
 #include "ui_stati.h"
 //#include"ui_dialog.h"
 #include<iostream>
@@ -72,10 +72,10 @@ void stati::paintEvent(QPaintEvent *)
 
     painter.setBrush(Qt::blue);
     painter.drawPie(size,0,16*y);
-    ui->label_2->setText("pii ") ;
+    ui->label_2->setText("cher") ;
     painter.setBrush(Qt::green);
     painter.drawPie(size,16*y,16*m);
-    ui->label_3->setText("En panne") ;
+    ui->label_3->setText("pas cher") ;
 
 
 }

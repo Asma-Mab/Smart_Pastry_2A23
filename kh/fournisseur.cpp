@@ -58,19 +58,71 @@ QString getSPECIALITE ();
     bool fournisseur::ajouter(){
         QSqlQuery query;
        int l = lastId();
-        QString stringId = QString::number(this->ID_FOURNISSEUR);
-        QString TEL = QString::number(this->TELEPHONE);
+        QString stringId = QString::number(l);
+        bool test,test1,test2;
+        fournisseur s;
+        test=s.verif_nom(this->NOM);
+        test1=s.verif_nom(this->PRENOM);
+        test2=s.verif_mail(this->EMAIL);
+        if(test == false)
+        {
+            QMessageBox::information(nullptr, QObject::tr("erreur"),
+                        QObject::tr("nom invalide.\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+        }else if(test1 == false)
+        {
+            QMessageBox::information(nullptr, QObject::tr("erreur"),
+                        QObject::tr("prenom invalide.\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+        }
+       /* else if(test2 == false)
+        {
+            QMessageBox::information(nullptr, QObject::tr("erreur"),
+                        QObject::tr("mail invalide.\n"
+                                    "Click Cancel to exit."), QMessageBox::Cancel);
+        }*/
+        else{
+        //QString TEL = QString::number(this->TELEPHONE);
         query.prepare("INSERT INTO fournisseur VALUES (?,?, ?, ?, ?, ?)");
-        query.addBindValue(l);
+        query.addBindValue(stringId);
         query.addBindValue(this->NOM);
         query.addBindValue(this->PRENOM);
-        query.addBindValue(this->TELEPHONE);
         query.addBindValue(this->EMAIL);
+        query.addBindValue(this->TELEPHONE);
         query.addBindValue(this->SPECIALITE );
-
+         }
         return query.exec();
 }
 
+    bool fournisseur::verif_mail(QString ch_nom)
+{
+        bool test=false;
+        int i;
+        if(false)
+        {
+            for(i=0;i<ch_nom.length();i++){
+                if(ch_nom[i]=="@"){
+                    test=true;
+                    return  test;
+            }
+        }
+      }
+        return  test;
+    }
+    bool fournisseur::verif_nom(QString ch_nom){
+        bool test=true;
+        int i;
+        if(true)
+        {
+            for(i=0;i<ch_nom.length();i++){
+                if(!(((ch_nom[i]>='A')&&(ch_nom[i]<='Z'))||((ch_nom[i]>='a')&&(ch_nom[i]<='z'))||(ch_nom[i]==' '))){
+                    test=false;
+                    return  test;
+            }
+        }
+      }
+        return  test;
+    }
     bool fournisseur::supprimer(int id){
         QSqlQuery query;
         QString stringId = QString::number(id);
@@ -85,12 +137,13 @@ QString getSPECIALITE ();
         QSqlQuery edit;
 
 
-                          edit.prepare("update fournisseur set NOM = :NOM,TELEPHONE=:TELEPHONE, PRENOM=:PRENOM , SPECIALITE=:SPECIALITE where ID_FOURNISSEUR = :ID");
+                          edit.prepare("update fournisseur set NOM = :NOM, PRENOM=:PRENOM, EMAIL=:EMAIL ,TELEPHONE=:TELEPHONE , SPECIALITE=:SPECIALITE where ID_FOURNISSEUR = :ID");
 
                           edit.bindValue(":ID",a.getID_FOURNISSEUR());
                           edit.bindValue(":NOM",a.getNOM());
                           edit.bindValue(":TELEPHONE",a.getTELEPHONE());
                           edit.bindValue(":PRENOM",a.getPRENOM());
+                          edit.bindValue(":EMAIL",a.getEMAIL());
                           edit.bindValue(":SPECIALITE",a.getSPECIALITE());
                           return    edit.exec();
 
@@ -107,9 +160,9 @@ QSqlQueryModel * fournisseur::afficher(){
     model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID_FOURNISSEUR"));
     model->setHeaderData(1, Qt::Horizontal,QObject::tr("NOM"));
     model->setHeaderData(2, Qt::Horizontal,QObject::tr("PRENOM"));
-    model->setHeaderData(3, Qt::Horizontal,QObject::tr("TELEPHONE"));
-    model->setHeaderData(4, Qt::Horizontal,QObject::tr("EMAIL"));
-    model->setHeaderData(6, Qt::Horizontal,QObject::tr("SPECIALITE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("EMAIL"));
+    model->setHeaderData(4, Qt::Horizontal,QObject::tr("TELEPHONE"));
+    model->setHeaderData(5, Qt::Horizontal,QObject::tr("SPECIALITE"));
     //model->setHeaderData(7, Qt::Horizontal,QObject::tr("modifier"));
 
 

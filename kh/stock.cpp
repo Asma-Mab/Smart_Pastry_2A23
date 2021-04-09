@@ -52,7 +52,17 @@ int getPRIX();
 
     bool stock::ajouter(){
         QSqlQuery query;
+       bool test;
+       stock s;
+       test=s.verif_nom(this->NOM_MP);
 
+       if(test == false)
+       {
+           QMessageBox::information(nullptr, QObject::tr("erreur"),
+                       QObject::tr("nom invalide.\n"
+                                   "Click Cancel to exit."), QMessageBox::Cancel);
+       }
+       else{
         query.prepare("INSERT INTO stock VALUES (?, ?, ? , ?, ?, ?)");
        query.addBindValue(this->REFERENCE );
         query.addBindValue(this->ID_FOURNISSEUR);
@@ -60,7 +70,7 @@ int getPRIX();
         query.addBindValue(this->QUANTITE);
         query.addBindValue(this->DATE_ACHAT);
         query.addBindValue(this->PRIX);
-
+    }
 
         return query.exec();
 }
@@ -102,9 +112,9 @@ QSqlQueryModel * stock::afficher(){
     model->setHeaderData(0, Qt::Horizontal,QObject::tr("REFERENCE"));
     model->setHeaderData(1, Qt::Horizontal,QObject::tr("ID_FOURNISSEUR"));
     model->setHeaderData(2, Qt::Horizontal,QObject::tr("NOM_MP"));
-    model->setHeaderData(5, Qt::Horizontal,QObject::tr("QUANTITE"));
+    model->setHeaderData(3, Qt::Horizontal,QObject::tr("QUANTITE"));
     model->setHeaderData(4, Qt::Horizontal,QObject::tr("DATE_ACHAT"));
-     model->setHeaderData(3, Qt::Horizontal,QObject::tr("PRIX"));
+     model->setHeaderData(5, Qt::Horizontal,QObject::tr("PRIX"));
 
 
 

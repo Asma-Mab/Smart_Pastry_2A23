@@ -7,7 +7,7 @@
 #include <QPrinter>
 #include "stati.h"
 #include "smtp.h"
-
+#include <QMediaPlayer>
 #include <QPropertyAnimation>
 QT_BEGIN_NAMESPACE
 namespace Ui { class accueil; }
@@ -112,11 +112,20 @@ void make();
 
         void on_mailing_2_clicked();
 
+        void on_play_music_clicked();
+
+        void on_stop_music_clicked();
+
+        void on_horizontalSlider_sliderMoved(int position);
+
+        void on_ajouter_rep_9_clicked();
+
 private:
     Ui::accueil *ui;
     int a;
      QPropertyAnimation *animation;
      QPropertyAnimation *animation1;
+     QMediaPlayer* player;
      bool verif_modif(QString,QString,int);
 
 

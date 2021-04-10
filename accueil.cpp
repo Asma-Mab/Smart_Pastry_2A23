@@ -17,6 +17,8 @@ accueil::accueil(QWidget *parent)
 
 
     ui->setupUi(this);
+    player = new QMediaPlayer(this);
+
     ui->button_profil->setFocus();
     ui->stackedWidget->setCurrentIndex(0);
      ui->valstack->setCurrentIndex(0);
@@ -866,7 +868,7 @@ void accueil::make()
     // prepare y axis:
     ui->customPlot->yAxis->setRange(0, 9.68);
     ui->customPlot->yAxis->setPadding(5); // a bit more space to the left border
-    ui->customPlot->yAxis->setLabel("Milles dinars tunisien / Equipement");
+    ui->customPlot->yAxis->setLabel("Milles dinars tunisien / Equipement en panne");
     ui->customPlot->yAxis->setBasePen(QPen(Qt::white));
     ui->customPlot->yAxis->setTickPen(QPen(Qt::white));
     ui->customPlot->yAxis->setSubTickPen(QPen(Qt::white));
@@ -903,3 +905,26 @@ void accueil::make()
     ui->customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
 }
 
+
+void accueil::on_play_music_clicked()
+{
+    player->setMedia(QUrl("qrc:/img/img/batchbug-sweet-dreams.mp3")) ;
+       player->play();
+       qDebug() << player->errorString();
+}
+
+void accueil::on_stop_music_clicked()
+{
+    player->stop();
+}
+
+void accueil::on_horizontalSlider_sliderMoved(int position)
+{
+     player->setVolume(position);
+}
+
+
+void accueil::on_ajouter_rep_9_clicked()
+{
+    ui->consulter_eq->setCurrentIndex(0);
+}

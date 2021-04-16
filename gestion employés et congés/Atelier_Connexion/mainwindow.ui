@@ -55,7 +55,7 @@
       <x>20</x>
       <y>0</y>
       <width>551</width>
-      <height>381</height>
+      <height>411</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -96,7 +96,7 @@ border-top-right-radius:10px;
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="tabsClosable">
      <bool>false</bool>
@@ -127,14 +127,14 @@ border-top-right-radius:10px;
         <x>0</x>
         <y>0</y>
         <width>541</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="tabShape">
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -468,7 +468,7 @@ border-radius:10px;
          <string>Ajouter</string>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="ressources2.qrc">
           <normaloff>:/img/img/validate.png</normaloff>:/img/img/validate.png</iconset>
         </property>
         <property name="iconSize">
@@ -540,7 +540,7 @@ border-radius:10px;
           <x>0</x>
           <y>0</y>
           <width>531</width>
-          <height>301</height>
+          <height>331</height>
          </rect>
         </property>
         <property name="autoFillBackground">
@@ -608,10 +608,10 @@ selection-background-color: gray;</string>
        <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
-          <x>160</x>
+          <x>180</x>
           <y>230</y>
-          <width>75</width>
-          <height>23</height>
+          <width>91</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -634,6 +634,10 @@ border-radius:10px;
         </property>
         <property name="text">
          <string>supprimer</string>
+        </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/icons8-annuler-48.png</normaloff>:/img/img/icons8-annuler-48.png</iconset>
         </property>
        </widget>
        <widget class="QLineEdit" name="supcin">
@@ -748,9 +752,9 @@ selection-background-color: gray;</string>
         <property name="geometry">
          <rect>
           <x>440</x>
-          <y>60</y>
+          <y>52</y>
           <width>75</width>
-          <height>23</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -774,14 +778,18 @@ border-radius:10px;
         <property name="text">
          <string>Modifier</string>
         </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/icons8-modifier-48.png</normaloff>:/img/img/icons8-modifier-48.png</iconset>
+        </property>
        </widget>
        <widget class="QPushButton" name="pushButton_4">
         <property name="geometry">
          <rect>
           <x>440</x>
-          <y>180</y>
+          <y>230</y>
           <width>81</width>
-          <height>21</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -804,6 +812,10 @@ border-radius:10px;
         </property>
         <property name="text">
          <string>PDF</string>
+        </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/mod.png</normaloff>:/img/img/mod.png</iconset>
         </property>
        </widget>
        <widget class="QLabel" name="label_35">
@@ -902,8 +914,8 @@ border-radius:10px;
        <widget class="QLabel" name="label_19">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>175</y>
+          <x>280</x>
+          <y>230</y>
           <width>151</width>
           <height>31</height>
          </rect>
@@ -916,9 +928,9 @@ border-radius:10px;
         <property name="geometry">
          <rect>
           <x>440</x>
-          <y>210</y>
+          <y>270</y>
           <width>81</width>
-          <height>23</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -942,6 +954,10 @@ border-radius:10px;
         <property name="text">
          <string>Statistiques</string>
         </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/images.png</normaloff>:/img/img/images.png</iconset>
+        </property>
        </widget>
        <widget class="QTableView" name="tableView_11">
         <property name="geometry">
@@ -949,7 +965,7 @@ border-radius:10px;
           <x>0</x>
           <y>0</y>
           <width>531</width>
-          <height>301</height>
+          <height>331</height>
          </rect>
         </property>
         <property name="autoFillBackground">
@@ -961,6 +977,149 @@ border-radius: 10px;
 padding: 0 8px;
 background: white;
 selection-background-color: gray;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="load3">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>180</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 8pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Load</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_recherche">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>270</y>
+          <width>91</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Nexa Rust Sans Black 01</family>
+          <pointsize>8</pointsize>
+          <weight>10</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 8pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Rechercher</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/img/ressources/icons8-google-web-recherche-50.png</normaloff>:/img/ressources/icons8-google-web-recherche-50.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>30</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="rech">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>280</y>
+          <width>161</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> border: 1px solid gray;
+    font-size: 14px;
+    border-radius: 5px;</string>
+        </property>
+        <property name="placeholderText">
+         <string>CIN/date_entre/specialite</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="trie">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>200</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>CIN</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>NOM</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AGE</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>200</y>
+          <width>47</width>
+          <height>13</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Trier:</string>
         </property>
        </widget>
        <zorder>tableView_11</zorder>
@@ -984,6 +1143,11 @@ selection-background-color: gray;</string>
        <zorder>label_40</zorder>
        <zorder>label_19</zorder>
        <zorder>pushButton_2</zorder>
+       <zorder>load3</zorder>
+       <zorder>pushButton_recherche</zorder>
+       <zorder>rech</zorder>
+       <zorder>trie</zorder>
+       <zorder>label_20</zorder>
       </widget>
       <widget class="QWidget" name="tab_10">
        <attribute name="title">
@@ -1049,7 +1213,7 @@ font: bold, &quot;Comic Sans MS&quot;;</string>
          <string>Send</string>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="ressources2.qrc">
           <normaloff>:/img/img/validate.png</normaloff>:/img/img/validate.png</iconset>
         </property>
         <property name="iconSize">
@@ -1213,7 +1377,7 @@ font: bold, &quot;Comic Sans MS&quot;;</string>
           <x>0</x>
           <y>0</y>
           <width>531</width>
-          <height>301</height>
+          <height>331</height>
          </rect>
         </property>
         <property name="autoFillBackground">
@@ -1251,7 +1415,7 @@ selection-background-color: gray;</string>
         <x>0</x>
         <y>0</y>
         <width>551</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="tabShape">
@@ -1403,8 +1567,8 @@ selection-background-color: gray;</string>
          <rect>
           <x>310</x>
           <y>150</y>
-          <width>75</width>
-          <height>23</height>
+          <width>81</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1428,14 +1592,18 @@ border-radius:10px;
         <property name="text">
          <string>Ajouter </string>
         </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/icons8-plus-48.png</normaloff>:/img/img/icons8-plus-48.png</iconset>
+        </property>
        </widget>
        <widget class="QPushButton" name="load">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>60</y>
-          <width>75</width>
-          <height>23</height>
+          <x>250</x>
+          <y>50</y>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1513,7 +1681,7 @@ selection-background-color: gray;</string>
           <x>0</x>
           <y>10</y>
           <width>541</width>
-          <height>291</height>
+          <height>321</height>
          </rect>
         </property>
         <property name="autoFillBackground">
@@ -1551,7 +1719,7 @@ selection-background-color: gray;</string>
           <x>10</x>
           <y>30</y>
           <width>311</width>
-          <height>71</height>
+          <height>81</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1747,10 +1915,10 @@ selection-background-color: gray;</string>
        <widget class="QPushButton" name="modifierconge">
         <property name="geometry">
          <rect>
-          <x>460</x>
+          <x>450</x>
           <y>190</y>
-          <width>75</width>
-          <height>23</height>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1774,14 +1942,18 @@ border-radius:10px;
         <property name="text">
          <string>Modifier</string>
         </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/icons8-modifier-48.png</normaloff>:/img/img/icons8-modifier-48.png</iconset>
+        </property>
        </widget>
        <widget class="QPushButton" name="suppconge">
         <property name="geometry">
          <rect>
-          <x>360</x>
+          <x>350</x>
           <y>190</y>
-          <width>75</width>
-          <height>23</height>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1805,14 +1977,18 @@ border-radius:10px;
         <property name="text">
          <string>Supprimer</string>
         </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/icons8-effacer-26.png</normaloff>:/img/img/icons8-effacer-26.png</iconset>
+        </property>
        </widget>
        <widget class="QTableView" name="tableView_3">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>120</y>
+          <y>130</y>
           <width>311</width>
-          <height>81</height>
+          <height>91</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1827,9 +2003,9 @@ selection-background-color: gray;</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>220</y>
+          <y>240</y>
           <width>311</width>
-          <height>71</height>
+          <height>81</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -1844,7 +2020,7 @@ selection-background-color: gray;</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>200</y>
+          <y>220</y>
           <width>191</width>
           <height>16</height>
          </rect>
@@ -1857,7 +2033,7 @@ selection-background-color: gray;</string>
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>100</y>
+          <y>110</y>
           <width>191</width>
           <height>16</height>
          </rect>
@@ -1885,7 +2061,7 @@ selection-background-color: gray;</string>
           <x>0</x>
           <y>10</y>
           <width>541</width>
-          <height>291</height>
+          <height>321</height>
          </rect>
         </property>
         <property name="autoFillBackground">
@@ -1928,7 +2104,7 @@ selection-background-color: gray;</string>
       <x>590</x>
       <y>10</y>
       <width>551</width>
-      <height>371</height>
+      <height>401</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1963,7 +2139,7 @@ border-top-right-radius:10px;
 }</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab_13">
      <attribute name="title">
@@ -1975,7 +2151,7 @@ border-top-right-radius:10px;
         <x>0</x>
         <y>0</y>
         <width>551</width>
-        <height>331</height>
+        <height>361</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -2109,8 +2285,8 @@ selection-background-color: gray;</string>
          <rect>
           <x>300</x>
           <y>110</y>
-          <width>75</width>
-          <height>23</height>
+          <width>91</width>
+          <height>41</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -2134,6 +2310,10 @@ border-radius:10px;
         <property name="text">
          <string>Ajouter </string>
         </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/icons8-plus-48.png</normaloff>:/img/img/icons8-plus-48.png</iconset>
+        </property>
        </widget>
        <widget class="QLineEdit" name="lineEditc">
         <property name="geometry">
@@ -2156,7 +2336,7 @@ border-radius:10px;
           <x>0</x>
           <y>10</y>
           <width>541</width>
-          <height>281</height>
+          <height>311</height>
          </rect>
         </property>
         <property name="autoFillBackground">
@@ -2188,10 +2368,10 @@ selection-background-color: gray;</string>
        <widget class="QTableView" name="tableView_6">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>10</y>
-          <width>421</width>
-          <height>221</height>
+          <x>30</x>
+          <y>30</y>
+          <width>391</width>
+          <height>211</height>
          </rect>
         </property>
         <property name="autoFillBackground">
@@ -2208,10 +2388,10 @@ selection-background-color: gray;</string>
        <widget class="QPushButton" name="loading">
         <property name="geometry">
          <rect>
-          <x>450</x>
-          <y>50</y>
+          <x>440</x>
+          <y>100</y>
           <width>81</width>
-          <height>21</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -2236,6 +2416,29 @@ border-radius:10px;
          <string>Load</string>
         </property>
        </widget>
+       <widget class="QTableView" name="tableView_14">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>541</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+        </property>
+       </widget>
+       <zorder>tableView_14</zorder>
+       <zorder>tableView_6</zorder>
+       <zorder>loading</zorder>
       </widget>
      </widget>
     </widget>
@@ -2249,7 +2452,7 @@ border-radius:10px;
         <x>0</x>
         <y>0</y>
         <width>571</width>
-        <height>341</height>
+        <height>361</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -2366,10 +2569,10 @@ selection-background-color: gray;</string>
        <widget class="QPushButton" name="modifier_2">
         <property name="geometry">
          <rect>
-          <x>460</x>
-          <y>130</y>
+          <x>350</x>
+          <y>220</y>
           <width>75</width>
-          <height>23</height>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -2392,6 +2595,10 @@ border-radius:10px;
         </property>
         <property name="text">
          <string>Modifier</string>
+        </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/icons8-modifier-48.png</normaloff>:/img/img/icons8-modifier-48.png</iconset>
         </property>
        </widget>
        <widget class="QLineEdit" name="age_2">
@@ -2484,7 +2691,7 @@ border-radius:10px;
           <x>0</x>
           <y>0</y>
           <width>541</width>
-          <height>291</height>
+          <height>321</height>
          </rect>
         </property>
         <property name="autoFillBackground">
@@ -2535,7 +2742,7 @@ selection-background-color: gray;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/img/img/AA.jpg</pixmap>
+     <pixmap resource="ressources2.qrc">:/img/img/AA.jpg</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_48">
@@ -2551,7 +2758,7 @@ selection-background-color: gray;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>:/img/img/AA.jpg</pixmap>
+     <pixmap resource="ressources2.qrc">:/img/img/AA.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -2576,6 +2783,8 @@ selection-background-color: gray;</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="ressources2.qrc"/>
+ </resources>
  <connections/>
 </ui>

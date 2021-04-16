@@ -63,7 +63,14 @@ qDebug()<< music->errorString();
          E.setpassword(ui->mdp->text());
           E.setrole(ui->role->currentText());
          E.setspecialite(ui->specialite->text());
-         if(E.verif_tel_et_cin(ui->cin->text())==false){
+         if (E.verif_mail(ui->email->text())==false)
+               {
+                   QMessageBox::information(nullptr, QObject::tr("erreur"),
+                               QObject::tr("email invalide.\n"
+                                           "Click Cancel to exit."), QMessageBox::Cancel);
+
+               }
+         else if(E.verif_tel_et_cin(ui->cin->text())==false){
 
                 QMessageBox::critical(nullptr,QObject::tr("Ajouter un employe"),
                                                  QObject::tr("veuillez saisir correctement votre CIN.\n"
@@ -102,12 +109,14 @@ qDebug()<< music->errorString();
 void MainWindow::on_pushButton_clicked()
 {
     Employee E1;
+    conge c;
     QMediaPlayer * music=new QMediaPlayer();
     music->setMedia(QUrl("qrc:/sounds/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
     music->play();
     E1.setcin(ui->supcin->text().toInt());
 
           bool test=E1.supprimer(E1.getcin());
+          bool tesst=c.supprimer1(E1.getcin());
          if (test)
          {
 
@@ -360,8 +369,8 @@ void MainWindow::on_ajouterconge_2_clicked()
   qDebug()<< music->errorString();
          // t.setId_Employee(ui->lineEdit->text().toInt());
           c.setcin_employe(ui->lineEditc->text().toInt());
-          QString date_depart=ui->datedepart->date().toString("dd.MM.yyyy");
-          QString date_retour=ui->dateretour->date().toString("dd.MM.yyyy");
+          QString date_depart=ui->datedepart_2->date().toString("dd.MM.yyyy");
+          QString date_retour=ui->dateretour_2->date().toString("dd.MM.yyyy");
           c.setdate_depart(date_depart);
           c.setdate_retour(date_retour);
        c.setnature(ui->nature_3->currentText());
@@ -416,7 +425,7 @@ void MainWindow::on_pushButton_4_clicked()
            {
            str.append("  <b>"+QString("Je soussignée Mme:Braiki Farah")+"</b>"+ QString(",atteste par la présente que Mr/Mme ")+" ");
            str.append(query->value(1).toString()) ;
-           str.append(""+QString("né le ")+" ") ;
+           str.append(""+QString("né le <div>&nbsp;</div>")+" ") ;
            str.append(query->value(3).toString());
            str.append(""+QString("Titulaire de la CIN N° ")+"<br> ") ;
            str.append(query->value(0).toString());
@@ -427,7 +436,7 @@ void MainWindow::on_pushButton_4_clicked()
            str.append("</p></font>") ;
            str.append("<hr>") ;
            str.append("<br>") ;
-           str.append("<img src=':/img/img/signature.jpg' width='200' height='200'>");
+           str.append("<div></div><img src=':/img/img/signature.jpg' width='200' height='200'>");
            str.append("<center><img src=':/img/img/fff.png' width='500' height='400'></center>");
 
 
@@ -463,3 +472,42 @@ void MainWindow::on_anim_clicked()
 {
     ui->anim->setVisible(false);
 }
+void MainWindow::on_load3_clicked()
+{
+    Employee E;
+       QMediaPlayer * music=new QMediaPlayer();
+       music->setMedia(QUrl("qrc:/sounds/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+       music->play();
+
+           ui->tableView->setModel(E.afficher());
+}
+
+void MainWindow::on_pushButton_recherche_clicked()
+{
+    QSqlQuery q;
+    QSqlQueryModel *modal=new QSqlQueryModel();
+    QString mot =ui->rech->text();
+    q.prepare("select * from employe where (CIN LIKE '%"+mot+"%' or SPECIALITE LIKE '%"+mot+"%' or DATEENTR LIKE '%"+mot+"%' )");
+
+    q.exec() ;
+    modal->setQuery(q);
+    ui->tableView->setModel(modal);
+}
+
+void MainWindow::on_trie_currentIndexChanged(const QString &arg1)
+{
+    QSqlQuery q;
+    QSqlQueryModel *modal=new QSqlQueryModel();
+    QString mot =ui->trie->currentText();
+    if(mot=="CIN")
+    q.prepare("select * from employe order by CIN ");
+    else if(mot=="AGE")
+    q.prepare("select * from employe order by AGE ");
+    else
+        q.prepare("select * from employe order by NOM ");
+    q.exec() ;
+    modal->setQuery(q);
+    ui->tableView->setModel(modal);
+
+}
+

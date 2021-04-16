@@ -61,6 +61,12 @@ private slots:
 
     void on_anim_clicked();
 
+    void on_load3_clicked();
+
+    void on_pushButton_recherche_clicked();
+
+    void on_trie_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     QPropertyAnimation *animation;

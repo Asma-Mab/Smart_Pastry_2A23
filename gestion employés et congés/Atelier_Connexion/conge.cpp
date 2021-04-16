@@ -87,6 +87,13 @@
 
         return query.exec();
     }
+    bool conge::supprimer1(int cinn){
+        QSqlQuery query;
+        query.prepare("DELETE FROM CONGE WHERE CIN_EMPLOYE=:cinn");
+        query.bindValue(0,cinn);
+
+        return query.exec();
+    }
     bool conge::modifier()
     {
         QSqlQuery query;

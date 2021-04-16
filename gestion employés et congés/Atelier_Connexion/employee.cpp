@@ -87,6 +87,7 @@ bool Employee::supprimer(int cinn){
 
     return query.exec();
 }
+
 bool Employee::modifier()
 {
     QSqlQuery query;
@@ -193,21 +194,48 @@ bool Employee::verif_nom(QString ch_nom){
     }
     return  test;
 }
-bool Employee::verif_mail(QString ch_nom){
+bool Employee::verif_mail(QString email){
+
     bool test=true;
-    int i;
-    int c=0;
-    if(true)
-    {
-        for(i=0;i<ch_nom.length();i++){
-            if(!(ch_nom[i]=='@')){
-                c=1;
-                if(c==1)
-                {
-                test=false;}
-                return  test;
+    int i,j;
+   int pos1=0;
+   int pos2=0;
+   bool verif1=false;
+   bool verif2=false;
+       for(i=0;i<email.length();i++) {
+        if (!(((email[i]>='A')&&(email[i]<='Z'))||((email[i]>='a')&&((email[i]<='z')))||((email[i]>='0')&&(email[i]<='9'))||(email[i]=='@')||(email[i]=='.')))
+        {
+            test=false;
+
+
+
         }
+
+
     }
-    }
-    return  test;
-}
+
+        for(j=0;j<email.length();j++) {
+       if ((email[j]=='@')&&(pos1==0))
+       {
+           pos1=j;
+           verif1=true;
+
+       }
+
+       if ((email[j]=='.')&&(pos2==0))
+       {
+           pos2=j;
+           verif2=true;
+
+       }}
+
+       if ((verif1==false)||(verif2==false))
+       {
+           test=false;
+       }
+
+
+
+
+
+ return test;}

@@ -3,6 +3,8 @@
 #include <QPainter>
 #include <QSqlQuery>
 #include <QDialog>
+#include<QDate>
+#include<QDebug>
 using namespace std;
 
 namespace Ui {

@@ -55,6 +55,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     res.qrc \
-    ressources2.qrc
+    ressources2.qrc \
+    translations.qrc
 
 

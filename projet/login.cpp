@@ -45,6 +45,10 @@ void login::on_login_2_clicked()
      this->hide();
 
      }
+     else if(role=="EmployÃ©")
+     {}
+     else
+      {}
 }
 
     }

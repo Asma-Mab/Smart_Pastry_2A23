@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1">
+<TS version="2.1" language="ar" sourcelanguage="fr">
 <context>
     <name>MainWindow</name>
     <message>
         <location filename="mainwindow.ui" line="14"/>
         <source>MainWindow</source>
-        <translation type="unfinished"></translation>
+        <translation>النافذة الرئيسية</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="106"/>
         <source>Employés</source>
-        <translation type="unfinished"></translation>
+        <translation>الموظفين</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="147"/>
         <source>Ajouter employé</source>
-        <translation type="unfinished"></translation>
+        <translation>إضافة موظف</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="253"/>
         <source>Admin</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="258"/>
         <source>Employé</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="287"/>
@@ -35,63 +35,63 @@
         <location filename="mainwindow.ui" line="1098"/>
         <location filename="mainwindow.ui" line="2531"/>
         <source>CIN</source>
-        <translation type="unfinished"></translation>
+        <translation>بطاقة تعريف</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="300"/>
         <location filename="mainwindow.ui" line="911"/>
         <location filename="mainwindow.ui" line="2503"/>
         <source>Nom</source>
-        <translation type="unfinished"></translation>
+        <translation>الاسم</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="313"/>
         <location filename="mainwindow.ui" line="844"/>
         <location filename="mainwindow.ui" line="2475"/>
         <source>Prenom</source>
-        <translation type="unfinished"></translation>
+        <translation>اللقب</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="326"/>
         <source>Date nais:</source>
-        <translation type="unfinished"></translation>
+        <translation>تاريخ الميلاد</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="339"/>
         <location filename="mainwindow.ui" line="2629"/>
         <source>Age</source>
-        <translation type="unfinished"></translation>
+        <translation>سن</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="352"/>
         <source>Specialité</source>
-        <translation type="unfinished"></translation>
+        <translation>تخصص</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="380"/>
         <source>Email</source>
-        <translation type="unfinished"></translation>
+        <translation>بريد إلكتروني</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="393"/>
         <location filename="mainwindow.ui" line="2685"/>
         <source>Password</source>
-        <translation type="unfinished"></translation>
+        <translation>كلمه السر</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="424"/>
         <source>Date entrée:</source>
-        <translation type="unfinished"></translation>
+        <translation>تاريخ الدخول</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="437"/>
         <source>Role</source>
-        <translation type="unfinished"></translation>
+        <translation>وظيفة</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="468"/>
         <source>Ajouter</source>
-        <translation type="unfinished"></translation>
+        <translation>إضافة </translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="521"/>

@@ -144,24 +144,24 @@
     <message>
         <location filename="mainwindow.ui" line="924"/>
         <source>Générer attestation de travail:</source>
-        <translation></translation>
+        <translation>Generate attestation</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="955"/>
         <source>Statistiques</source>
-        <translation></translation>
+        <translation>satistics</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1010"/>
         <location filename="mainwindow.ui" line="1628"/>
         <location filename="mainwindow.ui" line="2416"/>
         <source>Load</source>
-        <translation></translation>
+        <translation>Load</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1049"/>
         <source>Rechercher</source>
-        <translation></translation>
+        <translation>search</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1077"/>
@@ -181,7 +181,7 @@
     <message>
         <location filename="mainwindow.ui" line="1122"/>
         <source>Trier:</source>
-        <translation></translation>
+        <translation>Sort</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1154"/>
@@ -221,7 +221,7 @@
     <message>
         <location filename="mainwindow.ui" line="1308"/>
         <source>Adresse email</source>
-        <translation></translation>
+        <translation>mail adress</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1331"/>
@@ -237,39 +237,39 @@
         <location filename="mainwindow.ui" line="1410"/>
         <location filename="mainwindow.ui" line="2146"/>
         <source>Congés</source>
-        <translation></translation>
+        <translation>work vacation</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1429"/>
         <source>Ajouter Congé</source>
-        <translation></translation>
+        <translation>add vacation</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1441"/>
         <location filename="mainwindow.ui" line="2174"/>
         <source>Cin employé</source>
-        <translation></translation>
+        <translation>CIN employee</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1454"/>
         <location filename="mainwindow.ui" line="1899"/>
         <location filename="mainwindow.ui" line="2239"/>
         <source>Date_depart</source>
-        <translation></translation>
+        <translation>departure date</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1467"/>
         <location filename="mainwindow.ui" line="1912"/>
         <location filename="mainwindow.ui" line="2280"/>
         <source>Date_retour</source>
-        <translation></translation>
+        <translation>return date</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1480"/>
         <location filename="mainwindow.ui" line="1789"/>
         <location filename="mainwindow.ui" line="2252"/>
         <source>Nature</source>
-        <translation></translation>
+        <translation>vacation type</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1501"/>
@@ -321,18 +321,18 @@
         <location filename="mainwindow.ui" line="1562"/>
         <location filename="mainwindow.ui" line="1817"/>
         <source>Confirmation</source>
-        <translation></translation>
+        <translation>Confirmation</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1593"/>
         <location filename="mainwindow.ui" line="2311"/>
         <source>Ajouter </source>
-        <translation></translation>
+        <translation>Add</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1714"/>
         <source>Consulter demandes de congés</source>
-        <translation></translation>
+        <translation>Check vacation requests list</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="1776"/>
@@ -342,47 +342,47 @@
     <message>
         <location filename="mainwindow.ui" line="1978"/>
         <source>Supprimer</source>
-        <translation></translation>
+        <translation>delete</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="2029"/>
         <source>Demandes refusées </source>
-        <translation></translation>
+        <translation>refused requests</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="2042"/>
         <source>Demandes acceptées </source>
-        <translation></translation>
+        <translation>accepted requests</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="2055"/>
         <source>Demandes en attentes</source>
-        <translation></translation>
+        <translation>pending request</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="2162"/>
         <source>Demander congé</source>
-        <translation></translation>
+        <translation>Request a vacation</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="2366"/>
         <source>Consulter Etats de demandes</source>
-        <translation></translation>
+        <translation>Check requests</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="2447"/>
         <source>Gérer profil</source>
-        <translation></translation>
+        <translation>manage profile</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="2463"/>
         <source>Consulter Profil</source>
-        <translation></translation>
+        <translation>Check profile</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="2726"/>
         <source>Chat</source>
-        <translation></translation>
+        <translation>chat box</translation>
     </message>
 </context>
 <context>
@@ -538,7 +538,7 @@ Click Cancel to exit.</source>
         <location filename="mainwindow.cpp" line="69"/>
         <source>email invalide.
 Click Cancel to exit.</source>
-        <translation></translation>
+        <translation>Invalid email</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="75"/>
@@ -547,37 +547,37 @@ Click Cancel to exit.</source>
         <location filename="mainwindow.cpp" line="91"/>
         <location filename="mainwindow.cpp" line="98"/>
         <source>Ajouter un employe</source>
-        <translation></translation>
+        <translation>Add employee</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="76"/>
         <source>veuillez saisir correctement votre CIN.
 Click Cancel to exit .</source>
-        <translation></translation>
+        <translation>would you please check your CIN</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="82"/>
         <source>veuillez saisir correctement votre Numero.
 Click Cancel to exit .</source>
-        <translation></translation>
+        <translation>Check your phone number please</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="86"/>
         <source>veuillez saisir votre specialite.
 Click Cancel to exit .</source>
-        <translation></translation>
+        <translation>check your speciality Click Cancel to exit </translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="92"/>
         <source>veuillez saisir correctement votre nom.
 Click Cancel to exit .</source>
-        <translation></translation>
+        <translation>check your name Click Cancel to exit .</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="99"/>
         <source>veuillez saisir correctement votre prenom.
 Click Cancel to exit .</source>
-        <translation></translation>
+        <translation>check your last name Click Cancel to exit .</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="123"/>
@@ -665,7 +665,7 @@ Click ok to exit.</source>
     <message>
         <location filename="stati.ui" line="14"/>
         <source>Dialog</source>
-        <translation></translation>
+        <translation>Statistics</translation>
     </message>
     <message>
         <location filename="stati.ui" line="32"/>
@@ -676,7 +676,7 @@ Click ok to exit.</source>
     <message>
         <location filename="stati.ui" line="577"/>
         <source>Fermer</source>
-        <translation></translation>
+        <translation>Close</translation>
     </message>
 </context>
 </TS>

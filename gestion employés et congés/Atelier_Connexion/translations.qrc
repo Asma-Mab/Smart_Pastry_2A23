@@ -3,5 +3,6 @@
         <file>arabic.ts</file>
         <file>frensh.ts</file>
         <file>english.qm</file>
+        <file>arabic.qm</file>
     </qresource>
 </RCC>

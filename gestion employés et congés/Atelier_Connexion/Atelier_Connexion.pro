@@ -26,6 +26,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    chat.cpp \
     conge.cpp \
     connection.cpp \
     employee.cpp \
@@ -36,6 +37,7 @@ SOURCES += \
 
 
 HEADERS += \
+    chat.h \
     conge.h \
     connection.h \
     employee.h \

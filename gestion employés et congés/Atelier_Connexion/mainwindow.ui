@@ -134,7 +134,7 @@ border-top-right-radius:10px;
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -2139,7 +2139,7 @@ border-top-right-radius:10px;
 }</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab_13">
      <attribute name="title">
@@ -2456,7 +2456,7 @@ selection-background-color: gray;</string>
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_14">
        <attribute name="title">
@@ -2723,8 +2723,185 @@ selection-background-color: gray;</string>
       </widget>
       <widget class="QWidget" name="tab_15">
        <attribute name="title">
-        <string>Chat</string>
+        <string>Boite de discussion</string>
        </attribute>
+       <widget class="QTableView" name="tableView_15">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>541</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="msg_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>250</y>
+          <width>341</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+        </property>
+        <property name="placeholderText">
+         <string>Ecrire votre message ici ....</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_49">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>10</y>
+          <width>141</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>  Boite de discussion</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="name">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>270</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"> border: 1px solid gray;
+    font-size: 14px;
+    border-radius: 5px;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_50">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>243</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Nom:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="sendchat">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>250</y>
+          <width>71</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QPushButton{
+border-image:url(&quot;:/img/img/3548028-200.png&quot;);
+ 
+}
+QPushButton:hover
+{ background-image: url(&quot;:/img/img/unnamed.png&quot;);
+ 
+border-image:url(&quot;:/img/img/unnamed.png&quot;);
+   background-repeat: no-repeat;
+}
+QPushButton:pressed
+{ background-image: url(&quot;:/img/img/unnamed.png&quot;);
+ 
+border-image:url(&quot;:/img/img/unnamed.png&quot;);
+   background-repeat: no-repeat;
+}
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ressources2.qrc">
+          <normaloff>:/img/img/validate.png</normaloff>:/img/img/validate.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>40</y>
+          <width>381</width>
+          <height>192</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>91</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 8pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>Actualiser</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>

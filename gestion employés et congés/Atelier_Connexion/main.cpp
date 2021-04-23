@@ -21,6 +21,11 @@ if(lang=="English")
     t.load(":/english.qm");
 
 }
+if(lang=="arabic")
+{qDebug()<<"jjj";
+    t.load(":/arabic.qm");
+
+}
 if(lang!="Frensh")
 {
 a.installTranslator(&t);

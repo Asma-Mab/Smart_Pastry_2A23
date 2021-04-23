@@ -9,6 +9,7 @@
 #include "connection.h"
 #include<QObject>
 #include"employee.h"
+#include"chat.h"
 #include"conge.h"
 #include<QPropertyAnimation>
 
@@ -66,6 +67,10 @@ private slots:
     void on_pushButton_recherche_clicked();
 
     void on_trie_currentIndexChanged(const QString &arg1);
+
+    void on_sendchat_clicked();
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::MainWindow *ui;

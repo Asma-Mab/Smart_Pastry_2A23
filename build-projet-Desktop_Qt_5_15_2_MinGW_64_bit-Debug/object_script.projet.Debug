@@ -1,0 +1,10 @@
+debug/connexion.o
+debug/dialog.o
+debug/employee.o
+debug/login.o
+debug/main.o
+debug/accueil.o
+debug/qrc_img.o
+debug/moc_accueil.o
+debug/moc_dialog.o
+debug/moc_login.o

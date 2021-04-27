@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/sounds">
+        <file>sound/zapsplat_multimedia_button_click_005_53866.mp3</file>
+    </qresource>
+</RCC>

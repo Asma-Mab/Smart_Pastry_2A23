@@ -1,0 +1,10 @@
+release/connexion.o
+release/dialog.o
+release/employee.o
+release/login.o
+release/main.o
+release/accueil.o
+release/qrc_img.o
+release/moc_accueil.o
+release/moc_dialog.o
+release/moc_login.o

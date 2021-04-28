@@ -19,8 +19,12 @@ SOURCES += \
     connexion.cpp \
     dialog.cpp \
     employee.cpp \
+<<<<<<< HEAD:projet/Nouveau dossier/projet.pro
     equipement.cpp \
     evenement.cpp \
+=======
+    login.cpp \
+>>>>>>> 311f2b141f366af75a4846b384ef063eac136cd2:projet/projet.pro
     main.cpp \
     accueil.cpp \
     recette.cpp \
@@ -36,6 +40,7 @@ HEADERS += \
     connexion.h \
     dialog.h \
     employee.h \
+<<<<<<< HEAD:projet/Nouveau dossier/projet.pro
     equipement.h \
     evenement.h \
     recette.h \
@@ -45,11 +50,18 @@ HEADERS += \
     qcustomplot.h \
     stati.h \
     conge.h
+=======
+    login.h
+>>>>>>> 311f2b141f366af75a4846b384ef063eac136cd2:projet/projet.pro
 
 FORMS += \
     accueil.ui \
     dialog.ui \
+<<<<<<< HEAD:projet/Nouveau dossier/projet.pro
     stati.ui
+=======
+    login.ui
+>>>>>>> 311f2b141f366af75a4846b384ef063eac136cd2:projet/projet.pro
 
 libcrypto.so
 libssl.so

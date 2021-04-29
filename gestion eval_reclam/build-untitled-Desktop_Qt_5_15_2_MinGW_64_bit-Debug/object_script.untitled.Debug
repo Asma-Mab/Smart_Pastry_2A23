@@ -1,0 +1,10 @@
+debug/connexion.o
+debug/employee.o
+debug/evaluation.o
+debug/main.o
+debug/reclamation.o
+debug/smtp.o
+debug/stati.o
+debug/moc_mainwindow.o
+debug/moc_smtp.o
+debug/moc_stati.o

@@ -1,0 +1,639 @@
+#include <QDebug>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include <string>
+#include <QSqlQuery>
+
+#include "evaluation.h"
+#include "smtp.h"
+#include "stati.h"
+#include "employee.h"
+#include<QPrinter>
+
+#include <QPdfWriter>
+
+#include <QPainter>
+
+#include <QTextDocument>
+
+#include<QPrintDialog>
+
+#include<QFileDialog>
+#include<QDateTime>
+#include<QMediaPlayer>
+
+#include "commentaire.h"
+#include"reclamation.h"
+#include<QFontDialog>
+#include<QColorDialog>
+#include<QColor>
+using namespace std;
+
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
+                                          ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    MainWindow::makePlot();
+
+reclamation r;
+   ui->tableView->setModel(r.afficher());
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::on_pushButton_clicked()//Ajouter
+{QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+    reclamation r;
+
+       // t.setId_equipement(ui->lineEdit->text().toInt());
+        r.setTitre(ui->lineEdit_6->text());
+        QDate a= QDate::currentDate();
+
+
+        r.setDate_reclamation(a.toString());
+        r.setDescription(ui->desc->toPlainText());
+
+
+
+        if(r.verif(ui->desc->toPlainText())==false||ui->desc->toPlainText()=="")
+                 {
+
+                                 QMessageBox::critical(nullptr,QObject::tr("Ajouter une reclamation"),
+                                                                  QObject::tr("veuillez saisir correctement la  description.\n"
+                                                                              "Click Cancel to exit ."),QMessageBox::Cancel);
+                }
+        if(r.verif(ui->lineEdit_6->text())==false||ui->lineEdit_6->text()=="")
+                 {
+
+                                 QMessageBox::critical(nullptr,QObject::tr("Ajouter une reclamation"),
+                                                                  QObject::tr("veuillez saisir correctement le titre.\n"
+                                                                              "Click Cancel to exit ."),QMessageBox::Cancel);
+                }
+        r.ajouter();
+    ui->tableView->setModel(r.afficher());
+}
+
+
+
+void MainWindow::on_tableView_activated(const QModelIndex &index)//recuperer
+{QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+    QString val=ui->tableView->model()->data(index).toString();
+     QSqlQuery query;
+      query.prepare("select *  FROM reclamation WHERE ID_reclamation='"+val+"'  ");
+      if(query.exec())
+      {while(query.next())
+
+
+          { ui->lineEdit_8->setText(query.value(4).toString());
+               ui->textEdit->setText(query.value(3).toString());
+              ui->lineEdit_5->setText(query.value(2).toString());
+
+          }
+
+      }
+}
+
+void MainWindow::on_pushButton_3_clicked()//supprimer
+{
+
+        reclamation r;
+        QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+
+
+        r.setTitre(ui->lineEdit_8->text());
+
+              bool test=r.supprimer(r.getTitre());
+
+            ui->tableView->setModel(r.afficher());
+
+
+
+
+
+
+}
+void MainWindow::on_pushButton_6_clicked()
+{QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+   reclamation r;
+        ui->tableView->setModel(r.afficher());
+}
+
+void MainWindow::on_pushButton_4_clicked()//modifier
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+        QString titre=ui->lineEdit_8->text();
+            QString desc=ui->textEdit->toPlainText();
+
+            QString d=ui->lineEdit_5->text();
+
+          reclamation r(titre,desc,d);
+            bool test=r.modifier();
+  ui->tableView->setModel(r.afficher());
+    }
+
+
+
+
+
+
+void MainWindow::on_pdf_clicked()
+{QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+    QString str;
+               str.append("<html><head></head><body><center>"+QString("Resultat de l'evaluation "));
+
+               str.append("</center>") ;
+
+               /*str.append("<td>"+QString("NOM")+"</td>") ;
+               str.append("<td>"+QString("PRENOM")+"</td>") ;
+               str.append("<td>"+QString("FIABLITE")+"</td>") ;
+               str.append("<td>"+QString("PERFORMANCE")+"</td>") ;
+               str.append("<td>"+QString("AUTONOMIE")+"</td>") ;
+            str.append("<td>"+QString("COMMENTAIRE")+"</td>") ;
+            str.append("<td>"+QString("PRIME")+"</td>") ;*/
+               QSqlQuery* qury=new QSqlQuery();
+ //QString val=ui->cin->text();
+
+
+               QSqlQuery* query=new QSqlQuery();
+                //query->exec("select * from EMPLOYE where CIN='"+val+"'");
+                query->exec("select * from EMPLOYE where CIN='1'");
+                qury->exec("select * from evaluation where cin_employe='1'");
+               while(query->next()and qury->next())
+               { float a=(qury->value(1).toFloat()+qury->value(2).toFloat()+qury->value(3).toFloat())/3;
+                   QString salaire;
+                   if(a==1)
+                   {
+                       salaire="un";
+
+                       }
+                           else  if(a>1 && a<=2)
+                            {salaire="deux";
+                 }
+
+
+                         else if(a>2 && a<=3)
+                         {salaire="trois";
+}
+
+str.append("<p>"+QString("Bravo chér(e) ")) ;
+                   str.append(query->value(1).toString());
+                   str.append("   ");
+                   str.append(query->value(2).toString());
+str.append("  vous aurez un prime de  ");
+str.append(salaire);
+str.append("  salaires ""</p>");
+str.append("<p>""Merci de contacter le service financier""</p>");
+str.append(" --------------------------------------------------------------------------------------------------------------");
+str.append("<filedset>");
+str.append("<p>""Voici votre chéque ""</p>");
+str.append("<p>""  chéque personel                                                         Num:____" "</p>");
+str.append("<p>"" payer à l 'ordre de __________Evaluation___________""</p>");
+str.append("<p>" "Montant_________________");
+str.append(salaire);
+str.append("  _______salaires""</p>");
+str.append("<p>""à___");
+str.append(query->value(1).toString());
+str.append("   ");
+str.append(query->value(2).toString());
+str.append("_______Date___________");
+str.append("______________09/04/2021_____________""</p>");
+str.append("                                                                                                  " " Signature");
+str.append("</filedset>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               }
+
+            str.append("</body></html>") ;
+
+            QPrinter printer ;
+            printer.setOrientation(QPrinter::Portrait);
+            printer.setOutputFormat(QPrinter::PdfFormat);
+            printer.setPaperSize(QPrinter::A4) ;
+
+            QString path=QFileDialog::getSaveFileName(NULL,"Convertir a PDF","..","PDF(*.pdf)");
+
+            if (path.isEmpty()) return ;
+            printer.setOutputFileName(path) ;
+
+            QTextDocument doc;
+            doc.setHtml(str) ;
+            doc.print(&printer);
+
+
+
+
+
+            QPrinter *p=new QPrinter();
+            QPrintDialog dialog(p,this);
+            if(dialog.exec()== QDialog::Rejected)
+            {
+                return;
+            }
+
+
+
+
+
+}
+
+/*
+void MainWindow::on_affichageemployee_clicked()
+{
+    Employee E ;
+       ui->listeemployee->setModel(E.afficher());
+}
+
+void MainWindow::on_listeemployee_activated(const QModelIndex &index)
+{
+    QString val=ui->listeemployee->model()->data(index).toString();
+     QSqlQuery query;
+      query.prepare("select *  FROM EMPLOYE WHERE cin='"+val+"'  ");
+      if(query.exec())
+      {while(query.next())
+
+
+          { ui->cin1->setText(query.value(0).toString());
+               //ui->email->setText(query.value(4).toString());
+              //ui->lineEdit_4->date(query.value(3).toString());
+
+          }
+
+      }
+}
+*/
+void MainWindow::on_voirevaluation_clicked()
+{
+   // QString val=ui->cin->text();
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+    QSqlQuery* qury=new QSqlQuery();
+    qury->exec("select * from EMPLOYE where CIN='1'");
+     QSqlQuery query;
+      query.prepare("select *  FROM evaluation WHERE cin_employe='1'  ");
+     //int  fiabilite=query.value(3).toInt();
+     //int autonomie=query.value(1).toInt();
+      //int performance=query.value(2).toInt();
+      if(query.exec())
+      {while(query.next()and qury->next())
+
+
+          {
+
+              ui->prenom->setText(qury->value(1).toString());
+              ui->nom->setText(qury->value(2).toString());
+
+
+
+
+
+
+
+             if(query.value(3).toInt()<2)
+
+      {ui->fiabilite->setText("*Fiabilité");}
+
+            if(query.value(2).toInt()<2)
+
+      {ui->performance->setText("*Performance");}
+             if(query.value(1).toInt()<2)
+
+      {ui->autonomie->setText("*autonomie");}
+float a=(query.value(1).toFloat()+query.value(2).toFloat()+query.value(3).toFloat())/3;
+
+if(a==1)
+{ui->augmentation->setText("vous aurez un prime de un salaire ");
+}
+        else  if(a>1 && a<=2)
+         {ui->augmentation->setText("vous aurez une augmentation de 10%");
+         ui->prime->setText("et un prime de deux salaire");
+}
+
+
+      else if(a>2 && a<=3)
+      {ui->augmentation->setText("vous aurez une augmentation de 20%");
+      ui->prime->setText("et un prime de trois salaire");}
+
+
+
+     qDebug()<<a;
+
+
+          }}
+
+}
+void MainWindow::makePlot()
+{ // set dark background gradient:
+    QLinearGradient gradient(0, 0, 0, 400);
+    gradient.setColorAt(0, QColor(90, 90, 90));
+    gradient.setColorAt(0.38, QColor(105, 105, 105));
+    gradient.setColorAt(1, QColor(70, 70, 70));
+   ui->customPlot->setBackground(QBrush(gradient));
+    // create empty bar chart objects:
+    QCPBars *fossil = new QCPBars(ui->customPlot->xAxis,ui->customPlot->yAxis);
+    //fossil->setAntialiased(false);
+    //regen->setStackingGap(1);
+   // nuclear->setStackingGap(1);
+    //fossil->setStackingGap(1);
+    // set names and colors:
+   // fossil->setName("");
+    fossil->setPen(QPen(QColor(250, 170, 20).lighter(150)));;
+    fossil->setBrush(QColor(250, 170, 20));
+    // prepare x axis with country labels:
+    QVector<double> ticks;
+    QVector<QString> labels;
+    ticks << 1 << 2 << 3 ;
+    labels << "Performance" << "Discipline" << "Autonomie" ;
+    QSharedPointer<QCPAxisTickerText> textTicker(new QCPAxisTickerText);
+    textTicker->addTicks(ticks, labels);
+   ui->customPlot->xAxis->setTicker(textTicker);
+   ui->customPlot->xAxis->setTickLabelRotation(60);
+   ui->customPlot->xAxis->setSubTicks(false);
+   ui->customPlot->xAxis->setTickLength(0, 4);
+   ui->customPlot->xAxis->setRange(0, 8);
+   ui->customPlot->xAxis->setBasePen(QPen(Qt::white));
+   ui->customPlot->xAxis->setTickPen(QPen(Qt::white));
+   ui->customPlot->xAxis->grid()->setVisible(true);
+   ui->customPlot->xAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
+  ui->customPlot->xAxis->setTickLabelColor(Qt::white);
+  ui->customPlot->xAxis->setLabelColor(Qt::white);
+
+    // prepare y axis:
+   ui->customPlot->yAxis->setRange(0, 3);
+   ui->customPlot->yAxis->setPadding(5); // a bit more space to the left border
+   ui->customPlot->yAxis->setLabel("evaluation annuelle ");
+   ui->customPlot->yAxis->setBasePen(QPen(Qt::white));
+   ui->customPlot->yAxis->setTickPen(QPen(Qt::white));
+   ui->customPlot->yAxis->setSubTickPen(QPen(Qt::white));
+   ui->customPlot->yAxis->grid()->setSubGridVisible(true);
+   ui->customPlot->yAxis->setTickLabelColor(Qt::white);
+   ui->customPlot->yAxis->setLabelColor(Qt::white);
+   ui->customPlot->yAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::SolidLine));
+   ui->customPlot->yAxis->grid()->setSubGridPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
+evaluation e;
+
+QSqlQuery query;
+ query.prepare("select *  FROM evaluation WHERE cin_employe='1'  ");
+
+ if(query.exec())
+ {while(query.next())
+     {
+        int perf=query.value(2).toInt();
+         int aut=query.value(1).toInt();
+         int fiab=query.value(3).toInt();
+
+    // Add data:
+    QVector<double> fossilData;
+    fossilData  << perf << fiab  << aut ;
+   // nuclearData << 0.08*10.5 << 0.12*5.5 << 0.12*5.5 << 0.40*5.8 << 0.09*5.2 << 0.00*4.2 << 0.07*11.2;
+    //regenData   << 0.06*10.5 << 0.05*5.5 << 0.04*5.5 << 0.06*5.8 << 0.02*5.2 << 0.07*4.2 << 0.25*11.2;
+    fossil->setData(ticks, fossilData);
+   // nuclear->setData(ticks, nuclearData);
+    //regen->setData(ticks, regenData);
+}}
+    // setup legend:
+  /* ui->customPlot->legend->setVisible(true);
+   ui->customPlot->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop|Qt::AlignHCenter);
+   ui->customPlot->legend->setBrush(QColor(255, 255, 255, 100));
+   ui->customPlot->legend->setBorderPen(Qt::NoPen);
+    QFont legendFont = font();
+    legendFont.setPointSize(10);
+   ui->customPlot->legend->setFont(legendFont);
+   ui->customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);*/
+}
+
+
+void MainWindow::on_pushButton_7_clicked()
+{QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+   commentaire c;
+
+       c.setId(ui->emp->text().toInt());
+
+        c.setDescription(ui->comm->toPlainText());
+
+
+
+        if(c.verif(ui->desc->toPlainText())==false||ui->comm->toPlainText()=="")
+                 {
+
+                                 QMessageBox::critical(nullptr,QObject::tr("Ajouter une reclamation"),
+                                                                  QObject::tr("veuillez saisir correctement la  description.\n"
+                                                                              "Click Cancel to exit ."),QMessageBox::Cancel);
+                }
+
+        c.ajouter();
+    ui->tableView_3->setModel(c.afficher());
+
+}
+
+
+void MainWindow::on_empeval_clicked()
+{
+    Employee e;
+    ui->tableView_2->setModel(e.afficher());
+}
+
+void MainWindow::on_tableView_2_activated(const QModelIndex &index)
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+
+
+        QString val=ui->tableView_2->model()->data(index).toString();
+         QSqlQuery query;
+          query.prepare("select *  FROM EMPLOYE WHERE cin='"+val+"'  ");
+          if(query.exec())
+          {while(query.next())
+
+
+              { ui->emp->setText(query.value(0).toString());
+
+
+
+              }
+
+          }
+}
+
+void MainWindow::on_pushButton_5_clicked()//afficher
+{
+    commentaire c;
+      ui->tableView_3->setModel(c.afficher());
+}
+
+void MainWindow::on_supp_clicked()
+{
+    commentaire c;
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+    c.setId(ui->lineEdit->text().toInt());
+
+          bool test=c.supprimer(c.getId());
+
+        ui->tableView_3->setModel(c.afficher());
+}
+
+void MainWindow::on_edit_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+
+            QString desc=ui->comm->toPlainText();
+            int id=ui->lineEdit->text().toInt();
+
+
+
+          commentaire c(desc,id);
+            bool test=c.modifier();
+  ui->tableView_3->setModel(c.afficher());
+  qDebug()<<desc;
+}
+
+void MainWindow::on_tableView_3_activated(const QModelIndex &index)
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+
+
+        QString val=ui->tableView_3->model()->data(index).toString();
+         QSqlQuery query;
+          query.prepare("select *  FROM commentaire WHERE id='"+val+"'  ");
+          if(query.exec())
+          {while(query.next())
+
+
+              { ui->emp->setText(query.value(2).toString());
+
+                  ui->comm->setText(query.value(1).toString());
+ui->lineEdit->setText(query.value(0).toString());
+              }
+
+          }
+
+}
+
+void MainWindow::on_font_clicked()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(&ok, QFont("Times", 12), this);
+    if (ok) {
+        ui->label_2->setFont(font);
+        ui->label->setFont(font);
+    } else {
+       return;
+    }
+}
+
+

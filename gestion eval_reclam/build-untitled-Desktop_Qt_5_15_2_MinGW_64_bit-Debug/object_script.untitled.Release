@@ -1,0 +1,10 @@
+release/connexion.o
+release/employee.o
+release/evaluation.o
+release/main.o
+release/reclamation.o
+release/smtp.o
+release/stati.o
+release/moc_mainwindow.o
+release/moc_smtp.o
+release/moc_stati.o

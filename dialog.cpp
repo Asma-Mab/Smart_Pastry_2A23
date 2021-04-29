@@ -267,6 +267,7 @@ void Dialog::on_affichemploye_activated(const QModelIndex &index)
               }
 
           }
+}
 
 void Dialog::on_empeval_clicked()
 { Employee e;
@@ -530,7 +531,7 @@ QSqlQuery query;
     //regen->setData(ticks, regenData);
 }}
     // setup legend:
-  /* ui->customPlot->legend->setVisible(true);
+   ui->customPlot->legend->setVisible(true);
    ui->customPlot->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop|Qt::AlignHCenter);
    ui->customPlot->legend->setBrush(QColor(255, 255, 255, 100));
    ui->customPlot->legend->setBorderPen(Qt::NoPen);
@@ -645,4 +646,43 @@ void Dialog::on_suppcomm_clicked()
           bool test=c.supprimer(c.getId());
 
         ui->listecomm->setModel(c.afficher());
+}
+/******************/
+void Dialog::on_sendchat_clicked()
+{
+    QMediaPlayer * music=new QMediaPlayer();
+    music->setMedia(QUrl("qrc:/sounds/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    music->play();
+    QString nom=ui->name->text();
+    QString msg=ui->msg_2->toPlainText();
+    QDateTime d=d.currentDateTime();
+     QString temps=d.toString("dd.MM.yyyy.hh:mm");
+  chat c(nom,msg,temps);
+  c.ajouter();
+    ui->textBrowser->clear();
+  QSqlQuery query;
+  query.prepare("SELECT * FROM CHAT");
+  QString l;
+  if (query.exec()){
+  while(query.next()){
+   l="<"+query.value(0).toString()+"> "+query.value(1).toString()+"                       "+query.value(3).toString();
+   ui->textBrowser->append(l);
+   qDebug()<<l;}}
+
+}
+
+void Dialog::on_pushButton_3_clicked()
+{
+    ui->textBrowser->clear();
+    QSqlQuery query;
+    query.prepare("SELECT * FROM CHAT");
+    QString l;
+    if (query.exec()){
+    while(query.next()){
+     l="<"+query.value(0).toString()+"> "+query.value(1).toString()+"                      "+query.value(3).toString();
+     ui->textBrowser->append(l);
+     qDebug()<<l;
+    }
+    }
+
 }

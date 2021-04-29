@@ -20,6 +20,7 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QStyleFactory>
+#include"chat.h"
 namespace Ui {
 class Dialog;
 }
@@ -86,6 +87,11 @@ private slots:
     void on_editcomm_clicked();
 
     void on_suppcomm_clicked();
+    /***************/
+    void on_sendchat_clicked();
+
+    void on_pushButton_3_clicked();
+
 
 private:
     Ui::Dialog *ui;

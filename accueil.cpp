@@ -13,6 +13,7 @@
 #include"evaluation.h"
 #include"reclamation.h"
 #include"stati1.h"
+#include"todolist.h"
 
 
 accueil::accueil(QWidget *parent)
@@ -2150,4 +2151,9 @@ void accueil::on_affichageemployee_2_clicked()
         Employee e(id);
         bool test=e.modifiereval();
     ui->affichagereclam->setModel(e.afficher());
+}
+void accueil::on_todolist_clicked()
+{
+    CToDoList app;
+           app.exec();
 }

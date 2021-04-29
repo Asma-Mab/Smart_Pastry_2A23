@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    chat.cpp \
     commentaire.cpp \
     connexion.cpp \
     dialog.cpp \
@@ -32,10 +33,12 @@ SOURCES += \
     smtp.cpp \
     qcustomplot.cpp \
     stati.cpp \
-    conge.cpp
+    conge.cpp \
+    todolist.cpp
 
 HEADERS += \
     accueil.h \
+    chat.h \
     commentaire.h \
     connexion.h \
     dialog.h \
@@ -50,7 +53,8 @@ HEADERS += \
     smtp.h \
     qcustomplot.h \
     stati.h \
-    conge.h
+    conge.h \
+    todolist.h
 
 FORMS += \
     accueil.ui \

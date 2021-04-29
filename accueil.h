@@ -259,6 +259,7 @@ void make();
        // void on_stat_clicked();
 
         void on_affichageemployee_2_clicked();
+        void on_todolist_clicked();
 
 private:
     Ui::accueil *ui;

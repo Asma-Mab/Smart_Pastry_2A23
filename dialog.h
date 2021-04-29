@@ -59,6 +59,34 @@ private slots:
 
     void on_tabWidget_10_currentChanged(int index);
 
+    void on_reclamer_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_afficherreclam_activated(const QModelIndex &index);
+
+    void on_supprimreclam_clicked();
+
+    void on_editreclam_clicked();
+
+    void on_affichemploye_activated(const QModelIndex &index);
+
+    void on_empeval_clicked();
+
+    void on_voirevaluation_clicked();
+
+    void on_pdf_clicked();
+  //void makePlot();
+    void on_afficherlesavis_clicked();
+
+    void on_listecomm_activated(const QModelIndex &index);
+
+    void on_ajoucomm_clicked();
+
+    void on_editcomm_clicked();
+
+    void on_suppcomm_clicked();
+
 private:
     Ui::Dialog *ui;
     int a;

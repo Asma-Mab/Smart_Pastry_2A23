@@ -19,6 +19,10 @@ datenais="";
 dateentr="";
 
 }
+Employee:: Employee(QString c)
+
+{
+cin=c;}
 Employee:: Employee(QString c,QString n,QString p,QString dn,QString e,QString pas,int t,QString r,int ev,int a,QString d,QString s)
 
 {
@@ -255,4 +259,15 @@ void Employee::Recherche(Ui::accueil *ui)
     else
     {
         qWarning( "can't get value" ); }
+}
+bool Employee::modifiereval()
+{
+    QSqlQuery query;
+QString id=QString(cin);
+  query.prepare("update employe SET EVALUATION='1' where cin=:id");
+ query.bindValue(":id",id);
+
+  return query.exec();
+
+
 }

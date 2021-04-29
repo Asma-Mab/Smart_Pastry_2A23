@@ -407,7 +407,7 @@ border-radius:10px;
 }</string>
     </property>
     <property name="text">
-     <string>Fournisseurs/stock</string>
+     <string>Evaluation/Reclamation</string>
     </property>
     <property name="icon">
      <iconset resource="img.qrc">
@@ -596,22 +596,6 @@ border-radius:10px;
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>246</x>
-      <y>169</y>
-      <width>961</width>
-      <height>598</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
@@ -625,7 +609,7 @@ border-radius:10px;
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="profil">
      <widget class="QGroupBox" name="groupBox">
@@ -2122,7 +2106,7 @@ border-radius:10px;</string>
                 <x>0</x>
                 <y>0</y>
                 <width>221</width>
-                <height>381</height>
+                <height>387</height>
                </rect>
               </property>
               <attribute name="label">
@@ -4111,7 +4095,7 @@ border-radius:10px;</string>
               <x>0</x>
               <y>0</y>
               <width>221</width>
-              <height>381</height>
+              <height>387</height>
              </rect>
             </property>
             <attribute name="label">
@@ -4853,7 +4837,7 @@ border-top-right-radius:10px;
 }</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -4876,7 +4860,7 @@ height:28px;
 }</string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab_4">
          <attribute name="title">
@@ -5580,7 +5564,7 @@ border-radius:10px;</string>
                 <x>0</x>
                 <y>0</y>
                 <width>221</width>
-                <height>381</height>
+                <height>387</height>
                </rect>
               </property>
               <attribute name="label">
@@ -5904,7 +5888,7 @@ border-radius:10px;</string>
                   <x>0</x>
                   <y>0</y>
                   <width>221</width>
-                  <height>31</height>
+                  <height>37</height>
                  </rect>
                 </property>
                 <attribute name="label">
@@ -5942,7 +5926,7 @@ border-radius:10px;
                 <x>0</x>
                 <y>0</y>
                 <width>221</width>
-                <height>331</height>
+                <height>337</height>
                </rect>
               </property>
               <attribute name="label">
@@ -6463,7 +6447,7 @@ border-radius:10px;
                   <x>0</x>
                   <y>0</y>
                   <width>221</width>
-                  <height>31</height>
+                  <height>37</height>
                  </rect>
                 </property>
                 <attribute name="label">
@@ -7418,7 +7402,7 @@ border-radius:10px;</string>
               <x>0</x>
               <y>0</y>
               <width>221</width>
-              <height>381</height>
+              <height>387</height>
              </rect>
             </property>
             <attribute name="label">
@@ -7742,7 +7726,7 @@ border-radius:10px;</string>
                 <x>0</x>
                 <y>0</y>
                 <width>221</width>
-                <height>31</height>
+                <height>37</height>
                </rect>
               </property>
               <attribute name="label">
@@ -7780,7 +7764,7 @@ border-radius:10px;
               <x>0</x>
               <y>0</y>
               <width>221</width>
-              <height>331</height>
+              <height>337</height>
              </rect>
             </property>
             <attribute name="label">
@@ -8326,7 +8310,7 @@ border-radius:10px;
                 <x>0</x>
                 <y>0</y>
                 <width>221</width>
-                <height>31</height>
+                <height>37</height>
                </rect>
               </property>
               <attribute name="label">
@@ -9017,7 +9001,7 @@ border-radius:10px;</string>
               <x>0</x>
               <y>0</y>
               <width>221</width>
-              <height>381</height>
+              <height>387</height>
              </rect>
             </property>
             <attribute name="label">
@@ -9341,7 +9325,7 @@ border-radius:10px;</string>
                 <x>0</x>
                 <y>0</y>
                 <width>221</width>
-                <height>31</height>
+                <height>37</height>
                </rect>
               </property>
               <attribute name="label">
@@ -9379,7 +9363,7 @@ border-radius:10px;
               <x>0</x>
               <y>0</y>
               <width>221</width>
-              <height>331</height>
+              <height>337</height>
              </rect>
             </property>
             <attribute name="label">
@@ -9859,7 +9843,7 @@ border-radius:10px;
                 <x>0</x>
                 <y>0</y>
                 <width>221</width>
-                <height>31</height>
+                <height>37</height>
                </rect>
               </property>
               <attribute name="label">
@@ -10308,7 +10292,2453 @@ border-radius:10px;
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="fournisseurs"/>
+    <widget class="QWidget" name="fournisseurs">
+     <widget class="QTabWidget" name="tabWidget_11">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>0</y>
+        <width>951</width>
+        <height>531</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTabBar::tab{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 8pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color:rgb(39, 39,39);
+background:  rgb(51, 50, 50);
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+min-width:120px;
+height:30px;
+
+}
+QTabBar::tab::hover
+{
+color:white;
+
+background:#b20837;
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+}
+
+QTabBar::tab:selected
+{
+color:white;
+
+background:#b20837;
+border-top-left-radius:10px;
+border-top-right-radius:10px;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab_24">
+       <attribute name="title">
+        <string>reclamation</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_44">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>831</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+QGroupBox  {
+    border: 1px solid;
+    
+  
+    border-radius: 20px;
+}</string>
+        </property>
+        <property name="title">
+         <string/>
+        </property>
+        <widget class="QLabel" name="label_redEq_29">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>831</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+
+background:#b20837;
+border-radius:20px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_RedEq2_28">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>41</width>
+           <height>391</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+
+background:#b20837;
+border-radius:20px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_AjEq_29">
+         <property name="geometry">
+          <rect>
+           <x>380</x>
+           <y>10</y>
+           <width>211</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 10pt &quot;Nexa Rust Sans Black 01&quot;;
+background:#b20837;
+border-radius:10px;</string>
+         </property>
+         <property name="text">
+          <string>liste des reclamations</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="afficher_reclam">
+         <property name="geometry">
+          <rect>
+           <x>360</x>
+           <y>310</y>
+           <width>221</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>afficher listes des reclamations</string>
+         </property>
+        </widget>
+        <widget class="QTableView" name="affichagereclam">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>100</y>
+           <width>531</width>
+           <height>201</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;
+</string>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_45">
+         <property name="geometry">
+          <rect>
+           <x>620</x>
+           <y>120</y>
+           <width>181</width>
+           <height>121</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Traitement des reclamations</string>
+         </property>
+         <widget class="QLineEdit" name="id_reclam">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>70</y>
+            <width>161</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_119">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>30</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Id reclamation</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="traiter">
+         <property name="geometry">
+          <rect>
+           <x>660</x>
+           <y>260</y>
+           <width>111</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>traiter</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="stat">
+         <property name="geometry">
+          <rect>
+           <x>90</x>
+           <y>310</y>
+           <width>161</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>statistique</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="rech_2">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>60</y>
+           <width>181</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;
+</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="recherche">
+         <property name="geometry">
+          <rect>
+           <x>400</x>
+           <y>60</y>
+           <width>121</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+         </property>
+         <property name="text">
+          <string>chercher</string>
+         </property>
+        </widget>
+        <zorder>groupBox_45</zorder>
+        <zorder>label_redEq_29</zorder>
+        <zorder>label_RedEq2_28</zorder>
+        <zorder>label_AjEq_29</zorder>
+        <zorder>afficher_reclam</zorder>
+        <zorder>affichagereclam</zorder>
+        <zorder>traiter</zorder>
+        <zorder>stat</zorder>
+        <zorder>rech_2</zorder>
+        <zorder>recherche</zorder>
+       </widget>
+       <widget class="QLabel" name="label_121">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>0</y>
+          <width>891</width>
+          <height>491</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/img/img/AA.jpg);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <zorder>label_121</zorder>
+       <zorder>groupBox_44</zorder>
+      </widget>
+      <widget class="QWidget" name="tab_22">
+       <attribute name="title">
+        <string>evaluation</string>
+       </attribute>
+       <widget class="QTabWidget" name="tabWidget_12">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>951</width>
+          <height>501</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab_23">
+         <attribute name="title">
+          <string>liste employee</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_40">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>30</y>
+            <width>821</width>
+            <height>411</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QGroupBox  {
+    border: 1px solid;
+    
+  
+    border-radius: 20px;
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QLabel" name="label_redEq_26">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>821</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:white;
+
+background:#b20837;
+border-radius:20px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_AjEq_26">
+           <property name="geometry">
+            <rect>
+             <x>350</x>
+             <y>10</y>
+             <width>211</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:white;
+font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 10pt &quot;Nexa Rust Sans Black 01&quot;;
+background:#b20837;
+border-radius:10px;</string>
+           </property>
+           <property name="text">
+            <string>liste des employees</string>
+           </property>
+          </widget>
+          <widget class="QTableView" name="listeemployee">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>90</y>
+             <width>621</width>
+             <height>201</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;
+</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="affichageemployee">
+           <property name="geometry">
+            <rect>
+             <x>480</x>
+             <y>310</y>
+             <width>171</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>afficher liste des employees</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_RedEq2_26">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>51</width>
+             <height>411</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:white;
+
+background:#b20837;
+border-radius:20px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="affichageemployee_2">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>310</y>
+             <width>171</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+           </property>
+           <property name="text">
+            <string>ajouterau  liste des evaluation</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="label_122">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>891</width>
+            <height>491</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-image: url(:/img/img/AA.jpg);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <zorder>label_122</zorder>
+         <zorder>groupBox_40</zorder>
+        </widget>
+        <widget class="QWidget" name="ajouter_reclam">
+         <attribute name="title">
+          <string>ajouter</string>
+         </attribute>
+         <widget class="QLabel" name="label_99">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>40</y>
+            <width>211</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>AU DESSOUS DU NIVEAU ATTENDU</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_100">
+          <property name="geometry">
+           <rect>
+            <x>510</x>
+            <y>40</y>
+            <width>191</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ATTEINTE DU NIVEAU ATTENDU</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_101">
+          <property name="geometry">
+           <rect>
+            <x>710</x>
+            <y>40</y>
+            <width>201</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>AU DESSUS DU NIVEAU ATTENDU</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_102">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>60</y>
+            <width>121</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ToolTipText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="PlaceholderText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="128">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ToolTipText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="PlaceholderText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="128">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ToolTipText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="PlaceholderText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="128">
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>PERFORMANCE</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_103">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>80</y>
+            <width>151</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>qualité du travail fourni</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_104">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>100</y>
+            <width>151</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>qualité du travail produit</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_105">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>180</y>
+            <width>71</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>intégrité</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_106">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>120</y>
+            <width>91</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ToolTipText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="PlaceholderText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="128">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ToolTipText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="PlaceholderText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="128">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Text">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ButtonText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="ToolTipText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="PlaceholderText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="128">
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>discipline</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_107">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>140</y>
+            <width>141</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>respet des deadlines</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_108">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>160</y>
+            <width>91</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ponctualité</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_109">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>200</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="palette">
+           <palette>
+            <active>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </active>
+            <inactive>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>170</red>
+                <green>0</green>
+                <blue>0</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </inactive>
+            <disabled>
+             <colorrole role="WindowText">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>120</red>
+                <green>120</green>
+                <blue>120</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Button">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Base">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+             <colorrole role="Window">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>255</red>
+                <green>255</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </colorrole>
+            </disabled>
+           </palette>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>AUTONOMIE</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_110">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>220</y>
+            <width>321</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <family>MS Shell Dlg 2</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>capacité à travailler dune maniére independence</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_111">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>240</y>
+            <width>241</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>capacité de resolution du probléme</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_112">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>260</y>
+            <width>241</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>capacité de faire face à des imprevus</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="evaluerbutton">
+          <property name="geometry">
+           <rect>
+            <x>690</x>
+            <y>350</y>
+            <width>201</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>evaluer</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>../../../OneDrive/Documents/ghof/premiereapp1/ressource/icons8-coche-48.png</normaloff>../../../OneDrive/Documents/ghof/premiereapp1/ressource/icons8-coche-48.png</iconset>
+          </property>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>100</y>
+            <width>621</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_17">
+           <item>
+            <widget class="QRadioButton" name="moyenneperf2_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="excelperf2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="faibleperf2_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>80</y>
+            <width>621</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_18">
+           <item>
+            <widget class="QRadioButton" name="faibleperf1_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="moyenneperf1_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="excelperf1_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>140</y>
+            <width>621</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_19">
+           <item>
+            <widget class="QRadioButton" name="faiblefiab1_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="moyennefiab2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="excelfiab1_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_4">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>160</y>
+            <width>621</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_20">
+           <item>
+            <widget class="QRadioButton" name="faiblefiab2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="moyennefiab2_2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="excelfiab2_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_5">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>180</y>
+            <width>621</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_21">
+           <item>
+            <widget class="QRadioButton" name="faiblefiab3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="moyennefiab3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="excelfiab3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_6">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>220</y>
+            <width>621</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_22">
+           <item>
+            <widget class="QRadioButton" name="faibleauto1_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="moyenneauto1">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="excelauto1_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_7">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>240</y>
+            <width>621</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_23">
+           <item>
+            <widget class="QRadioButton" name="faibleauto2_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="moyenneauto2">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="excelauto2_3">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="horizontalLayoutWidget_8">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>260</y>
+            <width>621</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_24">
+           <item>
+            <widget class="QRadioButton" name="faibleauto3_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="moyenneauto3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="excelauto3_3">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLineEdit" name="cin1_2">
+          <property name="geometry">
+           <rect>
+            <x>300</x>
+            <y>340</y>
+            <width>201</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+          </property>
+          <property name="placeholderText">
+           <string>cin..</string>
+          </property>
+         </widget>
+         <widget class="QTextEdit" name="commentaire">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>290</y>
+            <width>621</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+          </property>
+          <property name="placeholderText">
+           <string>commentaire..</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_113">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>300</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>commentaire</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_114">
+          <property name="geometry">
+           <rect>
+            <x>90</x>
+            <y>340</y>
+            <width>91</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>cin employee</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="send">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>410</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_41">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>0</y>
+            <width>1131</width>
+            <height>471</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QGroupBox  {
+    border: 1px solid;
+    
+  
+    border-radius: 20px;
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QLabel" name="label_redEq_27">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-5</y>
+             <width>971</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:white;
+
+background:#b20837;
+border-radius:20px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_AjEq_27">
+           <property name="geometry">
+            <rect>
+             <x>350</x>
+             <y>10</y>
+             <width>211</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:white;
+font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 10pt &quot;Nexa Rust Sans Black 01&quot;;
+background:#b20837;
+border-radius:10px;</string>
+           </property>
+           <property name="text">
+            <string>Ajouter Evaluation</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_115">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>370</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Email employee</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="email_2">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>370</y>
+             <width>201</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>email</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="anim_2">
+           <property name="geometry">
+            <rect>
+             <x>710</x>
+             <y>380</y>
+             <width>201</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <zorder>groupBox_41</zorder>
+         <zorder>label_99</zorder>
+         <zorder>label_100</zorder>
+         <zorder>label_101</zorder>
+         <zorder>label_102</zorder>
+         <zorder>label_103</zorder>
+         <zorder>label_104</zorder>
+         <zorder>label_105</zorder>
+         <zorder>label_106</zorder>
+         <zorder>label_107</zorder>
+         <zorder>label_108</zorder>
+         <zorder>label_109</zorder>
+         <zorder>label_110</zorder>
+         <zorder>label_111</zorder>
+         <zorder>label_112</zorder>
+         <zorder>cin1_2</zorder>
+         <zorder>label_113</zorder>
+         <zorder>label_114</zorder>
+         <zorder>evaluerbutton</zorder>
+         <zorder>horizontalLayoutWidget</zorder>
+         <zorder>horizontalLayoutWidget_2</zorder>
+         <zorder>horizontalLayoutWidget_3</zorder>
+         <zorder>horizontalLayoutWidget_4</zorder>
+         <zorder>horizontalLayoutWidget_5</zorder>
+         <zorder>horizontalLayoutWidget_6</zorder>
+         <zorder>horizontalLayoutWidget_7</zorder>
+         <zorder>horizontalLayoutWidget_8</zorder>
+         <zorder>commentaire</zorder>
+         <zorder>send</zorder>
+        </widget>
+        <widget class="QWidget" name="consulter_reclam">
+         <attribute name="title">
+          <string>consulter</string>
+         </attribute>
+         <widget class="QGroupBox" name="groupBox_42">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>941</width>
+            <height>481</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QGroupBox  {
+    border: 1px solid;
+    
+  
+    border-radius: 20px;
+}</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QLabel" name="label_120">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-30</y>
+             <width>911</width>
+             <height>491</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-image: url(:/img/img/AA.jpg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_46">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>10</y>
+             <width>821</width>
+             <height>421</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+QGroupBox  {
+    border: 1px solid;
+    
+  
+    border-radius: 20px;
+}</string>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <widget class="QLabel" name="label_redEq_28">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>0</y>
+              <width>821</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white;
+
+background:#b20837;
+border-radius:20px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_RedEq2_27">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>51</width>
+              <height>421</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white;
+
+background:#b20837;
+border-radius:20px;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_AjEq_28">
+            <property name="geometry">
+             <rect>
+              <x>350</x>
+              <y>10</y>
+              <width>211</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color:white;
+font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 10pt &quot;Nexa Rust Sans Black 01&quot;;
+background:#b20837;
+border-radius:10px;</string>
+            </property>
+            <property name="text">
+             <string>consuter evaluation</string>
+            </property>
+           </widget>
+           <widget class="QTableView" name="consultereval">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>60</y>
+              <width>581</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;
+</string>
+            </property>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_43">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>230</y>
+              <width>731</width>
+              <height>171</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <widget class="QLineEdit" name="ide">
+             <property name="geometry">
+              <rect>
+               <x>120</x>
+               <y>20</y>
+               <width>291</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+             </property>
+             <property name="placeholderText">
+              <string>id..</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_116">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>20</y>
+               <width>81</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>id evaluation</string>
+             </property>
+            </widget>
+            <widget class="QTextEdit" name="commentaire_2">
+             <property name="geometry">
+              <rect>
+               <x>120</x>
+               <y>50</y>
+               <width>291</width>
+               <height>71</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+             </property>
+             <property name="placeholderText">
+              <string>commentaire..</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_117">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>70</y>
+               <width>81</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>commentaire</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="dateEdit">
+             <property name="geometry">
+              <rect>
+               <x>120</x>
+               <y>140</y>
+               <width>291</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+selection-background-color: gray;</string>
+             </property>
+             <property name="placeholderText">
+              <string>date eval..</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_118">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>140</y>
+               <width>101</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>date evaluation</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="editeval">
+             <property name="geometry">
+              <rect>
+               <x>530</x>
+               <y>100</y>
+               <width>141</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>modifier</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../../OneDrive/Documents/ghof/premiereapp1/ressource/icons8-modifier-48.png</normaloff>../../../OneDrive/Documents/ghof/premiereapp1/ressource/icons8-modifier-48.png</iconset>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="supprimeval">
+             <property name="geometry">
+              <rect>
+               <x>530</x>
+               <y>40</y>
+               <width>141</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>supprimer</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../../OneDrive/Documents/ghof/premiereapp1/ressource/icons8-effacer-26.png</normaloff>../../../OneDrive/Documents/ghof/premiereapp1/ressource/icons8-effacer-26.png</iconset>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QPushButton" name="listeeval">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>70</y>
+              <width>111</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>liste des evaluations</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="trie_2">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>100</y>
+              <width>111</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>trie par discipline</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="trie1">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>140</y>
+              <width>111</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>trie par autonomie</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="trie2">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>170</y>
+              <width>111</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>trie par performance</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
     <widget class="QWidget" name="evenements">
      <widget class="QTabWidget" name="tabWidget_5">
       <property name="geometry">
@@ -10412,7 +12842,7 @@ height:28px;
            <widget class="QGroupBox" name="groupBox_21">
             <property name="geometry">
              <rect>
-              <x>40</x>
+              <x>50</x>
               <y>30</y>
               <width>821</width>
               <height>421</height>
@@ -11283,7 +13713,7 @@ border-radius:10px;</string>
                 <x>0</x>
                 <y>0</y>
                 <width>221</width>
-                <height>381</height>
+                <height>387</height>
                </rect>
               </property>
               <attribute name="label">
@@ -12894,7 +15324,7 @@ border-radius:10px;</string>
               <x>0</x>
               <y>0</y>
               <width>221</width>
-              <height>381</height>
+              <height>387</height>
              </rect>
             </property>
             <attribute name="label">
@@ -14054,7 +16484,7 @@ border-radius:10px;
      <x>0</x>
      <y>0</y>
      <width>1200</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

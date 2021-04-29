@@ -25,7 +25,7 @@ public:
     Employee(QString,QString,QString,QString,QString,QString,int,QString,int,int,QString,QString);
     Employee(QString,QString,QString,int,QString,QString);
     Employee(QString,QString,QString,int,int,QString);
-
+ Employee(QString);
     QString getcin();
     QString getnom();
     QString getprenom();
@@ -62,7 +62,7 @@ public:
     bool verif_mail(QString);
     QSqlQueryModel * afficher();
     QSqlQueryModel * afficher11();
-
+bool modifiereval();
 
 
     void Recherche(Ui::accueil *ui);

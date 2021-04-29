@@ -16,14 +16,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    commentaire.cpp \
     connexion.cpp \
     dialog.cpp \
     employee.cpp \
     equipement.cpp \
+    evaluation.cpp \
     evenement.cpp \
     main.cpp \
     accueil.cpp \
     recette.cpp \
+    reclamation.cpp \
     reparateur.cpp \
     reparation.cpp \
     smtp.cpp \
@@ -33,12 +36,15 @@ SOURCES += \
 
 HEADERS += \
     accueil.h \
+    commentaire.h \
     connexion.h \
     dialog.h \
     employee.h \
     equipement.h \
+    evaluation.h \
     evenement.h \
     recette.h \
+    reclamation.h \
     reparateur.h \
     reparation.h \
     smtp.h \

@@ -224,6 +224,42 @@ void make();
 
         void on_ajouter_rep_15_clicked();
 
+        void on_listeemployee_activated(const QModelIndex &index);
+
+        void on_affichageemployee_clicked();
+
+
+        void on_evaluerbutton_clicked();
+
+        void on_consultereval_activated(const QModelIndex &index);
+
+
+        void on_supprimeval_clicked();
+
+        void on_editeval_clicked();
+
+        void on_listeeval_clicked();
+
+        void on_trie_2_clicked();
+
+        void on_trie1_clicked();
+
+        void on_trie2_clicked();
+
+        void on_affichagereclam_activated(const QModelIndex &index);
+
+        void on_afficher_reclam_clicked();
+
+        void on_traiter_clicked();
+
+        void on_recherche_clicked();
+
+
+
+       // void on_stat_clicked();
+
+        void on_affichageemployee_2_clicked();
+
 private:
     Ui::accueil *ui;
 

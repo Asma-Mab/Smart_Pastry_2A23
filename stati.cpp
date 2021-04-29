@@ -161,3 +161,4 @@ void stati::on_pushButton_clicked()
 {
     hide();
 }
+

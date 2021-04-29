@@ -10,6 +10,9 @@
 #include <QPainter>
 #include <QTextDocument>
 #include<QFileDialog>
+#include"evaluation.h"
+#include"reclamation.h"
+#include"stati1.h"
 
 
 accueil::accueil(QWidget *parent)
@@ -1781,4 +1784,370 @@ void accueil::on_ajouter_rep_15_clicked()
 
     ui->valstack_7->setCurrentIndex(0);
 
+}
+
+void accueil::on_listeemployee_activated(const QModelIndex &index)
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+
+
+        QString val=ui->listeemployee->model()->data(index).toString();
+         QSqlQuery query;
+          query.prepare("select *  FROM EMPLOYE WHERE cin='"+val+"'  ");
+          if(query.exec())
+          {while(query.next())
+
+
+              { ui->cin1_2->setText(query.value(0).toString());
+
+                   ui->email_2->setText(query.value(4).toString());
+                  //ui->lineEdit_4->date(query.value(3).toString());
+
+              }
+
+          }
+}
+
+void accueil::on_affichageemployee_clicked()
+{
+    Employee E ;
+       ui->listeemployee->setModel(E.afficher());
+}
+
+
+
+void accueil::on_evaluerbutton_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+
+
+        evaluation e;
+        if(e.verif(ui->commentaire->toPlainText())==false||ui->commentaire->toPlainText()=="")
+                 {
+
+                                 QMessageBox::critical(nullptr,QObject::tr("Ajouter une evaluation"),
+                                                                  QObject::tr("veuillez saisir correctement le commentaire.\n"
+                                                                              "Click Cancel to exit ."),QMessageBox::Cancel);
+                }
+
+            float perf =0;
+                    float fiab = 0;
+                   float  autonomie=0;
+            //performance
+           if(ui->faibleperf1_3->isChecked())
+           {perf=perf+1;}
+           else if (ui->moyenneperf1_3->isChecked())
+           {perf=perf+2;}
+           else if (ui->excelperf1_3->isChecked())
+           {perf=perf+3;}
+           if(ui->faibleperf2_3->isChecked())
+           {perf=perf+1;}
+           else if (ui->moyenneperf2_3->isChecked())
+           {perf=perf+2;}
+           else if (ui->excelperf2->isChecked())
+           {perf=perf+3;}
+           e.setPerformance(perf/2);
+           //fiabilité
+           if(ui->faiblefiab1_3->isChecked())
+           {fiab=fiab+1;}
+           else if (ui->moyennefiab2_2->isChecked())
+           {fiab=fiab+2;}
+           else if (ui->excelfiab1_3->isChecked())
+           {fiab=fiab+3;}
+           if(ui->faiblefiab2->isChecked())
+           {fiab=fiab+1;}
+           else if (ui->moyennefiab2->isChecked())
+           {fiab=fiab+2;}
+           else if (ui->excelfiab2_3->isChecked())
+           {fiab=fiab+3;}
+           if(ui->faiblefiab3->isChecked())
+         {fiab=fiab+1;}
+           else if (ui->moyennefiab3->isChecked())
+           {fiab=fiab+2;}
+           else if (ui->excelfiab3->isChecked())
+           {fiab=fiab+3;}
+           e.setFiabilite(fiab/3);
+           //autonomie
+           if(ui->faibleauto1_3->isChecked())
+           {autonomie=autonomie+1;}
+           else if (ui->moyenneauto1->isChecked())
+          {autonomie=autonomie+2;}
+           else if (ui->excelauto1_3->isChecked())
+          {autonomie=autonomie+3;}
+           if(ui->faibleauto2_3->isChecked())
+           {autonomie=autonomie+1;}
+           else if (ui->moyenneauto2->isChecked())
+           {autonomie=autonomie+2;}
+           else if (ui->excelauto2_3->isChecked())
+          {autonomie=autonomie+3;}
+           if(ui->faibleauto3_3->isChecked())
+          {autonomie=autonomie+1;}
+           else if (ui->moyenneauto3->isChecked())
+           {autonomie=autonomie+2;}
+           else if (ui->excelauto3_3->isChecked())
+           {autonomie=autonomie+3;}
+
+
+     QDate a= QDate::currentDate();
+           e.setAutonomie(autonomie/3);
+          e.setDate_evaluation(a.toString());
+           e.setCommentaire(ui->commentaire->toPlainText());
+
+      e.setCin_employe(ui->cin1_2->text());
+          e.ajouter();
+          ui->consultereval->setModel(e.afficher());
+          ui->anim->setText("Sending...") ;
+         Smtp* smtp = new Smtp("rim.chaouch@esprit.tn", "Rim123456789", "smtp.gmail.com", 465);
+
+
+     smtp->sendMail("rim.chaouch@esprit.tn", ui->email_2->text() , "evaluation" ,"vous avez été évaluer, vous pouvez consulter votre évaluation.");
+     animation=new QPropertyAnimation(ui->anim,"geometry");
+             ui->anim_2->setText("Email envoyé!");
+               animation->setDuration(6000);
+               animation->setStartValue(ui->anim->geometry());
+               animation->setEndValue(QRect(300,400,300,20));
+               animation->start();
+}
+
+void accueil::on_consultereval_activated(const QModelIndex &index)
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+    QString val=ui->consultereval->model()->data(index).toString();
+     QSqlQuery query;
+      query.prepare("select *  FROM evaluation WHERE ID_evaluation='"+val+"'  ");
+      if(query.exec())
+      {while(query.next())
+
+
+          { ui->ide->setText(query.value(0).toString());
+               ui->commentaire_2->setText(query.value(4).toString());
+              ui->dateEdit->setText(query.value(5).toString());;
+
+          }
+
+      }
+}
+
+
+
+void accueil::on_supprimeval_clicked()
+{
+    evaluation e;
+        QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+
+
+        e.setId_evaluation(ui->ide->text().toInt());
+
+              bool test=e.supprimer(e.getId_evaluation());
+
+            ui->consultereval->setModel(e.afficher());
+
+}
+
+void accueil::on_editeval_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+
+
+
+        QString commentaire=ui->commentaire_2->toPlainText();
+       int  id=ui->ide->text().toInt();
+
+
+            QString d=ui->dateEdit->text();
+
+           evaluation e(commentaire,d,id);
+            bool test=e.modifier();
+  ui->consultereval->setModel(e.afficher());
+}
+
+void accueil::on_listeeval_clicked()
+{evaluation e;
+    ui->consultereval->setModel(e.afficher());
+
+}
+
+void accueil::on_trie_2_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+       evaluation e;
+
+          QTableView* table=ui->consultereval;
+
+         e.trie2(table);
+}
+
+void accueil::on_trie1_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+       evaluation e;
+
+          QTableView* table=ui->consultereval;
+
+         e.trie1(table);
+}
+
+void accueil::on_trie2_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+       evaluation e;
+
+          QTableView* table=ui->consultereval;
+
+         e.trie(table);
+}
+
+void accueil::on_affichagereclam_activated(const QModelIndex &index)
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+
+
+        QString val=ui->affichagereclam->model()->data(index).toString();
+         QSqlQuery query;
+          query.prepare("select *  FROM reclamation WHERE ID_reclamation='"+val+"'  ");
+          if(query.exec())
+          {while(query.next())
+
+
+              { ui->id_reclam->setText(query.value(0).toString());
+
+
+              }
+
+          }
+}
+
+void accueil::on_afficher_reclam_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+
+
+        reclamation r;
+            ui->affichagereclam->setModel(r.afficher());
+}
+
+void accueil::on_traiter_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+    if (bulletsound->state() == QMediaPlayer::PlayingState){
+        bulletsound->setPosition(0);
+    }
+    else if (bulletsound->state() == QMediaPlayer::StoppedState){
+        bulletsound->play();
+    }
+
+    int id=ui->id_reclam->text().toInt();
+    reclamation r(id);
+    bool test=r.modifieretat();
+     ui->affichagereclam->setModel(r.afficher());
+}
+
+void accueil::on_recherche_clicked()
+{
+    QSqlQuery q;
+        QSqlQueryModel *modal=new QSqlQueryModel();
+        QString mot =ui->rech->text();
+       q.prepare("select * from reclamation where (Titre LIKE '%"+mot+"%' or cin_employe LIKE '%"+mot+"%' or date_reclamation like '%"+mot+"%' )");
+
+        q.exec() ;
+        modal->setQuery(q);
+        ui->affichagereclam->setModel(modal);
+}
+
+/*
+void accueil::on_stat_clicked()
+{
+    stati1 s;
+    s.exec();
+
+}*/
+
+void accueil::on_affichageemployee_2_clicked()
+{
+    QMediaPlayer * bulletsound = new QMediaPlayer();
+        bulletsound->setMedia(QUrl::fromLocalFile("c:/sound/zapsplat_multimedia_button_click_005_53866.mp3"));
+        if (bulletsound->state() == QMediaPlayer::PlayingState){
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState){
+            bulletsound->play();
+        }
+       QString id=ui->cin1_2->text();
+        Employee e(id);
+        bool test=e.modifiereval();
+    ui->affichagereclam->setModel(e.afficher());
 }

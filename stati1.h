@@ -1,5 +1,5 @@
-#ifndef STATI_H
-#define STATI_H
+#ifndef STATI1_H
+#define STATI1_H
 #include <QPainter>
 #include <QSqlQuery>
 #include <QDialog>
@@ -8,15 +8,15 @@
 using namespace std;
 
 namespace Ui {
-class stati;
+class stati1;
 }
 
-class stati : public QDialog
+class stati1 : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit stati(QWidget *parent = nullptr);
+    explicit stati1(QWidget *parent = nullptr);
        int Statistique_partie2() ;
        int Statistique_partie3() ;
        int Statistique1();
@@ -24,19 +24,17 @@ public:
 
 void paintEvent2(QPaintEvent *) ;
      void paintEvent(QPaintEvent *) ;
-    ~stati();
+    ~stati1();
 private slots:
 
      void on_pushButton_clicked();
 
 private:
-    Ui::stati *ui;
+    Ui::stati1 *ui;
 };
 
-#endif // STATI_H
-/*void stati::on_pushButton_clicked()
-{
-    hide();
 
 
-}*/
+
+
+#endif // STATI1_H

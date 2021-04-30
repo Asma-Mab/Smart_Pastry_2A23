@@ -77,7 +77,7 @@ private slots:
     void on_voirevaluation_clicked();
 
     void on_pdf_clicked();
-  //void makePlot();
+ // void makePlot();
     void on_afficherlesavis_clicked();
 
     void on_listecomm_activated(const QModelIndex &index);
@@ -92,6 +92,8 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+
+    void on_font_2_clicked();
 
 private:
     Ui::Dialog *ui;

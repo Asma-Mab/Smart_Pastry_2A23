@@ -3,7 +3,7 @@
 #include"reclamation.h"
 #include"evaluation.h"
 #include"commentaire.h"
-
+#include<QFontDialog>
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog)
@@ -259,10 +259,10 @@ void Dialog::on_affichemploye_activated(const QModelIndex &index)
           {while(query.next())
 
 
-              { ui->lineEditid->setText(query.value(0).toString());
+              {
 
- ui->emp->setText(query.value(2).toString());
-  ui->comm->setText(query.value(1).toString());
+ ui->emp->setText(query.value(0).toString());
+
 
               }
 
@@ -357,13 +357,7 @@ void Dialog::on_pdf_clicked()
 
                    str.append("</center>") ;
 
-                   /*str.append("<td>"+QString("NOM")+"</td>") ;
-                   str.append("<td>"+QString("PRENOM")+"</td>") ;
-                   str.append("<td>"+QString("FIABLITE")+"</td>") ;
-                   str.append("<td>"+QString("PERFORMANCE")+"</td>") ;
-                   str.append("<td>"+QString("AUTONOMIE")+"</td>") ;
-                str.append("<td>"+QString("COMMENTAIRE")+"</td>") ;
-                str.append("<td>"+QString("PRIME")+"</td>") ;*/
+
                    QSqlQuery* qury=new QSqlQuery();
      //QString val=ui->cin->text();
 
@@ -685,4 +679,51 @@ void Dialog::on_pushButton_3_clicked()
     }
     }
 
+}
+
+void Dialog::on_font_2_clicked()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(&ok, QFont("Times", 12), this);
+    if (ok) {
+        ui->label_2->setFont(font);
+        ui->label->setFont(font);
+        ui->label_14->setFont(font);
+        ui->label_15->setFont(font);
+        ui->label_18->setFont(font);
+        ui->label_19->setFont(font);
+        ui->label_20->setFont(font);
+        ui->label_16->setFont(font);
+        ui->label_13->setFont(font);
+        ui->label_12->setFont(font);
+
+        ui->nom->setFont(font);
+        ui->prenom->setFont(font);
+        ui->prime->setFont(font);
+        ui->augmentation->setFont(font);
+        ui->performance->setFont(font);
+
+        ui->autonomie->setFont(font);
+        ui->fiabilite->setFont(font);
+
+
+
+
+
+        ui->label_nomR_50->setFont(font);
+        ui->label_nomR_51->setFont(font);
+        ui->label_nomR_52->setFont(font);
+          ui->label_nomR_53->setFont(font);
+            ui->label_49->setFont(font);
+
+              ui->label_50->setFont(font);
+                ui->label_AjEq_22->setFont(font);
+                  ui->label_AjEq_24->setFont(font);
+                    ui->label_AjEq_26->setFont(font);
+                      ui->label_AjEq_28->setFont(font);
+                        ui->label_AjEq_29->setFont(font);
+                          ui->label_AjEq_30->setFont(font);
+    } else {
+       return;
+    }
 }

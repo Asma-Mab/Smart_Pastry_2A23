@@ -51,7 +51,7 @@ border-radius:10px;
     <string>Fournisseurs/stock</string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/Untitled design (24).png</normaloff>:/img/img/Untitled design (24).png</iconset>
    </property>
    <property name="iconSize">
@@ -74,7 +74,7 @@ border-radius:10px;
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>:/img/img/Untitled design (6).png</pixmap>
+    <pixmap resource="img.qrc">:/img/img/Untitled design (6).png</pixmap>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
@@ -131,7 +131,7 @@ border-radius:10px;
     <string>  CONGés                   </string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/Untitled design (18).png</normaloff>:/img/img/Untitled design (18).png</iconset>
    </property>
    <property name="iconSize">
@@ -230,7 +230,7 @@ border-radius:10px;
     <string> Profil                     </string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/154347018_1093458397748791_4413400449242006441_n.png</normaloff>:/img/img/154347018_1093458397748791_4413400449242006441_n.png</iconset>
    </property>
    <property name="iconSize">
@@ -272,7 +272,7 @@ border-radius:10px;
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>:/img/img/154067405_1632533030284127_9027939143200895570_n.png</pixmap>
+    <pixmap resource="img.qrc">:/img/img/154067405_1632533030284127_9027939143200895570_n.png</pixmap>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -329,7 +329,7 @@ border-radius:10px;
     <string>Evaluation/Reclamation</string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/Untitled design (26).png</normaloff>:/img/img/Untitled design (26).png</iconset>
    </property>
    <property name="iconSize">
@@ -673,7 +673,7 @@ border-radius:10px;
     <string> Quitter                    </string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/Untitled design (28).png</normaloff>:/img/img/Untitled design (28).png</iconset>
    </property>
    <property name="iconSize">
@@ -721,7 +721,7 @@ border-radius:10px;
     <string>  Produits                  </string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/Untitled design (22).png</normaloff>:/img/img/Untitled design (22).png</iconset>
    </property>
    <property name="iconSize">
@@ -769,7 +769,7 @@ border-radius:10px;
     <string> Equipements            </string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/Untitled design (23).png</normaloff>:/img/img/Untitled design (23).png</iconset>
    </property>
    <property name="iconSize">
@@ -817,7 +817,7 @@ border-radius:10px;
     <string> Evenements             </string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/Untitled design (25).png</normaloff>:/img/img/Untitled design (25).png</iconset>
    </property>
    <property name="iconSize">
@@ -865,7 +865,7 @@ border-radius:10px;
     <string> RECETTES                  </string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/Untitled design (26).png</normaloff>:/img/img/Untitled design (26).png</iconset>
    </property>
    <property name="iconSize">
@@ -1041,7 +1041,7 @@ border-radius:10px;
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>:/img/img/DREAM PASTRY.png</pixmap>
+    <pixmap resource="img.qrc">:/img/img/DREAM PASTRY.png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="button_client">
@@ -1082,7 +1082,7 @@ border-radius:10px;
     <string>  Clients/Commande </string>
    </property>
    <property name="icon">
-    <iconset>
+    <iconset resource="img.qrc">
      <normaloff>:/img/img/Untitled design (21).png</normaloff>:/img/img/Untitled design (21).png</iconset>
    </property>
    <property name="iconSize">
@@ -1095,8 +1095,8 @@ border-radius:10px;
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
-     <x>255</x>
-     <y>185</y>
+     <x>260</x>
+     <y>170</y>
      <width>931</width>
      <height>581</height>
     </rect>
@@ -1339,8 +1339,8 @@ border-radius:10px;
     <widget class="QTabWidget" name="tabWidget_10">
      <property name="geometry">
       <rect>
-       <x>5</x>
-       <y>5</y>
+       <x>30</x>
+       <y>10</y>
        <width>901</width>
        <height>551</height>
       </rect>
@@ -1377,7 +1377,7 @@ border-top-right-radius:10px;
 }</string>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_20">
       <attribute name="title">
@@ -1506,7 +1506,7 @@ border-radius:10px;
            <string>Ajouter</string>
           </property>
           <property name="icon">
-           <iconset resource="../projet c++/Atelier_Connexion/ressources2.qrc">
+           <iconset resource="img.qrc">
             <normaloff>:/img/img/validate.png</normaloff>:/img/img/validate.png</iconset>
           </property>
           <property name="iconSize">
@@ -1857,7 +1857,7 @@ border-radius:10px;
            <string>Retour</string>
           </property>
           <property name="icon">
-           <iconset>
+           <iconset resource="img.qrc">
             <normaloff>:/img/img/return.png</normaloff>:/img/img/return.png</iconset>
           </property>
           <property name="iconSize">
@@ -2230,8 +2230,8 @@ border-radius:10px;</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>221</width>
-           <height>387</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -2629,8 +2629,8 @@ border-radius:10px;</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>221</width>
-           <height>387</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -2821,7 +2821,7 @@ border-image:url(&quot;:/img/img/unnamed.png&quot;);
          <string/>
         </property>
         <property name="icon">
-         <iconset resource="../projet c++/Atelier_Connexion/ressources2.qrc">
+         <iconset resource="img.qrc">
           <normaloff>:/img/img/validate.png</normaloff>:/img/img/validate.png</iconset>
         </property>
         <property name="iconSize">
@@ -2893,7 +2893,7 @@ border-top-right-radius:10px;
 }</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="reclamation">
       <attribute name="title">
@@ -2909,7 +2909,7 @@ border-top-right-radius:10px;
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="ajouter_reclam">
         <attribute name="title">
@@ -3557,14 +3557,14 @@ border-radius:10px;
       <widget class="QTabWidget" name="tabWidget_2">
        <property name="geometry">
         <rect>
-         <x>-10</x>
-         <y>10</y>
+         <x>0</x>
+         <y>0</y>
          <width>911</width>
          <height>531</height>
         </rect>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -3883,7 +3883,7 @@ border-radius:10px;
            </font>
           </property>
           <property name="text">
-           <string>kkkk</string>
+           <string/>
           </property>
          </widget>
          <widget class="QLabel" name="prime">
@@ -3903,7 +3903,7 @@ border-radius:10px;
            </font>
           </property>
           <property name="text">
-           <string>kkkk</string>
+           <string/>
           </property>
          </widget>
          <widget class="QLabel" name="label_30">
@@ -4531,6 +4531,37 @@ color: rgb(255, 255, 255);
     <string>espace employé</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="font_2">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>80</y>
+     <width>91</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+    color:white;
+	font: 75 10pt &quot;Source Code Pro&quot;;
+	font: 87 7pt &quot;Nexa Rust Sans Black 01&quot;;
+    background-color: rgb(51, 50, 50);
+background:  rgb(51, 50, 50);
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:white;
+
+background:#b20837;
+border-radius:10px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>modifier font</string>
+   </property>
+  </widget>
   <zorder>label_3</zorder>
   <zorder>label_2</zorder>
   <zorder>button_fournisseurs</zorder>
@@ -4555,6 +4586,7 @@ color: rgb(255, 255, 255);
   <zorder>button_client</zorder>
   <zorder>stackedWidget</zorder>
   <zorder>label_11</zorder>
+  <zorder>font_2</zorder>
  </widget>
  <customwidgets>
   <customwidget>
@@ -4564,6 +4596,8 @@ color: rgb(255, 255, 255);
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>
